@@ -6,6 +6,8 @@ var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-facebook').Strategy;
 
+var userCtrl = require('./controllers/userCtrl');
+var listingCtrl = require('./controllers/listingCtrl');
 
 var Listing = require('./server-assets/models/listingModel.js');
 var User = require('./server-assets/models/userModel.js');
@@ -31,6 +33,11 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.post('/api/user/create', userCtrl.create);
+app.post('/api/user/login', passport.authenticate('facebook'), userCtrl.login)
+app.post('/api/Listing/create', listingCtrl.create);
+app.post('/api/Listing/addListing/:userId', userCtrl.addListing);
 
 passport.serializeUser(function(user, done){
   console.log(111111, user);
