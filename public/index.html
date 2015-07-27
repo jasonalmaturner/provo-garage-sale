@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
+
+<!-- *************     app name for internal use. ************* -->
+<head ng-app="treasureHunters">
 	<title>Provo Garage Sale </title>
+
+ <!--   ****************   Links    ******************** -->
+
+	<link type="text/css" href="public/styles/style.css">
+	<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
 	<link type="text/css" href="styles/style.css">
 </head>
-<body>
+
+<!-- ************ main Controller and main menu ************************* -->
+<body ng-controller="mainCtrl">
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
 
 
+
+
+<!--     ********************** Connected Views ******************* -->
+<ng-view></ng-view>
+
+<!-- ************************** Script Links ********************* -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js"></script>
-<script src="app/app.js"
+<script src="app/app.js"></script>
 <script src="app/directives/listingDir/listingDir.js"></script>
 <script src="app/directives/mainDir/mainDir.js"></script>
 <script src="app/services/authService.js"></script>
