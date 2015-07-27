@@ -1,5 +1,5 @@
 var app = angular.module('treasureHunters', []);
 
-app.config(function(){
+app.service('authService', function(){
 
 });
