@@ -1,0 +1,6 @@
+html, body{
+	/*background-color: #FAFAFA;*/
+	background-color: red;
+	padding-top: 10px;
+}
+console.log('test')
