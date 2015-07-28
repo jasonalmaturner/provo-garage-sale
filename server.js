@@ -43,6 +43,7 @@ app.delete('/api/Listing/:id', listingCtrl.delete);
 app.put('/api/Listing/:id', listingCtrl.update);
 app.get('/api/Listing/user/:id', listingCtrl.readByUser);
 app.get('/api/Listing/:id', listingCtrl.readByListing);
+app.get('/api/Listings', listingCtrl.getAllListings);
 
 passport.serializeUser(function(user, done){
   done(null, user);
