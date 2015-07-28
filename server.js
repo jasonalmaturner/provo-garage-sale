@@ -34,17 +34,14 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// app.post('/api/user/create', userCtrl.create);
-// app.post('/api/Listing/create', listingCtrl.create);
-// app.post('/api/Listing/addListing/:userId', userCtrl.addListing);
+app.post('/api/user/create', userCtrl.create);
+app.post('/api/Listing/create', listingCtrl.create);
 
 passport.serializeUser(function(user, done){
-  console.log(111111, user);
   done(null, user);
 })
 
 passport.deserializeUser(function(obj, done){
-  console.log(2222222, obj);
   done(null, obj);
 })
 

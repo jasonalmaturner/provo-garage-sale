@@ -1,5 +1,12 @@
-html, body{
-	/*background-color: #FAFAFA;*/
-	background-color: red;
-	padding-top: 10px;
+html, body {
+	background-color: #F5F5F5;
+}
+
+.navbar { 
+	padding: 10px; 
+}
+
+.writing {
+	color: #F5F5F5;
+	text-align: center;
 }
