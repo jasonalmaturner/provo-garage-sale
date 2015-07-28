@@ -1,12 +1,15 @@
 var mongoose = require('mongoose');
 
 var Listing = new mongoose.Schema({
-	address: 
-	{ 
+	address: { 
 		street: { type: String, required: true },
 		city: { type: String, required: true },
 		state: { type: String, required: true, maxlength: 2 },
-		zip: { type: String, required: true, maxlength: 5 },
+		zip: { type: String, required: true, maxlength: 5 }
+	},
+	geo: {
+		lon: { type: String, default: '0' },
+		lat: { type: String, default: '0' }
 	},
 	date: [{ type: Date, required: true }],
 	picture: { type: String, default: "http://www.clker.com/cliparts/l/a/V/x/F/r/house-icon-dark-green-md.png"},

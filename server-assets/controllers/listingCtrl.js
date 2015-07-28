@@ -1,15 +1,23 @@
 var Listing = require('../models/listingModel.js');
+var geocoderProvider = 'google';
+
+var geocoder = require('node-geocoder')(geocoderProvider);
 
 module.exports = {
 
 	create: function(req, res){
 		console.log(11111, req.body)
 		var newListing = new Listing(req.body);
-		newListing.save(function (err, result) {
+		geocoder.geocode(newListing.address.street + ' ' + newListing.address.city + ' ' + newListing.address.state + ' ' + newListing.address.zip)
+		.then(function(response){
+			newListing.geo.lon = response[0].longitude;
+			newListing.geo.lat = response[0].latitude;
+			newListing.save(function (err, result) {
 			if (err) {
 				return res.status(500).end();
 			}
-			return res.json(result);
+				return res.json(result);
+			})
 		})
 	},
 
@@ -44,5 +52,7 @@ module.exports = {
 			res.send(result);
 		});
 	}
+
+
 
 };
