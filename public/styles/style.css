@@ -2,28 +2,25 @@ html, body{
 	background-color: #F5F5FA;
 	padding-top: 10px;
 }
-
-.listingBox {
-	width: 300px;
-	height: 800px;
-	border: 2px solid black;
-	float: left;
-	margin-left: 10px;
-}
-
-.map {
-	width: 700px;
-	height: 800px;
-	border: 2px solid black;
-	float: right;
-	margin-right: 10px
-}
-
 .navbar { 
 	padding: 10px; 
 }
 
-.writing {
-	color: #F5F5F5;
-	text-align: center;
+.listingBox {
+	width: 300px;
+	height: 500px;
+	border: 5px solid black;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
 }
+
+.map {
+	width: 700px;
+	height: 500px;
+	border: 5px solid black;
+	float: right;
+	margin-right: 10px
+}
+
+
