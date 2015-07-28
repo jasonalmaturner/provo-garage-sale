@@ -1,24 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="treasureHunters">
+
+<!-- *************     app name for internal use. ************* -->
 <head>
 	<title>Provo Garage Sale </title>
-	<link type="text/css" href="public/styles/style.css">
+
+ <!--   ****************   Links    ******************** -->
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
 </head>
-<body>
 
+  <!-- ************ main Controller and main menu ************************* -->
+  <body ng-controller="mainCtrl">
 
+    <nav class="navbar navbar-inverse navbar-top">
+      <div class ="container">
+        <button type="button" 
+        class="homeButton btn btn-warning 
+        col-xs-2 col-xs-offset-5 
+        col-sm-2 col-sm-offset-5
+        col-md-1 col-md-offset-1
+        col-lg-1 col-lg-offset-1"><a href="#/home">Home
+        </a></button>
 
+        <button type="button" 
+        class="addListingButton btn btn-success 
+        col-xs-4 col-xs-offset-4 
+        col-sm-4 col-sm-offset-4 
+        col-md-2 col-md-offset-3
+        col-lg-2 col-lg-offset-3">Add Listing
+        </button>
 
+        <button type="button" 
+        class="facebookButton btn btn-primary 
+        col-xs-6 col-xs-offset-3 
+        col-sm-6 col-sm-offset-3 
+        col-md-3 col-md-offset-1
+        col-lg-3 col-lg-offset-1">Sign In with Facebook
+        </button>
+      </div>
+    </nav>
 
+    <!--     ********************** Connected Views ******************* -->
+    <ng-view></ng-view>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js"></script>
-<script src="public/app/app,js"></script>
-<script src="public/views/view2/view1Ctrl.js"></script>
-<script src="public/app/views/view1/view2Ctrl.js"></script>
-<script src="public/app/services/angularService1"></script>
-<script src="public/app/services/angularService2"></script>
-<script src="public/app/directives/dir1/dir1.js"></script>
-<script src="public/app/directives/dir2/dir2.js"></script>
-</body>
+    <!-- ************************** Script Links ********************* -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/directives/listingDir/listingDir.js"></script>
+    <script src="app/directives/mainDir/mainDir.js"></script>
+    <script src="app/services/authService.js"></script>
+    <script src="app/services/mainService.js"></script>
+     <script src="app/views/home/mainCtrl.js"></script>
+    <script src="app/views/home/homeCtrl.js"></script>
+    <script src="app/views/user/userCtrl.js"></script>
+  </body>
 </html>
