@@ -10,11 +10,19 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
+<<<<<<< HEAD
+    "body-parser": "^1.13.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.1",
+    "express-session": "^1.11.3",
+    "mongoose": "^4.1.0",
+=======
     "body-parser": "~1.13.2",
     "cors": "~2.7.1",
     "express": "~4.13.1",
     "express-session": "^1.11.3",
     "mongoose": "~4.1.0",
+>>>>>>> 4b100b9a057405d3e16f42bb5fa1cdd2db0ddd5c
     "passport": "^0.2.2",
     "passport-facebook": "^2.0.0"
   }

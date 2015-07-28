@@ -1,18 +1,21 @@
 {
-  "name": "public",
+  "name": "structureExample",
   "version": "0.0.0",
-  "authors": [
-    "Jason Turner <jasonalmaturner@gmail.com>"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
   "dependencies": {
-    "angular": "~1.4.3"
+    "body-parser": "^1.13.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.1",
+    "express-session": "^1.11.3",
+    "mongoose": "^4.1.0",
+    "passport": "^0.2.2",
+    "passport-facebook": "^2.0.0"
   }
 }
