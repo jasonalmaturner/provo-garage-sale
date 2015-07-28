@@ -35,7 +35,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.post('/api/user/create', userCtrl.create);
+app.get('/api/user/favorites/:id', userCtrl.favorites);
+app.put('/api/user/favorites/:id', userCtrl.modifyFavorites);
+
 app.post('/api/Listing/create', listingCtrl.create);
+app.delete('/api/Listing/:id', listingCtrl.delete);
+app.put('/api/Listing/:id', listingCtrl.update);
+app.get('/api/Listing/user/:id', listingCtrl.readByUser);
+app.get('/api/Listing/:id', listingCtrl.readByListing);
 
 passport.serializeUser(function(user, done){
   done(null, user);
