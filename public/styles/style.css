@@ -3,7 +3,6 @@ html, body{
 	padding-top: 10px;
 }
 
-
 .listingBox {
 	width: 300px;
 	height: 800px;
@@ -12,6 +11,7 @@ html, body{
 	float: left;
 	margin-left: 10px;
 }
+
 .map {
 	width: 700px;
 	height: 800px;
@@ -19,4 +19,13 @@ html, body{
 	background-color: red;
 	float: right;
 	margin-right: 10px
+}
+
+.navbar { 
+	padding: 10px; 
+}
+
+.writing {
+	color: #F5F5F5;
+	text-align: center;
 }

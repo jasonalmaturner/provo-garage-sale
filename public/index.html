@@ -11,36 +11,55 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
 </head>
 
-<!-- ************ main Controller and main menu ************************* -->
-<body ng-controller="mainCtrl">
+  <!-- ************ main Controller and main menu ************************* -->
+  <body ng-controller="mainCtrl">
 
-<nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class ="container">
+        <button type="button" 
+        class="homeButton btn btn-warning 
+        col-xs-2 col-xs-offset-5 
+        col-sm-2 col-sm-offset-5
+        col-md-1 col-md-offset-1
+        col-lg-1 col-lg-offset-1">Home
+        </button>
 
-  <button type="button" class="homeButton btn btn-warning col-md-1 col-md-offset-1"><a href="#/home">Home</a></button>
+        <button type="button" 
+        class="addListingButton btn btn-success 
+        col-xs-4 col-xs-offset-4 
+        col-sm-4 col-sm-offset-4 
+        col-md-2 col-md-offset-3
+        col-lg-2 col-lg-offset-3">Add Listing
+        </button>
 
-  <button type="button" class="addListingButton btn btn-success col-md-2 col-md-offset-4">Add Listing</button>
+        <button type="button" 
+        class="facebookButton btn btn-primary 
+        col-xs-6 col-xs-offset-3 
+        col-sm-6 col-sm-offset-3 
+        col-md-3 col-md-offset-1
+        col-lg-3 col-lg-offset-1">Sign In with Facebook
+        </button>
+      </div>
+    </nav>
 
-  <button type="button" class="facebookButton btn btn-primary col-md-2 col-md-offset-1">Sign In with Facebook</button>
-
-</nav>
-
-
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+      <p class="writing">this is the center</p>
+    </nav>
 
 
-<!--     ********************** Connected Views ******************* -->
-<ng-view></ng-view>
 
-<!-- ************************** Script Links ********************* -->
+    <!--     ********************** Connected Views ******************* -->
+    <ng-view></ng-view>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js"></script>
-<script src="app/app.js"></script>
-<script src="app/directives/listingDir/listingDir.js"></script>
-<script src="app/directives/mainDir/mainDir.js"></script>
-<script src="app/services/authService.js"></script>
-<script src="app/services/mainService.js"></script>
-<script src="app/views/home/homeCtrl.js"></script>
-<script src="app/views/home/mainCtrl.js"></script>
-<script src="app/views/user/userCtrl.js"></script>
-</body>
+    <!-- ************************** Script Links ********************* -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/directives/listingDir/listingDir.js"></script>
+    <script src="app/directives/mainDir/mainDir.js"></script>
+    <script src="app/services/authService.js"></script>
+    <script src="app/services/mainService.js"></script>
+    <script src="app/views/home/homeCtrl.js"></script>
+    <script src="app/views/user/userCtrl.js"></script>
+  </body>
 </html>
