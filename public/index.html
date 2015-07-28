@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="treasureHunters">
 
 <!-- *************     app name for internal use. ************* -->
-<head ng-app="treasureHunters">
+<head>
 	<title>Provo Garage Sale </title>
 
  <!--   ****************   Links    ******************** -->
-
-	<link type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
 </head>
@@ -17,7 +16,7 @@
 
 <nav class="navbar navbar-inverse">
 
-  <button type="button" class="homeButton btn btn-warning col-md-1 col-md-offset-1">Home</button>
+  <button type="button" class="homeButton btn btn-warning col-md-1 col-md-offset-1"><a href="#/home">Home</a></button>
 
   <button type="button" class="addListingButton btn btn-success col-md-2 col-md-offset-4">Add Listing</button>
 
@@ -41,6 +40,7 @@
 <script src="app/services/authService.js"></script>
 <script src="app/services/mainService.js"></script>
 <script src="app/views/home/homeCtrl.js"></script>
+<script src="app/views/home/mainCtrl.js"></script>
 <script src="app/views/user/userCtrl.js"></script>
 </body>
 </html>
