@@ -22,7 +22,23 @@ module.exports = {
 			};
 		});
 
+	},
+
+	modifyFavorites: function(req, res){
+		User.findByIdAndUpdate(req.params.id, req.body, function(err, result) {
+			console.log(req.body);
+	      if (err) return res.status(500).send(err);
+	      res.json(result);
+	    })
+	},
+
+	favorites: function(req, res){
+		User.find({ _id: req.params.id })
+			.populate('favorites')
+			.exec(function (err, result) {
+				console.log(result)
+				if (err) return res.status(500).send(err);
+					res.send(result[0].favorites);
+			});
 	}
-
-
 }
