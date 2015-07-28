@@ -11,11 +11,8 @@ app.directive('mainDir', function(){
 
 		},
 		link: function(elem, attr, scope) {
-			
+
 
 		}
 	}
 });
-
-
-
