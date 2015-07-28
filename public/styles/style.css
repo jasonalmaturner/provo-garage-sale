@@ -6,8 +6,7 @@ html, body{
 .listingBox {
 	width: 300px;
 	height: 800px;
-	border-radius: 1px black;
-	background-color: red;
+	border: 2px solid black;
 	float: left;
 	margin-left: 10px;
 }
@@ -15,8 +14,7 @@ html, body{
 .map {
 	width: 700px;
 	height: 800px;
-	border-radius: 1px black;
-	background-color: red;
+	border: 2px solid black;
 	float: right;
 	margin-right: 10px
 }
