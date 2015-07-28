@@ -1,5 +1,12 @@
-var app = angular.module('treasureHunters', []);
+var app = angular.module('treasureHunters', ["ngRoute"]);
 
-app.config(function(){
+app.config(function($routeProvider){
+
+$routeProvider
+	.when('/home', {
+		templateUrl:'app/views/home/homeTmpl.html',
+		controller: 'homeCtrl'
+	})
+
 
 });

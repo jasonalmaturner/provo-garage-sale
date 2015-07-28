@@ -1,5 +1,24 @@
-html, body {
-	background-color: #F5F5F5;
+html, body{
+	background-color: #F5F5FA;
+	padding-top: 10px;
+}
+
+.listingBox {
+	width: 300px;
+	height: 800px;
+	border-radius: 1px black;
+	background-color: red;
+	float: left;
+	margin-left: 10px;
+}
+
+.map {
+	width: 700px;
+	height: 800px;
+	border-radius: 1px black;
+	background-color: red;
+	float: right;
+	margin-right: 10px
 }
 
 .navbar { 
