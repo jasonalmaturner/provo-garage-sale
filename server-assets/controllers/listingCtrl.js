@@ -21,10 +21,28 @@ module.exports = {
 	},
 
 	update: function(req, res) {
-	    Listing.findByIdAndUpdate(req.params.id, req.body, {new:true}, function(err, result) {
+	    Listing.findByIdAndUpdate(req.params.id, req.body, function(err, result) {
 	      if (err) return res.status(500).send(err);
 	      res.json(result);
 	    })
+	},
+
+	readByUser: function(req, res) {
+		Listing.find({ user: req.params.id })
+		.populate('user')
+		.exec(function (err, result) {
+			if (err) return res.status(500).send(err);
+			res.send(result);
+		});
+	},
+
+	readByListing: function(req, res) {
+		Listing.find({ _id: req.params.id })
+		.populate('_id')
+		.exec(function (err, result) {
+			if (err) return res.status(500).send(err);
+			res.send(result);
+		});
 	}
 
 };
