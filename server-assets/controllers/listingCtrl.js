@@ -51,8 +51,17 @@ module.exports = {
 			if (err) return res.status(500).send(err);
 			res.send(result);
 		});
+	},
+
+	getAllListings: function(req, res) {
+		Listing.find(req.query)
+		.exec(function (err, result) {
+			if (err) {
+				return res.status(500).json(err);
+			} else {
+				return res.json(result);
+			}
+		})
 	}
-
-
 
 };
