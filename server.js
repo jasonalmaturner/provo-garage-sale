@@ -1,8 +1,8 @@
-var express = require('express');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
 var cors = require('cors');
+var express = require('express');
 var session = require('express-session');
+var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-facebook').Strategy;
 
