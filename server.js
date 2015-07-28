@@ -21,7 +21,7 @@ passport.use(new FacebookStrategy({
     clientSecret: 'ebab77d2f0a597cabc8c0bb10cef28d6',
     callbackURL: 'http://localhost:8040/auth/facebook/callback'
   }, function(accessToken, refreshToken, profile, done) {
-  	userCtrl.create(profile, done);
+    userCtrl.create(profile, done);
  }));
 
 app.use(bodyParser.json());
@@ -43,6 +43,7 @@ app.delete('/api/Listing/:id', listingCtrl.delete);
 app.put('/api/Listing/:id', listingCtrl.update);
 app.get('/api/Listing/user/:id', listingCtrl.readByUser);
 app.get('/api/Listing/:id', listingCtrl.readByListing);
+app.get('/api/Listings', listingCtrl.getAllListings);
 
 passport.serializeUser(function(user, done){
   done(null, user);
@@ -60,7 +61,7 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', {
 
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function(){
-	console.log('db connected');
+  console.log('db connected');
 })
 app.listen(port, function(){
   console.log('listening on port:', port);
