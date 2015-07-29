@@ -1,26 +1,19 @@
 html, body{
-	background-color: #F5F5FA;
-	padding-top: 10px;
-}
-.navbar { 
-	padding: 10px; 
+	background-color: #EEEEEE !important;
+	
 }
 
-.listingBox {
-	width: 300px;
-	height: 500px;
-	border: 5px solid black;
-	float: left;
-	margin-left: 10px;
-	margin-top: 10px;
+.name {
+	width: 100%;
+	height: 5;
+	background: #FFAB40;
+	text-align: center;
+	padding: 20px;
+}
+.md-card {
+	width: 20%;'
+	
 }
 
-.map {
-	width: 700px;
-	height: 500px;
-	border: 5px solid black;
-	float: right;
-	margin-right: 10px
-}
 
 
