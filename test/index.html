@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>map test</title>
+	<link href="style.css" rel='stylesheet' />
+</head>
+<body>
+	<div ng-app="mapsApp" ng-controller="MapCtrl">
+	    <div id="map"></div>
+	    <div ng-repeat="marker in markers"
+	                    ng-class="{active: $index == markerId}"     >
+	         <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+	    </div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
+	<script src='app.js'></script>
+</body>
+</html>
