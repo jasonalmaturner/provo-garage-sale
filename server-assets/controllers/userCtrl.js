@@ -24,12 +24,38 @@ module.exports = {
 
 	},
 
-	modifyFavorites: function(req, res){
-		User.findByIdAndUpdate(req.params.id, req.body, function(err, result) {
-			console.log(req.body);
-	      if (err) return res.status(500).send(err);
-	      res.json(result);
-	    })
+	// Unused
+	// modifyFavorites: function(req, res){
+	// 	User.findByIdAndUpdate(req.params.id, req.body, function(err, result) {
+	// 		console.log(req.body);
+	//       if (err) return res.status(500).send(err);
+	//       res.json(result);
+	//     })
+	// },
+
+	addFavorite: function(req, res){
+		User.findById(req.params.id, function (err, user){
+			if(err) return res.status(500).json(err);
+			var newFavorites = user.favorites.concat(req.query.listing);
+			user.favorites = newFavorites;
+			user.save(function(err, result){
+				if(err) return res.status(500).json(err);
+				res.json(result);
+			});
+		});
+	},
+
+	removeFavorite: function(req, res){
+		User.findById(req.params.id, function (err, user){
+			if(err) return res.status(500).json(err);
+			var index = user.favorites.indexOf(req.query.listing);
+			if(index === -1) return res.status(501).send('favorite not found');
+			user.favorites.splice(index, 1);
+			user.save(function(err, result){
+				if(err) return res.status(500).json(err);
+				res.json(result);
+			});
+		});
 	},
 
 	favorites: function(req, res){
