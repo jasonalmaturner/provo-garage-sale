@@ -17,7 +17,7 @@ $routeProvider
 					});
 				});
 				return dfd.promise;
-			};
+			}
 		}
 	})
 
