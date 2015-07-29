@@ -6,6 +6,8 @@ app.service('mainService', function($http, $q) {
 		return $http({
 			method: 'GET',
 			url: 'http://localhost:8040/api/Listing'
+		}).then(function(response){
+			return response.data;
 		})
 	}
 
