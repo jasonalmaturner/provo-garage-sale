@@ -34,10 +34,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+//users api
 app.post('/api/user/create', userCtrl.create);
 app.get('/api/user/favorites/:id', userCtrl.favorites);
 app.put('/api/user/favorites/:id', userCtrl.modifyFavorites);
 
+//listings api
 app.post('/api/Listing/create', listingCtrl.create);
 app.delete('/api/Listing/:id', listingCtrl.delete);
 app.put('/api/Listing/:id', listingCtrl.update);
