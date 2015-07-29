@@ -10,9 +10,34 @@ html, body{
 	text-align: center;
 	padding: 20px;
 }
-.md-card {
-	width: 20%;'
-	
+
+
+.listingColumn {
+	width: 30%;
+	background-color: #3F51B5;
+	padding: 10px;
+	float: left;
+	margin: 20px;
+}
+
+.map {
+	width: 60%;
+    background-color: #3F51B5;
+    float: right;
+    margin: 20px;
+    margin-bottom:50px
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color:#FFAB40;
+  text-align: center;
+  height: 5%;
+  padding: 3px;
+
 }
 
 
