@@ -1,5 +1,6 @@
 var app = angular.module('treasureHunters');
 
-app.controller('userCtrl', function(){
-
-});
+ app.controller('userCtrl', function() {
+     
+    
+  });
