@@ -1,3 +1,5 @@
+// Main directive file of mainDir.html 
+ 
 var app = angular.module('treasureHunters');
 
 app.directive('mainDir', function(){
@@ -7,12 +9,11 @@ app.directive('mainDir', function(){
 		scope: {
 			listings: '='
 		},
+		
 		controller: function($scope){
-
 		},
-		link: function(elem, attr, scope) {
-
-
+		
+		link: function(elem, attr, scope){
 		}
 	}
 });

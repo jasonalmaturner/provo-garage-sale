@@ -1,40 +1,59 @@
 <!DOCTYPE html>
+  <!-- app name for internal use.  -->
 <html ng-app="treasureHunters">
+  <head>
+	  <title>Provo Garage Sale </title>
 
-<!-- *************     app name for internal use. ************* -->
-<head>
-	<title>Provo Garage Sale </title>
+      <!-- links -->
+	  <link rel="stylesheet" type="text/css" href="styles/style.css">
+	  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
 
- <!--   ****************   Links    ******************** -->
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
-	<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-  <!-- ************ main Controller and main menu ************************* -->
+      <!-- main controller and main menu -->
   <body ng-controller="mainCtrl">
-
     <md-content>
-     <md-toolbar>
-      <div class="md-toolbar-tools">
-        <a href="#/home"><i class="material-icons">home</i></a>
-        <div style=" margin: 10px">
-        <md-button class="button"> Add Listing </md-button>
-        <md-button class="button"><img src="http://i.stack.imgur.com/ZW4QC.png"></md-button>
-        </div>
-        <md-input-container style="float: right">
-          <input type="text/number" style=" background:white">Search
-        </md-input-container>
-     </div>
-    </md-toolbar>
-    </md-content>
-    <md-toolbar class="name"> GARAGE SALE</md-toolbar>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button>
+            <a href="#/home">
+              <i class="material-icons">home
+              </i>
+            </a>
+          </md-button>
 
-    <!--     ********************** Connected Views ******************* -->
-    <ng-view></ng-view>
+          <div style="padding: 40px 20px 20px 20px">
+            <md-input-container>
+              <md-button>
+                <img src="http://i.stack.imgur.com/ZW4QC.png" href="">
+              </md-button>
+            </md-input-container>
+          </div>
+
+          <div style="padding: 40px 20px 20px 20px">
+            <md-input-container>
+              <md-button style="background-color: #3F51B5 font-color: white">Add Listing
+              </md-button>
+            </md-input-container>
+          </div>
+
+          <md-input-container>
+            <label style="margin-top:15px" >
+            </label>
+            <input type="text/number"style="background-color: white">
+          </md-input-container>
+        </div>
+      </md-toolbar>
+    </md-content>
+
+  <md-toolbar class="siteName"> GARAGE SALE</md-toolbar>
+
+        <!-- Connected Views -->
+  <ng-view>
+  </ng-view>
 
     <div class="footer">
-      <p>  all rights reserved 2015.</p>
+      <p>all rights reserved 2015</p>
     </div>
 
     <!-- ************************** Script Links ********************* -->

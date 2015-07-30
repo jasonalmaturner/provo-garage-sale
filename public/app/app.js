@@ -1,3 +1,5 @@
+// application file
+
 var app = angular.module('treasureHunters', ["ngRoute", "ngMaterial", "ngAnimate"]);
 
 app.config(function($routeProvider){
