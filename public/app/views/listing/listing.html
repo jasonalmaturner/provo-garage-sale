@@ -1,6 +1,6 @@
 <!-- listing html file -->
 
-<div ng-controller="listingCtrl as ctrl ">
+<div>
   <div style="text-align:center; font-size: 24px; font-weight: bold ">Add Your Listing
   </div>
 
@@ -9,7 +9,7 @@
     <div layout="row" layout-sm="column">
       <form name="userForm">
         <h1 class="md-title">Enter an address
-        </h1>  
+        </h1>
         <div layout="row">
           <md-input-container>
             <label>Street Name
@@ -22,9 +22,9 @@
             </label>
             <input type="text">
           </md-input-container>
-        
-          <md-select placeholder="State" ng-model="ctrl.userState">
-            <md-option ng-repeat="state in ctrl.states" value="{{state.abbrev}}">{{state.abbrev}}
+
+          <md-select placeholder="State" ng-model="userState">
+            <md-option ng-repeat="state in states" value="{{state.abbrev}}">{{state.abbrev}}
             </md-option>
           </md-select>
 
@@ -41,7 +41,7 @@
             <input type="date" ng-model="user.submissionDate">
           </md-input-container>
         </div>
-      
+
         <div layout="column" layout-sm="column">
 
             <!-- garage sale description -->
@@ -51,13 +51,13 @@
             <textarea ng-model="user.biography" columns="1" md-maxlength="500">
             </textarea>
           </md-input-container>
-            
+
             <!-- submit and cancel buttons -->
           <md-input-container>
             <button style="background-color: #00E676">Submit
             </button>
           </md-input-container>
-        
+
           <md-input-container>
             <button>Cancel
             </button>
