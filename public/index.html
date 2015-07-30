@@ -1,66 +1,65 @@
 <!DOCTYPE html>
-<html ng-app="treasureHunters">
+  <html ng-app="treasureHunters">
 
-    <!-- *************     app name for internal use. ************* -->
-  <head>
-  	<title>Provo Garage Sale </title>
+        <!-- *************     app name for internal use. ************* -->
+    <head>
+  	  <title>Provo Garage Sale </title>
 
-      <!--   ****************   Links    ******************** -->
-  	<link rel="stylesheet" type="text/css" href="styles/style.css">
-  	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
+        <!--   ****************   Links    ******************** -->
+  	  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  	  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
 
-    <!-- ************ main Controller and main menu ************************* -->
-  <body ng-controller="mainCtrl">
+        <!-- ************ main Controller and main menu ************************* -->
+    <body ng-controller="mainCtrl">
 
-    <md-content>
-     <md-toolbar>
-
-       <div class="md-toolbar-tools">
-       <md-button>
-          <a href="#/home">
-            <i class="material-icons">home
-            </i>
-          </a>
-          </md-button>
-          <div style="padding: 40px 20px 20px 20px"> 
-            <md-input-container>
+      <md-content>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
             <md-button>
-                <img src="http://i.stack.imgur.com/ZW4QC.png" href="">
+              <a href="#/home">
+                <i class="material-icons">home
+                </i>
+              </a>
+            </md-button>
+            
+            <div style="padding: 40px 20px 20px 20px"> 
+              <md-input-container>
+                <md-button>
+                  <img src="http://i.stack.imgur.com/ZW4QC.png" href="">
                 </md-button>
+              </md-input-container>
+            </div>
+
+            <div style="padding: 40px 20px 20px 20px"> 
+              <md-input-container>
+                <md-button style="background-color: #3F51B5 font-color: white">Add Listing
+                      <!-- font color white please when background is blue -->
+                </md-button>
+              </md-input-container>
+            </div>
+             
+            <md-input-container>
+              <label style="margin-top:15px" >
+              </label>
+              <input type="text/number"style="background-color: white">
             </md-input-container>
           </div>
-
-          <div style="padding: 40px 20px 20px 20px"> 
-            <md-input-container>
-              <md-button style="background-color: #3F51B5 font-color: white">Add Listing
-              <!-- font color white please when background is blue -->
-              </md-button>
-            </md-input-container>
-          </div>
-           
-          
-            <md-input-container>
-            <label style="margin-top:15px" ></label>
-          <input type="text/number"style="background-color: white">
-        </md-input-container>
-        
-
-        </div>
-      </md-toolbar>
-    </md-content>
+        </md-toolbar>
+      </md-content>
 
     <md-toolbar class="siteName"> GARAGE SALE</md-toolbar>
 
-    <!--     ********************** Connected Views ******************* -->
-    <ng-view></ng-view>
+          <!--     ********************** Connected Views ******************* -->
+    <ng-view>
+    </ng-view>
 
     <div class="footer">
-      <p>  all rights reserved 2015.</p>
+      <p>all rights reserved 2015</p>
     </div>
 
-    <!-- ************************** Script Links ********************* -->
+          <!-- ************************** Script Links ********************* -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-aria.min.js"></script>
