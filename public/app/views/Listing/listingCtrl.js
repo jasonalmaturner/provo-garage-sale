@@ -1,3 +1,5 @@
+// listing controller file 
+
 var app = angular.module('treasureHunters');
 
  	app.controller('listingCtrl', function() {
@@ -7,3 +9,4 @@ var app = angular.module('treasureHunters');
     'WY').split(' ').map(function (state) { return { abbrev: state }; });
     
  	});
+ 	
