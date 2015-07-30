@@ -6,12 +6,10 @@ var geocoder = require('node-geocoder')(geocoderProvider);
 module.exports = {
 
 	create: function(req, res){
-		console.log(11111, req.body)
 		var newListing = new Listing(req.body);
 		geocoder.geocode(newListing.address.street + ' ' + newListing.address.city + ' ' + newListing.address.state + ' ' + newListing.address.zip)
 		.then(function(response){
-			newListing.geo.lon = response[0].longitude;
-			newListing.geo.lat = response[0].latitude;
+			newListing.loc = [response[0].longitude, response[0].latitude];
 			newListing.save(function (err, result) {
 			if (err) {
 				return res.status(500).end();
@@ -61,6 +59,23 @@ module.exports = {
 			} else {
 				return res.json(result);
 			}
+		})
+	},
+
+	getByArea: function(req, res){
+		// Start building in query by date
+		var limit = req.query.limit || 20;
+		var maxDistance = req.query.distance || 8;
+		maxDistance /= 6371;
+		var coords = [req.params.lon, req.params.lat];
+		Listing.find({
+			loc: {
+				$near: coords,
+				$maxDistance: maxDistance
+			}
+		}).limit(limit).exec(function(err, listings){
+			if(err) return res.status(500).json(err);
+			return res.json(listings);
 		})
 	}
 
