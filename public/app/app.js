@@ -1,4 +1,4 @@
-var app = angular.module('treasureHunters', ["ngRoute", "ngMaterial"]);
+var app = angular.module('treasureHunters', ["ngRoute", "ngMaterial", "ngAnimate"]);
 
 app.config(function($routeProvider){
 
