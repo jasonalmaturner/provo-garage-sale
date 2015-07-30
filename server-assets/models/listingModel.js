@@ -1,16 +1,13 @@
 var mongoose = require('mongoose');
 
 var Listing = new mongoose.Schema({
+	title: { type: String, required: true },
 	address: {
 		street: { type: String, required: true },
 		city: { type: String, required: true },
 		state: { type: String, required: true, maxlength: 2 },
 		zip: { type: String, required: true, maxlength: 10 }
 	},
-	// geo: {
-	// 	lon: { type: String, default: '0' },
-	// 	lat: { type: String, default: '0' }
-	// },
 	loc: {type: [Number], index: '2d'},
 	startDate: { type: Date, required: true },
 	endDate: { type: Date, required: true },
