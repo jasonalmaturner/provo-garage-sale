@@ -1,22 +1,16 @@
-<!-- Listing html file FROM user of user garage sale -->
-
-<h1>Listing:</h1>
-
-<!-- <div>
-  {{listing.address.street}}
-  {{listing.address.city}}
-  <br>
-  {{listing.address.state}}
-  {{listing.address.zip}}
-</div>
-
-<div>
-  {{listing.date}}
-  {{listing.picture}}
-</div>
-
-<div>
-  {{listing.description}}
-</div> -->
-
-<div ng-click="addFavorite()">Favorite me</div>
+<md-card class="md-card" ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}">
+		<md-card-content>
+			<md-toolbar>Title: {{listing._id}}
+			</md-toolbar>
+			<div ng-show="active">
+ 			<h3 >Description:</h3>
+ 			<p>{{listing.description}}</p>
+				<div class="md-actions" layout="row" layout-align="end center">
+ 				<i class="material-icons">
+ 					<div ng-click="addFavorite()">favorite_border
+ 					</div>
+ 				</i>
+			</div>
+		</div>
+ 	</md-card-content>
+</md-card>

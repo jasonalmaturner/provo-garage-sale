@@ -1,24 +1,7 @@
 <!-- Main page html file -->
-
-<div class="listingColumn" ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}">
-
-    <!-- garage sale listing information box -->
-  <md-card class="md-card">
- 		<md-card-content>
- 			<md-toolbar>Title:
- 			</md-toolbar>
- 			<div ng-show="active">
-   			<h3 >Description:</h3>
-   			<p>Some Text</p>
- 				<div class="md-actions" layout="row" layout-align="end center">
-   				<i class="material-icons">
-   					<div ng-click="addFavorite()">favorite_border
-   					</div>
-   				</i>
-  			</div>
-  		</div>  
-   	</md-card-content>
-	</md-card>
+<!-- garage sale listing information box -->
+<div class="listingColumn">
+  <listing-dir ng-repeat="listing in theListings"></listing-dir>
 </div>
 
   <!-- garage sale locations map -->
