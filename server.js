@@ -50,6 +50,7 @@ app.put('/api/Listing/:id', listingCtrl.update);
 app.get('/api/Listing/user/:id', listingCtrl.readByUser);
 app.get('/api/Listing/:id', listingCtrl.readByListing);
 app.get('/api/Listings', listingCtrl.getAllListings);
+app.get('/api/Listings/:lon/:lat', listingCtrl.getByArea);
 
 passport.serializeUser(function(user, done){
   done(null, user);
