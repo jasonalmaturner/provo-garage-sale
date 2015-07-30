@@ -1,7 +1,10 @@
+<!-- listing html file -->
+
 <div ng-controller="listingCtrl as ctrl ">
   <div style="text-align:center; font-size: 24px; font-weight: bold ">Add Your Listing
   </div>
 
+    <!-- garage sale listing form -->
   <md-content layout-padding="">
     <div layout="row" layout-sm="column">
       <form name="userForm">
@@ -24,7 +27,8 @@
             <md-option ng-repeat="state in ctrl.states" value="{{state.abbrev}}">{{state.abbrev}}
             </md-option>
           </md-select>
-        
+
+            <!-- garage sale dates -->
           <md-input-container flex="both">
             <label>Start Date
             </label>
@@ -39,13 +43,16 @@
         </div>
       
         <div layout="column" layout-sm="column">
+
+            <!-- garage sale description -->
           <md-input-container>
             <label>Description
             </label>
             <textarea ng-model="user.biography" columns="1" md-maxlength="500">
             </textarea>
           </md-input-container>
-        
+            
+            <!-- submit and cancel buttons -->
           <md-input-container>
             <button style="background-color: #00E676">Submit
             </button>
