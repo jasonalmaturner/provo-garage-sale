@@ -46,15 +46,22 @@ var cities = [
 
 //Angular App Module and Controller
 angular.module('mapsApp', [])
-.controller('MapCtrl', function ($scope) {
+.controller('MapCtrl', function ($scope, $log) {
 
     var mapOptions = {
         zoom: 12,
         center: new google.maps.LatLng(40.226294, -111.660776),
         styles:[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#b4d4e1"},{"visibility":"on"}]}]
     }
-
+    
     $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    // $scope.input = '';
+
+    // $scope.autocomplete = new google.maps.places.Autocomplete( $scope.input ,{
+    //     componentRestrictions: {'country' : 'us'}
+    // });
+    //     $scope.autocomplete.bindTo('bounds', $scope.map);
 
     $scope.markers = [];
     
@@ -96,7 +103,7 @@ angular.module('mapsApp', [])
         // infoWindow.setContent('<h2>' + selectedMarker.title + '</h2>' + selectedMarker.content);
         // infoWindow.open($scope.map, selectedMarker);
         $scope.markerId = $scope.markers.indexOf(selectedMarker);
-        $scope.map.setCenter(selectedMarker.getPosition())
+        $scope.map.setCenter(selectedMarker.getPosition());
         selectedMarker.setIcon('http://maps.gpsvisualizer.com/google_maps/icons/google/green.png');
         if (selectedMarker.getAnimation() != null) {
             selectedMarker.setAnimation(null);
