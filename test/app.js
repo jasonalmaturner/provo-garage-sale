@@ -64,11 +64,11 @@ angular.module('mapsApp', [])
     //     $scope.autocomplete.bindTo('bounds', $scope.map);
 
     $scope.markers = [];
-    
+
     var infoWindow = new google.maps.InfoWindow();
-    
+
     var createMarker = function (info){
-        
+
         var marker = new google.maps.Marker({
             map: $scope.map,
             position: new google.maps.LatLng(info.lat, info.long),
@@ -77,17 +77,17 @@ angular.module('mapsApp', [])
             icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
         });
         marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
-        
-        
+
+
         google.maps.event.addListener(marker, 'click', function(){
             $scope.openInfoWindow(null, marker);
             $scope.$digest();
         });
-        
+
         $scope.markers.push(marker);
-        
-    }  
-    
+
+    }
+
     for (i = 0; i < cities.length; i++){
         createMarker(cities[i]);
     }
@@ -99,7 +99,7 @@ angular.module('mapsApp', [])
         }
 
         e && e.preventDefault();
-        
+
         // infoWindow.setContent('<h2>' + selectedMarker.title + '</h2>' + selectedMarker.content);
         // infoWindow.open($scope.map, selectedMarker);
         $scope.markerId = $scope.markers.indexOf(selectedMarker);
