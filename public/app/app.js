@@ -4,7 +4,7 @@ app.config(function($routeProvider){
 
 $routeProvider
 	.when('/home', {
-		templateUrl:'app/views/listing/listing.html',
+		templateUrl:'app/views/home/homeTmpl.html',
 		controller: 'listingCtrl',
 		// resolve: {
 		// 	listings: function(mainService){
