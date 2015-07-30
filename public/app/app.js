@@ -4,8 +4,8 @@ app.config(function($routeProvider){
 
 $routeProvider
 	.when('/home', {
-		templateUrl:'app/views/home/homeTmpl.html',
-		controller: 'homeCtrl',
+		templateUrl:'app/views/listing/listing.html',
+		controller: 'listingCtrl',
 		// resolve: {
 		// 	listings: function(mainService){
 		// 		var dfd = $q.defer();
