@@ -2,7 +2,9 @@ var app = angular.module('treasureHunters');
 
 app.directive('listingDir', function(){
 	return {
-		scope: {
+		restrict: "EA",
+		templateUrl: "app/directives/listingDir/listingDir.html",
+		link: function (elem, attr, scope){
 			
 		}
 	}
