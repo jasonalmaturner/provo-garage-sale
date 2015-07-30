@@ -7,12 +7,11 @@ app.directive('mainDir', function(){
 		scope: {
 			listings: '='
 		},
+		
 		controller: function($scope){
-
 		},
-		link: function(elem, attr, scope) {
-
-
+		
+		link: function(elem, attr, scope){
 		}
 	}
 });

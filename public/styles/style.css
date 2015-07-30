@@ -1,6 +1,5 @@
-html, body{
+html, body {
 	background-color: #EEEEEE !important;
-	
 }
 
 .siteName {
@@ -10,7 +9,6 @@ html, body{
 	text-align: center;
 	padding: 20px;
 }
-
 
 .listingColumn {
 	width: 30%;
@@ -22,10 +20,10 @@ html, body{
 
 .map {
 	width: 60%;
-    background-color: #3F51B5;
-    float: right;
-    margin: 20px;
-    margin-bottom:50px
+  background-color: #3F51B5;
+  float: right;
+  margin: 20px;
+  margin-bottom: 50px
 }
 
 .footer {
@@ -33,12 +31,9 @@ html, body{
   right: 0;
   bottom: 0;
   left: 0;
-  background-color:#FFAB40;
+  background-color: #FFAB40;
   text-align: center;
   height: 5%;
   padding: 3px;
-
 }
-
-
 
