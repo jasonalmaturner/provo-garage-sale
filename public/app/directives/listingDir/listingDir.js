@@ -1,4 +1,4 @@
-// Listing directive file of listingDir.html
+// Listing directive
 
 var app = angular.module('treasureHunters');
 
