@@ -12,8 +12,17 @@
     </head>
 
       <!-- main controller and main menu -->
-    <body ng-controller="mainCtrl">
-      <md-content>
+
+  <body ng-controller="mainCtrl">
+    <md-content>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button>
+            <a href="/#/home">
+              <i class="material-icons">home
+              </i>
+            </a>
+          </md-button>
 
           <!-- tool bar -->
         <md-toolbar>
@@ -62,12 +71,6 @@
       <!-- Connected Views -->
     <ng-view>
     </ng-view>
-
-      <!-- footer -->
-    <div class="footer">
-      <p>all rights reserved 2015</p>
-    </div>
-
 
     <!-- ************************** Script Links ********************* -->
     <script src="bower_components/angular/angular.js"></script>
