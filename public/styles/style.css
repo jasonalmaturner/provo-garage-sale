@@ -11,11 +11,25 @@ html, body {
 }
 
 	/*garage sale listing information*/
+
+main-dir {
+	display: flex;
+}
+
+.map-container {
+	height: 100%;
+	width: 100%;
+}
+
+.angular-google-map-container {
+	height: 400px;
+}
+
 .listingColumn {
 	width: 30%;
 	background-color: #3F51B5;
 	padding: 10px;
-	float: left;
+	/*float: left;*/
 	margin: 20px;
 }
 
