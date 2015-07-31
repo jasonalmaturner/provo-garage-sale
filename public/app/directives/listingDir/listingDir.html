@@ -1,16 +1,18 @@
 <md-card class="md-card">
 		<md-card-content >
-			<md-toolbar ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}">Title: {{listing._id}}
-			</md-toolbar>
-			<div ng-show="active">
- 			<h3 >Description:</h3>
- 			<p>{{listing.description}}</p>
-				<div class="md-actions" layout="row" layout-align="end center">
+			<md-toolbar style="font-size: 15px" ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >Title: {{listing.title}} <span>City: {{listing.address.city}}</span>
+			<span>Date: {{listing.startDate | date:"shortDate"}}</span>
+			<div class="md-actions" layout="row" layout-align="end center">
  				<i class="material-icons" ng-click="toggleFavorite(listing._id)">
  					<div>favorite_border
  					</div>
  				</i>
 			</div>
+			</md-toolbar>
+			<div ng-show="active" style="font-size: 14px">
+ 			<p style="font-weight: bold">Description:</p>
+ 			<p>{{listing.description}}</p>
+				
 		</div>
  	</md-card-content>
 </md-card>
