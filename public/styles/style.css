@@ -22,7 +22,7 @@ main-dir {
 }
 
 .angular-google-map-container {
-	height: 400px;
+	height: 500px;
 }
 
 .listingColumn {
@@ -31,6 +31,8 @@ main-dir {
 	padding: 10px;
 	/*float: left;*/
 	margin: 20px;
+	height: 500px;
+	overflow: scroll;
 }
 
 .map {
@@ -50,9 +52,4 @@ main-dir {
   text-align: center;
   height: 5%;
   padding: 3px;
-}
-
-listing-dir {
-	width: 100%;
-	margin: 0 auto;
 }
