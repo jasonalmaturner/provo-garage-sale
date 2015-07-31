@@ -1,4 +1,4 @@
-// Main directive file of mainDir.html
+// Main directive
 
 var app = angular.module('treasureHunters');
 

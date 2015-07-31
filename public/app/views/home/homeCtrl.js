@@ -1,4 +1,5 @@
 // home controller file
+
 var app = angular.module('treasureHunters');
 
 app.controller('homeCtrl', function($scope, listings) {
