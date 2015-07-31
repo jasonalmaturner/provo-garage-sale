@@ -1,8 +1,8 @@
 // application file
 
-var app = angular.module('treasureHunters', ["ngRoute", "ngMaterial", "ngAnimate"]);
+var app = angular.module('treasureHunters', ["ngRoute", "ngMaterial", "ngAnimate", "uiGmapgoogle-maps"]);
 
-app.config(function($routeProvider){
+app.config(function($routeProvider, uiGmapGoogleMapApiProvider){
 
 $routeProvider
 	.when('/home', {
@@ -22,5 +22,11 @@ $routeProvider
 			}
 		}
 	})
+
+uiGmapGoogleMapApiProvider.configure({
+	key: 'AIzaSyBifIcf6wbqjTZfAcuKKBjp1wk0XRMA_wA',
+	v: '3.17',
+	libraries: 'weather, geometry, visualization'
+});
 
 });

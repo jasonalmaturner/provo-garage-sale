@@ -6,8 +6,8 @@
  			<h3 >Description:</h3>
  			<p>{{listing.description}}</p>
 				<div class="md-actions" layout="row" layout-align="end center">
- 				<i class="material-icons">
- 					<div ng-click="addFavorite()">favorite_border
+ 				<i class="material-icons" ng-click="toggleFavorite(listing._id)">
+ 					<div>favorite_border
  					</div>
  				</i>
 			</div>
