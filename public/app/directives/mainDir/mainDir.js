@@ -9,13 +9,21 @@ app.directive('mainDir', function(){
 		// scope: {
 		// 	listings: '='
 		// },
-		controller: function($scope, uiGmapGoogleMapApi){
+		controller: function($scope, uiGmapGoogleMapApi, uiGmapIsReady){
 			// navigator.geolocation.getCurrentPosition(function())
+
 			uiGmapGoogleMapApi.then(function(map){
-				console.log(map)
+				console.log(map);
+			}, function(err){
+				console.log(err);
+			})
+
+			uiGmapIsReady.promise().then(function(map){
+				console.log(map);
 			}, function(err){
 				console.log(err)
-			})
+			});
+
 			// $scope.map = {
 			// 	center: {
 			// 		latitude: 45,
