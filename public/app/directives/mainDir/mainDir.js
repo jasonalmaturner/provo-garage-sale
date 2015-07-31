@@ -10,19 +10,20 @@ app.directive('mainDir', function(){
 		// 	listings: '='
 		// },
 		controller: function($scope, uiGmapGoogleMapApi, uiGmapIsReady){
-			// navigator.geolocation.getCurrentPosition(function())
-
-			uiGmapGoogleMapApi.then(function(map){
-				console.log(map);
-			}, function(err){
-				console.log(err);
+			navigator.geolocation.getCurrentPosition(function(position){
+				$scope.map.center.latitude = position.coords.latitude;
+				$scope.map.center.longitude = position.coords.longitude;
 			})
 
-			uiGmapIsReady.promise().then(function(map){
-				console.log(map);
+			uiGmapGoogleMapApi.then(function(map){
 			}, function(err){
-				console.log(err)
-			});
+			})
+
+			// uiGmapIsReady.promise().then(function(map){
+			// 	console.log(map);
+			// }, function(err){
+			// 	console.log(err)
+			// });
 
 			// $scope.map = {
 			// 	center: {
