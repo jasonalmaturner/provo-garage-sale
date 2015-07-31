@@ -1,74 +1,86 @@
 <!DOCTYPE html>
-  <!-- app name for internal use.  -->
-<html ng-app="treasureHunters">
-  <head>
-	  <title>Provo Garage Sale </title>
 
-      <!-- links -->
-	  <link rel="stylesheet" type="text/css" href="styles/style.css">
-	  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
+    <!-- app name for internal use.  -->
+  <html ng-app="treasureHunters">
+    <head>
+  	  <title>Provo Garage Sale </title>
+
+        <!-- links -->
+  	  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  	  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
 
       <!-- main controller and main menu -->
-  <body ng-controller="mainCtrl">
-    <md-content>
-      <md-toolbar>
-        <div class="md-toolbar-tools">
-          <md-button>
-            <a href="#/home">
-              <i class="material-icons">home
-              </i>
-            </a>
-          </md-button>
+    <body ng-controller="mainCtrl">
+      <md-content>
 
-          <div style="padding: 40px 20px 20px 20px">
+          <!-- tool bar -->
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+
+              <!-- home button -->
+            <md-button>
+              <a href="#/home">
+                <i class="material-icons">home
+                </i>
+              </a>
+            </md-button>
+            
+              <!-- facebook button -->
+            <div style="padding: 40px 20px 20px 20px"> 
+              <md-input-container>
+                <md-button>
+                  <img src="http://i.stack.imgur.com/ZW4QC.png" href="">
+                </md-button>
+              </md-input-container>
+            </div>
+
+              <!-- add listing button -->
+            <div style="padding: 40px 20px 20px 20px"> 
+              <md-input-container>
+                <md-button style="background-color: #3F51B5 font-color: white">Add Listing
+                </md-button>
+              </md-input-container>
+            </div>
+             
+              <!-- search  -->
             <md-input-container>
-              <md-button>
-                <img src="http://i.stack.imgur.com/ZW4QC.png" href="">
-              </md-button>
+              <label style="margin-top:15px" >
+              </label>
+              <input type="text/number"style="background-color: white">
             </md-input-container>
           </div>
+        </md-toolbar>
+      </md-content>
 
-          <div style="padding: 40px 20px 20px 20px">
-            <md-input-container>
-              <md-button style="background-color: #3F51B5 font-color: white">Add Listing
-              </md-button>
-            </md-input-container>
-          </div>
+      <!-- site name of Garage Sale -->
+    <md-toolbar class="siteName"> GARAGE SALE</md-toolbar>
 
-          <md-input-container>
-            <label style="margin-top:15px" >
-            </label>
-            <input type="text/number"style="background-color: white">
-          </md-input-container>
-        </div>
-      </md-toolbar>
-    </md-content>
+      <!-- Connected Views -->
+    <ng-view>
+    </ng-view>
 
-  <md-toolbar class="siteName"> GARAGE SALE</md-toolbar>
-
-        <!-- Connected Views -->
-  <ng-view>
-  </ng-view>
-
+      <!-- footer -->
     <div class="footer">
       <p>all rights reserved 2015</p>
     </div>
 
-    <!-- ************************** Script Links ********************* -->
-    <script src="bower_components/angular/angular.js"></script>
-		<script src="bower_components/angular-route/angular-route.js"></script>
-		<script src="bower_components/angular-aria/angular-aria.js"></script>
-		<script src="bower_components/angular-animate/angular-animate.js"></script>
-		<script src="bower_components/angular-material/angular-material.js"></script>
+      <!-- https sources -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.10.0/angular-material.min.js"></script>
+        
+      <!-- local file sources -->
     <script src="app/app.js"></script>
     <script src="app/mainCtrl.js"></script>
     <script src="app/directives/listingDir/listingDir.js"></script>
     <script src="app/directives/mainDir/mainDir.js"></script>
     <script src="app/services/authService.js"></script>
     <script src="app/services/mainService.js"></script>
-    <!-- // <script src="app/services/tempservice.js"></script> -->
+    <script src="app/services/tempService.js"></script>
     <script src="app/views/home/homeCtrl.js"></script>
     <script src="app/views/listing/listingCtrl.js"></script>
     <script src="app/views/user/userCtrl.js"></script>
