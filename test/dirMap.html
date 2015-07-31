@@ -1,0 +1,6 @@
+<div ng-app="mapsApp" ng-controller="MapCtrl">
+	    <div id="map"></div>
+	<div ng-repeat="marker in markers" ng-class="{active: $index == markerId}">
+	    <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+	</div>
+</div>

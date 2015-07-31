@@ -22,11 +22,23 @@ $routeProvider
 			}
 		}
 	})
+	.when('/listing', {
+		templateUrl: 'app/views/listing/listing.html',
+		controller: 'listingCtrl'
+	})
+	.when('/user', {
+		templateUrl: 'app/views/user/userTmpl.html',
+		controller: 'userCtrl'
+	})
+	.otherwise({
+		redirectTo: '/home'
+	})
 
 uiGmapGoogleMapApiProvider.configure({
 	key: 'AIzaSyBifIcf6wbqjTZfAcuKKBjp1wk0XRMA_wA',
 	v: '3.17',
 	libraries: 'weather, geometry, visualization'
-});
+})
+	
 
 });

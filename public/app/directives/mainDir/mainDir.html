@@ -7,7 +7,9 @@
 
   <!-- garage sale locations map -->
   <div class="map-container">
-    <ui-gmap-google-map center="map.center" zoom="map.zoom"></ui-gmap-google-map>
+    <ui-gmap-google-map center="map.center" zoom="map.zoom">
+      <ui-gmap-markers models="theListings" coords="'loc'" idkey="'_id'"></ui-gmap-markers>
+    </ui-gmap-google-map>
   </div>
 
   <!--
