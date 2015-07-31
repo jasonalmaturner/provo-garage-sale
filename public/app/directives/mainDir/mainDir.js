@@ -9,7 +9,20 @@ app.directive('mainDir', function(){
 		// scope: {
 		// 	listings: '='
 		// },
-		controller: function($scope){
+		controller: function($scope, uiGmapGoogleMapApi){
+			// navigator.geolocation.getCurrentPosition(function())
+			uiGmapGoogleMapApi.then(function(map){
+				console.log(map)
+			}, function(err){
+				console.log(err)
+			})
+			// $scope.map = {
+			// 	center: {
+			// 		latitude: 45,
+			// 		longitude: -73
+			// 	},
+			// 	zoom: 8
+			// };
 		},
 		link: function(elem, attr, scope){
 		}

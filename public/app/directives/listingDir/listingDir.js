@@ -7,6 +7,12 @@ app.directive('listingDir', function(){
 		restrict: "EA",
 		templateUrl: "app/directives/listingDir/listingDir.html",
 		link: function (elem, attr, scope){
+
+		},
+		controller: function($scope, mainService){
+			$scope.toggleFavorite = function(id){
+				console.log(id)
+			}
 		}
 	}
 });
