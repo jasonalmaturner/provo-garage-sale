@@ -1,12 +1,11 @@
 <md-card class="md-card">
 		<md-card-content >
 			<md-toolbar style="font-size: 15px" ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >Title: {{listing.title}} <span>City: {{listing.address.city}}</span>
-			<span>Date: {{listing.startDate | date:"shortDate"}}</span>
-	      		<div style="padding-left: 15px;padding-bottom:2px;">
+				<span>Date: {{listing.startDate | date:"shortDate"}}
 	            	<i ng-class="star.checked? 'fa fa-star-o fa-lg' : 'fa fa-star fa-lg'"
-	                        ng-click="star.checked = !star.checked"; "toggleFavorite(id)" style="color:#E9DB00;" >
+	                        ng-click="star.checked = !star.checked"; "toggleFavorite(id)" style="color:#E9DB00; float: right" >
 	                </i>
-      			</div>
+	            </span>
 			</md-toolbar>
 			<div ng-show="active" style="font-size: 14px">
  			<p style="font-weight: bold">Description:</p>
