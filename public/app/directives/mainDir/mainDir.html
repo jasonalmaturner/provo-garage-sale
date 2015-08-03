@@ -2,15 +2,15 @@
 
 	<!-- listing directive -->
 <div class="listingColumn">
-  <listing-dir ng-repeat="listing in theListings"></listing-dir>
+  <listing-dir ng-repeat="listing in theListings track by listing._id"></listing-dir>
 </div>
 
   <!-- garage sale locations map -->
-  <div class="map-container">
-    <ui-gmap-google-map center="map.center" zoom="map.zoom">
-      <ui-gmap-markers models="theListings" coords="'loc'" idkey="'_id'"></ui-gmap-markers>
-    </ui-gmap-google-map>
-  </div>
+<div class="map-container">
+  <ui-gmap-google-map center="map.center" pan="true" zoom="map.zoom">
+    <ui-gmap-markers models="theListings" coords="'loc'" idkey="'_id'" click="testClick" icon="'icon'"></ui-gmap-markers>
+  </ui-gmap-google-map>
+</div>
 
   <!--
 <div class="map">

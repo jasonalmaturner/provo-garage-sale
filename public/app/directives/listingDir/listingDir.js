@@ -11,7 +11,9 @@ app.directive('listingDir', function(){
 		},
 		controller: function($scope, mainService){
 			$scope.toggleFavorite = function(id){
-				console.log(id)
+			}
+			$scope.star = function(){
+				checked = false;
 			}
 		}
 	}
