@@ -1,6 +1,6 @@
-<md-card class="md-card">
+<md-card class="md-card" ng-class="{'clicked-': listing.clicked}">
 		<md-card-content >
-			<md-toolbar style="font-size: 15px" ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >Title: {{listing.title}} <span>City: {{listing.address.city}}</span>
+			<md-toolbar style="font-size: 15px" ng-click="active = !active;" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >Title: {{listing.title}} <span>City: {{listing.address.city}}</span>
 			<span>Date: {{listing.startDate | date:"shortDate"}}</span>
 	      		<div style="padding-left: 15px;padding-bottom:2px;">
 	            	<i ng-class="star.checked? 'fa fa-star-o fa-lg' : 'fa fa-star fa-lg'"
@@ -11,7 +11,7 @@
 			<div ng-show="active" style="font-size: 14px">
  			<p style="font-weight: bold">Description:</p>
  			<p>{{listing.description}}</p>
-				
+
 		</div>
  	</md-card-content>
 </md-card>
