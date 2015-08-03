@@ -1,4 +1,4 @@
-<md-card class="md-card" ng-class="{'clicked-': listing.clicked}">
+<md-card class="md-card" ng-class="{'clicked-listing': listing.clicked}">
 		<md-card-content >
 			<md-toolbar style="font-size: 15px" ng-click="active = !active;" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >Title: {{listing.title}} <span>City: {{listing.address.city}}</span>
 			<span>Date: {{listing.startDate | date:"shortDate"}}</span>
