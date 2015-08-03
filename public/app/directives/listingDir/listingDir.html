@@ -2,12 +2,11 @@
 		<md-card-content >
 			<md-toolbar style="font-size: 15px" ng-click="active = !active;" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >Title: {{listing.title}} <span>City: {{listing.address.city}}</span>
 			<span>Date: {{listing.startDate | date:"shortDate"}}</span>
-			<div class="md-actions" layout="row" layout-align="end center">
- 				<i class="material-icons" ng-click="toggleFavorite(listing._id)">
- 					<div>favorite_border
- 					</div>
- 				</i>
-			</div>
+	      		<div style="padding-left: 15px;padding-bottom:2px;">
+	            	<i ng-class="star.checked? 'fa fa-star-o fa-lg' : 'fa fa-star fa-lg'"
+	                        ng-click="star.checked = !star.checked"; "toggleFavorite(id)" style="color:#E9DB00;" >
+	                </i>
+      			</div>
 			</md-toolbar>
 			<div ng-show="active" style="font-size: 14px">
  			<p style="font-weight: bold">Description:</p>

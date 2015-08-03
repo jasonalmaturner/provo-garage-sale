@@ -6,6 +6,8 @@
 #map {
     height:420px;
     width:600px;
+    margin:30px 0 0 12px;
+	padding:0 11px 0 13px;
 }
 .infoWindowContent {
     font-size:  14px !important;
@@ -15,4 +17,24 @@
 h2 {
     margin-bottom:0;
     margin-top: 0;
+}
+.dp-places-map-wrapper .dp-places-map-input{
+	border:1px solid transparent;
+	border-radius:2px 0 0 2px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	height:32px;outline:none;
+	box-shadow:0 2px 6px rgba(0,0,0,0.3);
+	background-color:#fff;
+	font-size:15px;
+	font-weight:300;
+	margin:30px 0 0 12px;
+	padding:0 11px 0 13px;
+	text-overflow:ellipsis;
+	width: 600px
+	}
+.dp-places-map-wrapper .dp-places-map-input:focus{
+	border-color:#FFAB40;
+	border-radius: 4px;
+	border-width:2px
 }
