@@ -6,15 +6,18 @@
 </head>
 <body>
 	<div ng-app="mapsApp" ng-controller="MapCtrl">
-	    <div id="map"></div>
+	<div class="dp-places-map-wrapper">
+	    <input type="text" class="dp-places-map-input" 
+        pa-on-place-ready="callbackFunction"/>
+	</div>
+	    <div id="map" address="initAddress"></div>
 	    <div ng-repeat="marker in markers"
 	                    ng-class="{active: $index == markerId}"     >
 	         <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
 	    </div>
 	</div>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-	<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
+	<script src='http://maps.googleapis.com/maps/api/js?key=&sensor=false&libraries=places&extension=.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 	<script src='app.js'></script>
 </body>
 </html>
