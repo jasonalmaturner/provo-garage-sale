@@ -15,16 +15,38 @@ app.service('mainService', function($http, $q){
       dfd.reject(err);
     });
     return dfd.promise;
-  },
-  
+  };
+
   this.createListing = function(listingInfo) {
     return $http({
       method: 'POST',
-      url: 'http://localhost:8040/api/Listing/create',
+      url: '/api/Listing/create',
       data: listingInfo
     }).then(function(response){
       return response.data;
     })
-  }
+  };
+
+  this.addFavorite = function(listingId) {
+    return $http({
+      method: 'PUT',
+      url: '/api/user/favorite/add?listing=' + listingId
+    }).then(function(response){
+      return response.data;
+    })
+  };
+
+  this.getFavorites = function(){
+    var dfd = $q.defer();
+    $http({
+      method: 'GET',
+      url: '/api/user/favorites'
+    }).then(function(res){
+      console.log(res);
+      dfd.resolve(res.data);
+    }, function(err){
+      dfd.reject(err);
+    });
+  };
 
 });

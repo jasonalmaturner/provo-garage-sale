@@ -19,6 +19,9 @@ $routeProvider
 					});
 				});
 				return dfd.promise;
+			},
+			favorites: function(mainService){
+				return mainService.getFavorites();
 			}
 		}
 	})
@@ -39,6 +42,6 @@ uiGmapGoogleMapApiProvider.configure({
 	v: '3.17',
 	libraries: 'weather, geometry, visualization'
 })
-	
+
 
 });
