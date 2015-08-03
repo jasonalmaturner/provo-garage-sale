@@ -25,6 +25,10 @@ main-dir {
 	height: 500px;
 }
 
+.listingColumnBorder {
+	width: 40%;
+}
+
 .listingColumn {
 	width: 30%;
 	background-color: #3F51B5;
@@ -36,7 +40,7 @@ main-dir {
 }
 
 .map {
-	width: 60%;
+  width: 60%;
   background-color: #3F51B5;
   float: right;
   margin: 20px;

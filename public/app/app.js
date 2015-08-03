@@ -23,8 +23,12 @@ $routeProvider
 		}
 	})
 	.when('/listing', {
-		templateUrl: 'app/views/listing/listing.html',
+		templateUrl: 'app/views/listing/listingTmpl.html',
 		controller: 'listingCtrl'
+	})
+	.when('/update', {
+		templateUrl: 'app/views/update/updateTmpl.html',
+		controller: 'updateCtrl'
 	})
 	.when('/user', {
 		templateUrl: 'app/views/user/userTmpl.html',

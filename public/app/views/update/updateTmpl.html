@@ -1,0 +1,112 @@
+	<!-- update garage sale listing template // similar to listingDir.html --> 
+
+<div layout="row">
+
+  
+    <div style="width: 30%" layout="column" layout-sm="column">
+<md-card class="md-card">
+<div style="text-align:center; font-size: 24px; font-weight: bold ">My Listings
+  </div>
+		<md-card-content >
+			<md-toolbar style="font-size: 15px" ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >Title: {{listing.title}} <span>City: {{listing.address.city}}</span>
+			<span>Date: {{listing.startDate | date:"shortDate"}}</span>
+			<div class="md-actions" layout="row" layout-align="end center">
+ 				<i class="material-icons" ng-click="toggleFavorite(listing._id)">
+ 					<div>favorite_border
+ 					</div>
+ 				</i>
+			</div>
+			</md-toolbar>
+			<div ng-show="active" style="font-size: 14px">
+ 			<p style="font-weight: bold">Description:</p>
+ 			<p>{{listing.description}}</p>
+				
+		</div>
+ 	</md-card-content>
+</md-card> 
+ 	</div>
+
+<!-- update listing html file // similar to listing.html -->
+<div>
+  
+    <!-- garage sale listing form -->
+  <md-content layout-padding="">
+  <div style="text-align:center; font-size: 24px; font-weight: bold ">Update My Listing
+  </div>
+    <div layout="column" layout-sm="column" style="width: 40em">
+      <form name="userForm">
+        <div layout="column" layout-sm="column">
+         <md-input-container>
+            <label>Title
+            </label>
+            <textarea ng-model="newListing.title" columns="1" md-maxlength="50">
+            </textarea>
+          </md-input-container>
+        </div>
+
+        	<!-- garage sale address -->
+        <div layout="column">
+          <md-input-container>
+            <label>Street Name
+            </label>
+            <input type="text" ng-model="newListing.address.street">
+          </md-input-container>
+          </div>
+
+          <div layout="row">
+          <md-input-container>
+            <label>City
+            </label>
+            <input type="text" ng-model="newListing.address.city">
+          </md-input-container>
+
+          <md-select placeholder="State" ng-model="newListing.address.state">
+            <md-option ng-repeat="state in states" value="{{state.abbrev}}">{{state.abbrev}}
+            </md-option>
+          </md-select>
+
+          <md-input-container>
+            <label>Zip Code
+            </label>
+            <input type="text" ng-model="newListing.address.zip">
+          </md-input-container>
+        </div>
+        
+
+            <!-- garage sale dates -->
+        <div layout="row">
+          <md-input-container flex="">
+            <label>Start Date
+            </label>
+            <input type="date" ng-model="newListing.startDate">
+          </md-input-container>
+
+          <md-input-container>
+            <label>End Date
+            </label>
+            <input type="date" ng-model="newListing.endDate">
+          </md-input-container>
+        </div>
+
+        <div layout="column" layout-sm="column">
+
+            <!-- garage sale description -->
+          <md-input-container>
+            <label>Description
+            </label>
+            <textarea ng-model="newListing.description" columns="1" md-maxlength="500">
+            </textarea>
+          </md-input-container>
+
+            <!-- submit and cancel buttons -->
+          <md-input-container>
+            <button style="background-color: #00E676" ng-click="submitListing(newListing)">Submit
+            </button>
+          </md-input-container>
+
+        </div>
+      </form>
+    </div>
+  </md-content>
+</div>
+</div>
