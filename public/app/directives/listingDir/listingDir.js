@@ -1,4 +1,4 @@
-// Listing directive
+// Listing directive 
 
 var app = angular.module('treasureHunters');
 
