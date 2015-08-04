@@ -30,7 +30,7 @@ module.exports = {
 		// } else {
 		// 	return res.status(401).send('User not logged in');
 		// };
-		return req.user ? res.json(req.user) ? res.status(401).send('User not logged in');
+		return req.user ? res.json(req.user) : res.status(401).send('User not logged in');
 	},
 
 	// Unused
