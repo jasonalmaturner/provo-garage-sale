@@ -24,6 +24,10 @@ main-dir {
 	height: 500px;
 }
 
+.listingColumnBorder {
+	width: 40%;
+}
+
 .listingColumn {
 	width: 45%;
 	background-color: #3F51B5;

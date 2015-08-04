@@ -23,6 +23,7 @@
           </md-button>
           </a>
 
+            <!-- log in with facebook button-->
           <div style="padding: 40px 20px 20px 20px">
             <md-input-container>
               <a href="http://localhost:8040/auth/facebook"><md-button>
@@ -31,6 +32,7 @@
             </md-input-container>
           </div>
 
+            <!-- add listing button -->
           <div style="padding: 40px 20px 20px 20px">
             <md-input-container><a href="#/listing">
               <md-button style="background-color: #3F51B5 font-color: white">Add Listing
@@ -38,7 +40,15 @@
             </md-input-container>
           </div>
 
+            <!-- update my listing button -->
+          <div style="padding: 40px 20px 20px 20px">
+            <md-input-container><a href="#/update">
+              <md-button style="background-color: #3F51B5 font-color: white">Update My Listing
+              </md-button></a>
+            </md-input-container>
+          </div>
 
+            <!-- search by location button -->
           <md-input-container>
             <label >&nbsp;Search by Location
             </label>
@@ -74,7 +84,8 @@
     <script src="app/services/mainService.js"></script>
     <!-- // <script src="app/services/tempservice.js"></script> -->
     <script src="app/views/home/homeCtrl.js"></script>
-    <script src="app/views/listing/listingCtrl.js"></script> 
+    <script src="app/views/listing/listingCtrl.js"></script>
+    <script src="app/views/update/updateCtrl.js"></script>
     <script src="app/views/user/userCtrl.js"></script>
   </body>
 </html>
