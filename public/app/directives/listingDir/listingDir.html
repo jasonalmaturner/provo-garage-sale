@@ -1,10 +1,10 @@
 	<!-- garage sale listing template -->
 <md-card class="md-card" ng-class="{'clicked-listing': listing.clicked}">
-		<md-card-content >
-			<md-toolbar style="font-size: 15px; padding-left: 5px; cursor:pointer;" ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >Title: {{listing.title}} <span>City: {{listing.address.city}}</span>
+		<md-card-content>
+			<md-toolbar style="font-size: 15px; padding-left: 5px; cursor:pointer;" ng-click="active = !active; listingClick(listing)" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >Title: {{listing.title}} <span>City: {{listing.address.city}}</span>
 				<span>Date: {{listing.startDate | date:"shortDate"}}
-	            	<i ng-class="star.checked? 'fa fa-star-o fa-lg' : 'fa fa-star fa-lg'"
-	                        ng-click="star.checked = !star.checked; toggleFavorite(id); $event.stopPropagation();" style="color:#E9DB00; float: right; padding-right: 5px;">
+	            	<i ng-class="listing.favorite? 'fa fa-star-o fa-lg' : 'fa fa-star fa-lg'"
+	                        ng-click="listing.favorite = !listing.favorite; toggleFavorite(listing._id); $event.stopPropagation();" style="color:#E9DB00; float: right; padding-right: 5px;">
 	                </i>
 	            </span>
 			</md-toolbar>

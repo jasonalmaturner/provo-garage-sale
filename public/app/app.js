@@ -19,7 +19,10 @@ $routeProvider
 					});
 				});
 				return dfd.promise;
-			}
+			},
+			// favorites: function(mainService){
+			// 	return mainService.getFavorites();
+			// }
 		}
 	})
 	.when('/listing', {
@@ -43,6 +46,6 @@ uiGmapGoogleMapApiProvider.configure({
 	v: '3.17',
 	libraries: 'weather, geometry, visualization'
 })
-	
+
 
 });

@@ -1,4 +1,4 @@
-// template service file 
+// template service file
 
 var app = angular.module('treasureHunters');
 

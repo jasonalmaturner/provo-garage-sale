@@ -33,9 +33,24 @@ module.exports = {
 	//     })
 	// },
 
+	// addFavorite: function(req, res){
+	// 	User.findById(req.params.id, function (err, user){
+	// 		if(err) return res.status(500).json(err);
+	// 		var newFavorites = user.favorites.concat(req.query.listing);
+	// 		user.favorites = newFavorites;
+	// 		user.save(function(err, result){
+	// 			if(err) return res.status(500).json(err);
+	// 			res.json(result);
+	// 		});
+	// 	});
+	// },
+
 	addFavorite: function(req, res){
-		User.findById(req.params.id, function (err, user){
+		User.findById(req.user._id, function (err, user){
 			if(err) return res.status(500).json(err);
+			if(user.favorites.indexOf(req.query.listing)){
+				return res.status(502).send('favorite already added')
+			}
 			var newFavorites = user.favorites.concat(req.query.listing);
 			user.favorites = newFavorites;
 			user.save(function(err, result){
@@ -63,8 +78,19 @@ module.exports = {
 			.populate('favorites')
 			.exec(function (err, result) {
 				console.log(result)
-				if (err) return res.status(500).send(err);
-					res.send(result[0].favorites);
+				if (err) return res.status(500).json(err);
+				return res.json(result[0].favorites);
 			});
+	},
+
+	favoritesPlain: function(req, res){
+		User.find({ _id: req.user._id}).exec(function(err, result){
+			if(err) return res.status(500).json(err);
+			if(!result[0]){
+				return res.status(504).send('you probably are not logged in');
+			} else {
+				return res.json(result[0].favorites);
+			};
+		});
 	}
-}
+};
