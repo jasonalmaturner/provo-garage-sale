@@ -50,10 +50,15 @@
 
             <!-- search by location button -->
           <md-input-container>
-            <label >&nbsp;Search by Location
+            <label> &nbsp;Search by Location
             </label>
             <input type="text/number"style="background-color: white">
           </md-input-container>
+         <!--    ************* search by distance *************** -->
+          <md-select ng-model="distance">
+        <md-option ng-repeat="distance in distances" >{{distance}}</md-option>
+      </md-select>
+
         </div>
       </md-toolbar>
     </md-content>
