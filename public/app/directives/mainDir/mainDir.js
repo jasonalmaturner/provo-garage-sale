@@ -65,7 +65,10 @@ app.directive('mainDir', function(){
 				listing.clicked = !listing.clicked;
 				listing.icon = 'http://maps.gpsvisualizer.com/google_maps/icons/google/green.png';
 				for(var i = 0; i < $scope.theListings.length; i++){
-
+					if(listing._id !== $scope.theListings[i]._id){
+						$scope.theListings[i].clicked = false;
+						$scope.theListings[i].icon = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+					}
 				}
 			}
 		},

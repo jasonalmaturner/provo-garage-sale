@@ -20,9 +20,9 @@ $routeProvider
 				});
 				return dfd.promise;
 			},
-			favorites: function(mainService){
-				return mainService.getFavorites();
-			}
+			// favorites: function(mainService){
+			// 	return mainService.getFavorites();
+			// }
 		}
 	})
 	.when('/listing', {

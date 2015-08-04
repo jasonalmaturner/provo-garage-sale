@@ -2,9 +2,9 @@
 
 var app = angular.module('treasureHunters');
 
-app.controller('homeCtrl', function($scope, listings, favorites) {
+app.controller('homeCtrl', function($scope, listings) {
   $scope.theListings = listings;
-  $scope.favorites = favorites;
+  // $scope.favorites = favorites;
   // console.log($scope.theListings);
   // $scope.active = false;
   //
