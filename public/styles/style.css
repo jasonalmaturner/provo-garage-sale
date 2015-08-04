@@ -18,33 +18,24 @@ main-dir {
 .map-container {
 	height: 100%;
 	width: 100%;
+	padding-top: 10px;
 }
 
 .angular-google-map-container {
 	height: 500px;
 }
 
-.listingColumnBorder {
+/*.listingColumnBorder {
 	width: 40%;
-}
+}*/
 
 .listingColumn {
-	width: 45%;
 	background-color: #3F51B5;
 	padding: 10px;
-	/*float: left;*/
-	margin: 20px;
-	height: 500px;
+	margin: 10px;
+	height: 526px;
 	overflow: scroll;
 	min-width: 400px;
-}
-
-.map {
-  width: 45%;
-  background-color: #3F51B5;
-  float: right;
-  margin: 20px;
-  margin-bottom: 50px
 }
 
 .clicked-listing {
@@ -52,7 +43,7 @@ main-dir {
 }
 
 .tabsdemoStaticTabs md-tab-content {
-  padding: 10px; 
+  padding: 5px; 
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(1) {
@@ -60,6 +51,22 @@ background-color: #3F51B5;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(2) {
-background-color: #3F51B5; 
+background-color: #3F51B5;
+text-align: center;
+color: white; 
+}
+
+.expandcollapse-heading-collapsed:focus{
+	outline:none;
+}
+
+.expandcollapse-heading-expanded:focus{
+	outline:none;
+}
+i{
+	padding-top: 5px;
+}
+i:focus{
+	outline:none;
 }
 
