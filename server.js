@@ -42,6 +42,7 @@ app.get('/api/user/favorites', userCtrl.favoritesPlain);
 // app.put('/api/user/favorite/add/:id', userCtrl.addFavorite);
 app.put('/api/user/favorite/add', userCtrl.addFavorite);
 app.put('/api/user/favorite/remove/:id', userCtrl.removeFavorite);
+app.get('/api/user', userCtrl.getUser);
 // Unused
 // app.put('/api/user/favorites/:id', userCtrl.modifyFavorites);
 
@@ -64,7 +65,7 @@ passport.deserializeUser(function(obj, done){
 
 app.get('/auth/facebook', passport.authenticate('facebook'));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
-  successRedirect: '/#/user',
+  successRedirect: '/#/home',
   failureRedirect: '/auth/facebook'
 }))
 
