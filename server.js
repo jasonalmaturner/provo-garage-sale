@@ -38,7 +38,9 @@ app.use(passport.session());
 //users api
 app.post('/api/user/create', userCtrl.create);
 app.get('/api/user/favorites/:id', userCtrl.favorites);
-app.put('/api/user/favorite/add/:id', userCtrl.addFavorite);
+app.get('/api/user/favorites', userCtrl.favoritesPlain);
+// app.put('/api/user/favorite/add/:id', userCtrl.addFavorite);
+app.put('/api/user/favorite/add', userCtrl.addFavorite);
 app.put('/api/user/favorite/remove/:id', userCtrl.removeFavorite);
 // Unused
 // app.put('/api/user/favorites/:id', userCtrl.modifyFavorites);

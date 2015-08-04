@@ -4,7 +4,6 @@ html, body {
 
 .siteName {
 	width: 100%;
-	height: 5;
 	background: #FFAB40;
 	text-align: center;
 	padding: 20px;
@@ -30,34 +29,37 @@ main-dir {
 }
 
 .listingColumn {
-	width: 30%;
+	width: 45%;
 	background-color: #3F51B5;
 	padding: 10px;
 	/*float: left;*/
 	margin: 20px;
 	height: 500px;
 	overflow: scroll;
+	min-width: 400px;
 }
 
 .map {
-  width: 60%;
+  width: 45%;
   background-color: #3F51B5;
   float: right;
   margin: 20px;
   margin-bottom: 50px
 }
 
-.footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #FFAB40;
-  text-align: center;
-  height: 5%;
-  padding: 3px;
-}
-
 .clicked-listing {
 	background-color: #FFAB40;
 }
+
+.tabsdemoStaticTabs md-tab-content {
+  padding: 10px; 
+}
+
+.tabsdemoStaticTabs md-tab-content:nth-child(1) {
+background-color: #3F51B5; 
+}
+
+.tabsdemoStaticTabs md-tab-content:nth-child(2) {
+background-color: #3F51B5; 
+}
+
