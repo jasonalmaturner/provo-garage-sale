@@ -1,7 +1,7 @@
 	<!-- garage sale listing template -->
 <md-card class="md-card" ng-class="{'clicked-listing': listing.clicked}">
 		<md-card-content >
-			<md-toolbar style="font-size: 15px; padding-left: 5px; cursor:pointer;" ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" ><span><strong>Title:</strong> {{listing.title}}</span> <span><strong>City:</strong> {{listing.address.city}}, {{listing.address.state}}</span>
+			<md-toolbar style="font-size: 15px; padding-left: 5px; cursor:pointer;" ng-click="active = !active; listingClick(listing)" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" ><span><strong>Title:</strong> {{listing.title}}</span> <span><strong>City:</strong> {{listing.address.city}}, {{listing.address.state}}</span>
 				<span><strong>Date:</strong> {{listing.startDate | date:"shortDate"}}
 	            	<i ng-class="star.checked? 'fa fa-star fa-lg' : 'fa fa-star-o fa-lg'"
 	                        ng-click="star.checked = !star.checked; toggleFavorite(id); $event.stopPropagation();" style="color:#E9DB00; float: right; padding-right: 5px;">
@@ -13,7 +13,7 @@
 			{{listing.address.street}}</br>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}} 
+			{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}
 			</div>
  			<div><strong>Description:</strong>
  			{{listing.description}}</div>
