@@ -9,7 +9,7 @@ $routeProvider
 		templateUrl:'app/views/home/homeTmpl.html',
 		controller: 'homeCtrl',
 		resolve: {
-			listings: function(mainService, authService, $q){
+			listings: function(mainService, $q){
 				var dfd = $q.defer();
 				navigator.geolocation.getCurrentPosition(function(position){
 					mainService.getListings([position.coords.longitude, position.coords.latitude]).then(function(res){
@@ -20,10 +20,10 @@ $routeProvider
 				});
 				return dfd.promise;
 			},
-			favorites: function(authService){
-				authService.login();
-				return authService.currentUser();
-			}
+			// favorites: function(mainService){
+			// 	authService.login();
+			// 	return authService.currentUser();
+			// }
 		}
 	})
 	.when('/listing', {
