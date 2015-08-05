@@ -11,14 +11,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
 
-      <!-- main controller and main menu -->
+      <!-- main controller -->
   <body ng-controller="mainCtrl">
+
+      <!-- top toolbar -->
     <md-content>
       <md-toolbar>
         <div class="md-toolbar-tools">
 
+        <div class="topToolbar">
 
-        <div style="padding: 40px 20px 20px 20px">
+       
+            <!-- home button -->
           <md-input-container>
             <a href="/#/home">
               <md-button>
@@ -29,15 +33,7 @@
           </md-input-container>
         </div>
 
-            <!-- log in with facebook button-->
-<!--           <div style="padding: 40px 20px 20px 20px">
-            <md-input-container>
-              <a href="http://localhost:8040/auth/facebook"><md-button>
-                <img src="http://i.stack.imgur.com/ZW4QC.png">
-              </md-button></a>
-            </md-input-container>
-          </div> -->
-
+            <!-- facebook login button -->
           <div style="padding: 40px 20px 20px 20px">
             <md-input-container>
               <a href="/auth/facebook">
@@ -63,29 +59,43 @@
           <div style="padding: 40px 20px 20px 20px">
             <md-input-container><a href="#/update">
               <md-button style="background-color: #3F51B5 font-color: white">
-              <i class="fa fa-user fa-lg"></i>
+              <i class="fa fa-user fa-lg">
+              </i>
               &nbsp;&nbsp;My Listing
               </md-button></a>
             </md-input-container>
           </div>
-
-            <!-- search by location button -->
-          <md-input-container>
-            <label> &nbsp;Search by Location
-            </label>
-            <input type="text/number"style="background-color: white">
-          </md-input-container>
-         <!--    ************* search by distance *************** -->
-          <md-select ng-model="distance">
-        <md-option ng-repeat="distance in distances" >{{distance}}</md-option>
-          </md-select>
-
         </div>
       </md-toolbar>
     </md-content>
 
-  <md-toolbar class="siteName"> LOCAL YARD SALES
-  </md-toolbar>
+
+      <!-- second toolbar -->
+    <md-content >
+      <md-toolbar class="secondToolbar" layout="row">  
+
+          <!-- search icon -->
+        <i flex="5" style="padding-top: 30px" "padding-left: 10px" class="fa fa-search fa-lg"></i>
+
+          <!-- search by location container -->
+        <md-input-container flex="15">
+          <label style="font-size: 15px"> &nbsp;Search by Location
+          </label>
+          <input type="text/number"style="background-color: white">
+        </md-input-container>
+
+          <!-- search by distance -->
+        <md-select ng-model="distance" flex="15">
+          <md-option ng-repeat="distance in distances" >{{distance}}</md-option>
+        </md-select>
+
+
+          <!-- site name -->
+        <div class="siteName" flex="60">YARD SALES
+        </div>  
+
+      </md-toolbar>
+    </md-content>
 
         <!-- Connected Views -->
   <ng-view>
@@ -103,6 +113,7 @@
 		<script src="bower_components/angular-material/angular-material.js"></script>
     <script src="bower_components/lodash/lodash.js"></script>
     <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+      <!-- local files -->
     <script src="app/app.js"></script>
     <script src="app/mainCtrl.js"></script>
     <script src="app/directives/listingDir/listingDir.js"></script>

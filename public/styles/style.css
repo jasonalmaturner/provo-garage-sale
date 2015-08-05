@@ -2,11 +2,20 @@ html, body {
 	background-color: #EEEEEE !important;
 }
 
-.siteName {
-	width: 100%;
+.topToolbar {
+	padding: 40px 10px 10px 10px;
+}
+
+.secondToolbar {
 	background: #FFAB40;
-	text-align: center;
-	padding: 20px;
+}
+
+.siteName{
+	padding-top: 20px;
+	font-weight: bold;
+	font-size: 45px;
+	text-align: right;
+	letter-spacing: 10px;
 }
 
 	/*garage sale listing information*/
@@ -58,9 +67,11 @@ text-align: center;
 .expandcollapse-heading-expanded:focus{
 	outline:none;
 }
+
 i{
 	padding-top: 5px;
 }
+
 i:focus{
 	outline:none;
 }
