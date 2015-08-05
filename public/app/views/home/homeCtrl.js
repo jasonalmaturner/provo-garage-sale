@@ -4,7 +4,8 @@ var app = angular.module('treasureHunters');
 
 app.controller('homeCtrl', function($scope, listings) {
   $scope.theListings = listings;
-  
+  $scope.favorites = $scope.currentUser ? $scope.currentUser.favorites : false;
+  console.log($scope.favorites);
   // $scope.favorites = favorites;
   // console.log($scope.theListings);
   // $scope.active = false;

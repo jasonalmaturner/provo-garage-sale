@@ -13,7 +13,7 @@
       <md-tab id="tab2">
         <md-tab-label>Favorites</md-tab-label>
         <md-tab-body>
-            <md-input-container>
+            <md-input-container ng-hide="favorites">
               <a href="/auth/facebook">
               <md-button>
                 <p>Facebook Login</p>
@@ -21,6 +21,9 @@
                 </i>
               </md-button></a>
             </md-input-container>
+            <md-tab-body ng-show="favorites">
+              <listing-dir ng-repeat="listing in favorites track by listing._id"></listing-dir>
+            </md-tab-body>
         </md-tab-body>
     </md-tabs>
   </md-content>
