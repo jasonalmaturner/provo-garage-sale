@@ -25,10 +25,6 @@ main-dir {
 	height: 500px;
 }
 
-/*.listingColumnBorder {
-	width: 40%;
-}*/
-
 .listingColumn {
 	background-color: #3F51B5;
 	padding: 10px;
@@ -53,7 +49,6 @@ background-color: #3F51B5;
 .tabsdemoStaticTabs md-tab-content:nth-child(2) {
 background-color: #3F51B5;
 text-align: center;
-color: white; 
 }
 
 .expandcollapse-heading-collapsed:focus{

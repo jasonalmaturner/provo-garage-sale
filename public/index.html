@@ -16,26 +16,45 @@
     <md-content>
       <md-toolbar>
         <div class="md-toolbar-tools">
-          <a href="/#/home">
-          <md-button>
-              <i class="material-icons">home
-              </i>
-          </md-button>
-          </a>
+
+
+        <div style="padding: 40px 20px 20px 20px">
+          <md-input-container>
+            <a href="/#/home">
+              <md-button>
+                  <i class="fa fa-home fa-lg">
+                  </i>&nbsp;&nbsp;Home
+              </md-button>
+            </a>
+          </md-input-container>
+        </div>
 
             <!-- log in with facebook button-->
-          <div style="padding: 40px 20px 20px 20px">
+<!--           <div style="padding: 40px 20px 20px 20px">
             <md-input-container>
               <a href="http://localhost:8040/auth/facebook"><md-button>
                 <img src="http://i.stack.imgur.com/ZW4QC.png">
               </md-button></a>
+            </md-input-container>
+          </div> -->
+
+          <div style="padding: 40px 20px 20px 20px">
+            <md-input-container>
+              <a href="/auth/facebook">
+                <md-button>
+                  <i class="fa fa-facebook-official fa-lg">
+                  </i>&nbsp;&nbsp;Login
+                </md-button>
+              </a>
             </md-input-container>
           </div>
 
             <!-- add listing button -->
           <div style="padding: 40px 20px 20px 20px">
             <md-input-container><a href="#/listing">
-              <md-button style="background-color: #3F51B5 font-color: white">Add Listing
+              <md-button style="background-color: #3F51B5 font-color: white">
+              <i class="fa fa-plus-square fa-lg"></i>
+              &nbsp;&nbsp;Add Listing
               </md-button></a>
             </md-input-container>
           </div>
@@ -43,7 +62,9 @@
             <!-- update my listing button -->
           <div style="padding: 40px 20px 20px 20px">
             <md-input-container><a href="#/update">
-              <md-button style="background-color: #3F51B5 font-color: white">Update My Listing
+              <md-button style="background-color: #3F51B5 font-color: white">
+              <i class="fa fa-user fa-lg"></i>
+              &nbsp;&nbsp;My Listing
               </md-button></a>
             </md-input-container>
           </div>
@@ -57,13 +78,14 @@
          <!--    ************* search by distance *************** -->
           <md-select ng-model="distance">
         <md-option ng-repeat="distance in distances" >{{distance}}</md-option>
-      </md-select>
+          </md-select>
 
         </div>
       </md-toolbar>
     </md-content>
 
-  <md-toolbar class="siteName"> GARAGE SALE</md-toolbar>
+  <md-toolbar class="siteName"> LOCAL YARD SALES
+  </md-toolbar>
 
         <!-- Connected Views -->
   <ng-view>

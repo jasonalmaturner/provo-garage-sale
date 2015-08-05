@@ -26,7 +26,7 @@ $routeProvider
 		}
 	})
 	.when('/listing', {
-		templateUrl: 'app/views/listing/listingTmpl.html',
+		templateUrl: 'app/views/Listing/listingTmpl.html',
 		controller: 'listingCtrl'
 	})
 	.when('/update', {
