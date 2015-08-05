@@ -11,10 +11,11 @@ app.service('authService', function($http, $q){
 			method: 'GET',
 			url: '/api/user'
 		}).then(function(res){
+			console.log(res);
 			currentUser = res.data;
 		}, function(err){
 			console.log(err);
-		})
+		});
 	};
 
 	this.logout = function(){
