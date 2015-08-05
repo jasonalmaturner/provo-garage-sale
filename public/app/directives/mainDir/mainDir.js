@@ -36,15 +36,19 @@ app.directive('mainDir', function(){
 			console.log($scope.theListings);
 			$scope.active = false;
 
-			// $scope.matchFavorites = function(){
-			// 	for(var i = 0; i < $scope.theListings.length; i++){
-			// 		for(var j = 0; j < $scope.favorites.length; j++){
-			// 			if($scope.theListings[i]._id === $scope.favorites[i]){
-			// 				$scope.theListings[i].favorite = true;
-			// 		};
-			// 	};
-			// };
-			// $scope.matchFavorites();
+			$scope.matchFavorites = function(){
+				console.log('matches')
+				for(var i = 0; i < $scope.theListings.length; i++){
+					for(var j = 0; j < $scope.favorites.length; j++){
+						$scope.favorites[j].favorite = true;
+						if($scope.theListings[i]._id === $scope.favorites[j]._id){
+							$scope.theListings[i].favorite = true;
+							console.log($scope.theListings[i]);
+						};
+					};
+				};
+			};
+			$scope.matchFavorites();
 
 			$scope.testClick = function(instance, theEvent, marker){
 				console.log(111,instance, 222, instance.getIcon, 333,marker);
@@ -57,8 +61,8 @@ app.directive('mainDir', function(){
 						$scope.theListings[i].clicked = false;
 						$scope.theListings[i].icon = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
 						// instance.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
-					}
-				}
+					};
+				};
 			};
 
 			$scope.listingClick = function(listing){
