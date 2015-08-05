@@ -6,11 +6,12 @@ var geocoder = require('node-geocoder')(geocoderProvider);
 module.exports = {
 
 	create: function(req, res){
+		if(!req.user) return res.status(501).send('User not logged in');
 		var newListing = new Listing(req.body);
 		geocoder.geocode(newListing.address.street + ' ' + newListing.address.city + ' ' + newListing.address.state + ' ' + newListing.address.zip)
 		.then(function(response){
 			newListing.loc = [response[0].longitude, response[0].latitude];
-			// newListing.user = req.user._id;
+			newListing.user = req.user._id;
 			// console.log("create req user id", req.user._id);
 			newListing.save(function (err, result) {
 			if (err) {
