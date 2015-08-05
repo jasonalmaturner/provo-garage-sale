@@ -8,7 +8,6 @@ module.exports = {
 			facebookid: profile.id
 		};
 		User.findOne({facebookid: profile.id}, function(err, user){
-			console.log('anything', err, user);
 			if(err){
 				return done(err, user);
 			};
@@ -34,8 +33,9 @@ module.exports = {
 	},
 
 	getUserPopulated: function(req, res){
-		var id = req.user ? req.user._id : req.query.id;
-		User.findById(id).populate('favorites').exec(function(err, user){
+		if(!req.user) return res.status(501).send('User not logged in');
+		// var id = req.user ? req.user._id : req.query.id;
+		User.findById(req.user._id).populate('favorites').exec(function(err, user){
 			if(err) return res.status(500).json(err);
 			if(!user){
 				return res.status(401).send('User not logged in');
