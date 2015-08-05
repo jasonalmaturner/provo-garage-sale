@@ -42,7 +42,7 @@ app.get('/api/user/favorites', userCtrl.favoritesPlain);
 // app.put('/api/user/favorite/add/:id', userCtrl.addFavorite);
 app.put('/api/user/favorite/add', userCtrl.addFavorite);
 app.put('/api/user/favorite/remove/:id', userCtrl.removeFavorite);
-app.get('/api/user', userCtrl.getUser);
+app.get('/api/user', userCtrl.getUserPopulated);
 // Unused
 // app.put('/api/user/favorites/:id', userCtrl.modifyFavorites);
 

@@ -10,15 +10,17 @@ module.exports = {
 		geocoder.geocode(newListing.address.street + ' ' + newListing.address.city + ' ' + newListing.address.state + ' ' + newListing.address.zip)
 		.then(function(response){
 			newListing.loc = [response[0].longitude, response[0].latitude];
-			newListing.user = req.user._id;
-			console.log("create req user id", req.user._id);
+			// newListing.user = req.user._id;
+			// console.log("create req user id", req.user._id);
 			newListing.save(function (err, result) {
 			if (err) {
 				return res.status(500).end();
 			}
 				return res.json(result);
 			})
-		})
+		}, function(err){
+			return res.status(500).json(err);
+		});
 	},
 
 	delete: function(req, res) {

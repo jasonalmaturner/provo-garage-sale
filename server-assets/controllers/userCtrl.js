@@ -33,6 +33,18 @@ module.exports = {
 		return req.user ? res.json(req.user) : res.status(401).send('User not logged in');
 	},
 
+	getUserPopulated: function(req, res){
+		var id = req.user ? req.user._id : req.query.id;
+		User.findById(id).populate('favorites').exec(function(err, user){
+			if(err) return res.status(500).json(err);
+			if(!user){
+				return res.status(401).send('User not logged in');
+			} else {
+				return res.json(user);
+			};
+		});
+	},
+
 	// Unused
 	// modifyFavorites: function(req, res){
 	// 	User.findByIdAndUpdate(req.params.id, req.body, function(err, result) {
@@ -55,9 +67,12 @@ module.exports = {
 	// },
 
 	addFavorite: function(req, res){
-		User.findById(req.user._id, function (err, user){
+		var id = req.user ? req.user._id : req.query.id;
+		User.findById(id, function (err, user){
 			if(err) return res.status(500).json(err);
-			if(user.favorites.indexOf(req.query.listing)){
+			if(!user) return res.status(500).send('user not found');
+			if(user.favorites.indexOf(req.query.listing) !== -1){
+				console.log()
 				return res.status(502).send('favorite already added')
 			}
 			var newFavorites = user.favorites.concat(req.query.listing);
@@ -93,12 +108,12 @@ module.exports = {
 	},
 
 	favoritesPlain: function(req, res){
-		User.find({ _id: req.user._id}).exec(function(err, result){
+		User.findById(req.user._id).exec(function(err, user){
 			if(err) return res.status(500).json(err);
-			if(!result[0]){
-				return res.status(504).send('you probably are not logged in');
+			if(user){
+				return res.status(401).send('User not logged in');
 			} else {
-				return res.json(result[0].favorites);
+				return res.json(user.favorites);
 			};
 		});
 	}
