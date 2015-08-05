@@ -8,5 +8,5 @@ app.controller('mainCtrl', function($scope, authService){
 		$scope.currentUser = authService.currentUser;
 	});
 
-	$scope.distances = ["5", "10", "15", "20"];
+	$scope.distances = ["5 miles", "15 miles", "25 miles"];
 });
