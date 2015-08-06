@@ -6,7 +6,7 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			{{listing.title}}
 			    <i ng-class="listing.favorite ? 'fa fa-star fa-lg' : 'fa fa-star-o fa-lg'"
-                        ng-click="listing.favorite = !listing.favorite; toggleFavorite(id); $event.stopPropagation();" style="color:#E9DB00; float: right; padding-right: 5px;">
+                        ng-click="listing.favorite = !listing.favorite; toggleFavorite(listing); $event.stopPropagation();" style="color:#E9DB00; float: right; padding-right: 5px;">
                 </i>
 	        </span>
 	        <div><strong>Address:</strong>

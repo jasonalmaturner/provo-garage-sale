@@ -51,7 +51,6 @@ app.directive('mainDir', function(){
 			$scope.matchFavorites();
 
 			$scope.testClick = function(instance, theEvent, marker){
-				console.log(111,instance, 222, instance.getIcon, 333,marker);
 				for(var i = 0; i < $scope.theListings.length; i++){
 					if($scope.theListings[i]._id === marker._id){
 						$scope.theListings[i].clicked = true;
