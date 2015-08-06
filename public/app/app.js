@@ -6,7 +6,7 @@ app.config(function($routeProvider, uiGmapGoogleMapApiProvider){
 
 $routeProvider
 	.when('/home', {
-		templateUrl:'app/views/home/homeTmpl.html',
+		templateUrl: 'app/views/home/homeTmpl.html',
 		controller: 'homeCtrl',
 		resolve: {
 			listings: function(mainService, $q){

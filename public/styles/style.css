@@ -122,7 +122,7 @@ i:focus{
 }
 
 /*listing form*/
-.updateMyListingTitle {
+.updateMyListingTitle, .addMyListingTitle {
 	text-align:center; 
 	font-size: 24px; 
 	font-weight: bold;
@@ -130,4 +130,8 @@ i:focus{
 
 .submitBtn {
 	background-color: #00E676;
+}
+
+.areaListings {
+	background-color: #FFAB40;
 }
