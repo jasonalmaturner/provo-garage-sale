@@ -2,7 +2,7 @@
 
 var app = angular.module('treasureHunters');
 
-app.controller('mainCtrl', function($scope, authService){
+app.controller('mainCtrl', function($scope, authService, $location){
 	$scope.$watch(authService.isLoggedIn, function (isLoggedIn){
 		$scope.isLoggedIn = isLoggedIn;
 		$scope.currentUser = authService.currentUser();
@@ -10,4 +10,8 @@ app.controller('mainCtrl', function($scope, authService){
 	});
 
 	$scope.distances = ["5 miles", "15 miles", "25 miles"];
+
+	
+    $scope.showSearchBar = $location.path() === '/home';
+  
 });

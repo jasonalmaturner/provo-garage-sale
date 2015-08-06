@@ -76,19 +76,15 @@
     <md-content>
       <md-toolbar class="secondToolbar" layout="row">  
 
-          <!-- search icon -->
-        <i flex="5" flex-sm="15" class="fa fa-search fa-lg searchIcon">
-        </i>
-
           <!-- search by location container -->
-        <md-input-container class="searchByLocation" flex="15" flex-sm="15">
+        <md-input-container class="searchByLocation" flex="15" flex-sm="15" ng-if="showSearchBar">
           <label>Search by Location
           </label>
           <input type="text/number">
         </md-input-container>
 
           <!-- search by distance -->
-        <md-select class="distanceSearch" ng-model="distance" flex="15" flex-sm="30">
+        <md-select class="distanceSearch" ng-model="distance" flex="15" flex-sm="30" ng-if="showSearchBar">
           <md-option ng-repeat="distance in distances">{{distance}}
           </md-option>
         </md-select>
