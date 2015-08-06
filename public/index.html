@@ -2,39 +2,38 @@
   <!-- app name for internal use.  -->
 <html ng-app="treasureHunters">
   <head>
+
 	  <title>Local Yard Sales </title>
 
       <!-- links -->
 	  <link rel="stylesheet" type="text/css" href="styles/style.css">
 	  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
 
-      <!-- main controller -->
+    <!-- main controller -->
   <body ng-controller="mainCtrl">
 
       <!-- top toolbar -->
     <md-content>
-      <md-toolbar>
+      <md-toolbar class="topToolbar">
         <div class="md-toolbar-tools">
-
-        <div class="topToolbar">
-
-       
+        
             <!-- home button -->
-          <md-input-container>
-            <a href="/#/home">
-              <md-button>
+          <div class="homeBtn">
+            <md-input-container>
+              <a href="/#/home">
+                <md-button>
                   <i class="fa fa-home fa-lg">
                   </i>&nbsp;&nbsp;Home
-              </md-button>
-            </a>
-          </md-input-container>
-        </div>
+                </md-button>
+              </a>
+            </md-input-container>
+          </div>
 
             <!-- facebook login button -->
-          <div style="padding: 40px 20px 20px 20px">
+          <div class="facebookBtn">
             <md-input-container>
               <a href="/auth/facebook">
                 <md-button>
@@ -46,52 +45,57 @@
           </div>
 
             <!-- add listing button -->
-          <div style="padding: 40px 20px 20px 20px">
-            <md-input-container><a href="#/listing">
-              <md-button style="background-color: #3F51B5 font-color: white">
-              <i class="fa fa-plus-square fa-lg"></i>
-              &nbsp;&nbsp;Add Listing
-              </md-button></a>
+          <div class="addListingBtn">
+            <md-input-container>
+              <a href="#/listing">
+                <md-button>
+                  <i class="fa fa-plus-square fa-lg">
+                  </i>&nbsp;&nbsp;Add Listing
+                </md-button>
+              </a>
             </md-input-container>
           </div>
 
             <!-- update my listing button -->
-          <div style="padding: 40px 20px 20px 20px">
-            <md-input-container><a href="#/update">
-              <md-button style="background-color: #3F51B5 font-color: white">
-              <i class="fa fa-user fa-lg">
-              </i>
-              &nbsp;&nbsp;My Listing
-              </md-button></a>
+          <div class="myListingBtn">
+            <md-input-container>
+              <a href="#/update">
+                <md-button>
+                  <i class="fa fa-user fa-lg">
+                  </i>&nbsp;&nbsp;My Listing
+                </md-button>
+              </a>
             </md-input-container>
           </div>
+
         </div>
       </md-toolbar>
     </md-content>
 
 
       <!-- second toolbar -->
-    <md-content >
+    <md-content>
       <md-toolbar class="secondToolbar" layout="row">  
 
           <!-- search icon -->
-        <i flex="5" style="padding-top: 30px; padding-left: 10px" class="fa fa-search fa-lg"></i>
+        <i flex="5" flex-sm="15" class="fa fa-search fa-lg searchIcon">
+        </i>
 
           <!-- search by location container -->
-        <md-input-container flex="15">
-          <label style="font-size: 15px"> &nbsp;Search by Location
+        <md-input-container class="searchByLocation" flex="15" flex-sm="15">
+          <label>Search by Location
           </label>
-          <input type="text/number"style="background-color: white">
+          <input type="text/number">
         </md-input-container>
 
           <!-- search by distance -->
-        <md-select ng-model="distance" flex="15">
-          <md-option ng-repeat="distance in distances" >{{distance}}</md-option>
+        <md-select class="distanceSearch" ng-model="distance" flex="15" flex-sm="30">
+          <md-option ng-repeat="distance in distances">{{distance}}
+          </md-option>
         </md-select>
 
-
           <!-- site name -->
-        <div class="siteName" flex="60">YARD SALES
+        <div class="siteName" flex="60" flex-sm="40">YARD SALES
         </div>  
 
       </md-toolbar>
@@ -105,7 +109,7 @@
       <p>all rights reserved 2015</p>
     </div> -->
 
-    <!-- ************************** Script Links ********************* -->
+    <!-- Script Links -->
     <script src="bower_components/angular/angular.js"></script>
 		<script src="bower_components/angular-route/angular-route.js"></script>
 		<script src="bower_components/angular-aria/angular-aria.js"></script>

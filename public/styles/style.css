@@ -1,13 +1,25 @@
 html, body {
 	background-color: #EEEEEE !important;
 }
-
+/*tool bars*/
 .topToolbar {
-	padding: 40px 10px 10px 10px;
+	padding-top: 20px;
 }
 
 .secondToolbar {
 	background: #FFAB40;
+}
+
+.searchIcon {
+	padding: 30px 10px 10px 20px;
+}
+
+.searchByLocation {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.distanceSearch {
 }
 
 .siteName{
@@ -18,8 +30,8 @@ html, body {
 	letter-spacing: 10px;
 }
 
-	/*garage sale listing information*/
 
+/*map*/
 main-dir {
 	display: flex;
 }
@@ -34,6 +46,19 @@ main-dir {
 	height: 500px;
 }
 
+
+/*listing card information*/
+.myListingsCardTitle {
+	text-align:center; 
+	font-size: 24px; 
+	font-weight: bold;
+}
+
+.listingPopOut {
+	font-size: 14px;
+	font-weight: bold;
+}
+
 .listingColumn {
 	background-color: #3F51B5;
 	padding: 10px;
@@ -43,8 +68,28 @@ main-dir {
 	min-width: 400px;
 }
 
+.listingCard {
+	font-size: 15px;
+}
+
 .clicked-listing {
 	background-color: #FFAB40;
+}
+
+.listingClick {
+	font-size: 15px; 
+	padding: 5px; 
+	cursor:pointer;
+}
+
+.starChecked {
+	color:#E9DB00; 
+	float: right; 
+	padding-right: 5px;
+}
+
+.showActive {
+	font-size: 14px;
 }
 
 .tabsdemoStaticTabs md-tab-content {
@@ -76,3 +121,17 @@ i:focus{
 	outline:none;
 }
 
+/*listing form*/
+.updateMyListingTitle, .addMyListingTitle {
+	text-align:center; 
+	font-size: 24px; 
+	font-weight: bold;
+}
+
+.submitBtn {
+	background-color: #00E676;
+}
+
+.areaListings {
+	background-color: #FFAB40;
+}

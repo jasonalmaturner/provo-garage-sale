@@ -1,44 +1,50 @@
 <!-- listing html file -->
 <div>
-  <div style="text-align:center; font-size: 24px; font-weight: bold ">Add Your Listing
+  <div class="addMyListingTitle">Add My Listing
   </div>
     <!-- garage sale listing form -->
   <md-content layout-padding="">
     <div layout="row" layout-sm="column">
       <form name="userForm">
         <div layout="column" layout-sm="column">
-         <md-input-container>
+         	<md-input-container>
             <label>Title
             </label>
             <textarea ng-model="newListing.title" columns="1" md-maxlength="30">
             </textarea>
           </md-input-container>
         </div>
+
+        	<!-- Street Address -->
         <div layout="row">
           <md-input-container>
-            <label>Street Name
+            <label>Street
             </label>
             <input type="text" ng-model="newListing.address.street">
           </md-input-container>
 
+          	<!-- City -->
           <md-input-container>
             <label>City
             </label>
             <input type="text" ng-model="newListing.address.city">
           </md-input-container>
 
+          	<!-- State -->
           <md-select placeholder="State" ng-model="newListing.address.state">
             <md-option ng-repeat="state in states" value="{{state.abbrev}}">{{state.abbrev}}
             </md-option>
           </md-select>
 
+          	<!-- Zip Code -->
           <md-input-container>
             <label>Zip Code
             </label>
             <input type="text" ng-model="newListing.address.zip">
           </md-input-container>
         </div>
-            <!-- garage sale dates -->
+
+            <!-- garage sale start date -->
         <div layout="row">
           <md-input-container flex="both">
             <label>Start Date
@@ -46,6 +52,7 @@
             <input type="date" ng-model="newListing.startDate">
           </md-input-container>
 
+          	<!-- garage sale end date -->
           <md-input-container>
             <label>End Date
             </label>
@@ -54,7 +61,6 @@
         </div>
 
         <div layout="column" layout-sm="column">
-
             <!-- garage sale description -->
           <md-input-container>
             <label>Description
@@ -65,7 +71,7 @@
 
             <!-- submit and cancel buttons -->
           <md-input-container>
-            <button style="background-color: #00E676" ng-click="submitListing(newListing)">Submit
+            <button class="submitBtn" ng-click="submitListing(newListing)">Submit
             </button>
           </md-input-container>
 
