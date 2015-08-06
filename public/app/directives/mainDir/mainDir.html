@@ -1,30 +1,41 @@
-	<!-- Main page html file -->
+	<!-- Main directive html file -->
 
 	<!-- listing directive -->
 <div class="listingColumn tabsdemoStaticTabs">
-<md-content class="md-padding">
-    <md-tabs style="background-color: #FFAB40" md-selected="data.selectedIndex">
+  <md-content class="md-padding">
+    <md-tabs class="areaListings" md-selected="data.selectedIndex">
       <md-tab id="tab1">
-        <md-tab-label >Area Listings</md-tab-label>
+        <md-tab-label >Area Listings
+        </md-tab-label>
+
         <md-tab-body>
-          <listing-dir ng-repeat="listing in theListings track by listing._id"></listing-dir>
+          <listing-dir ng-repeat="listing in theListings track by listing._id">
+          </listing-dir>
         </md-tab-body>
       </md-tab>
+
       <md-tab id="tab2">
-        <md-tab-label>Favorites</md-tab-label>
+        <md-tab-label>Favorites
+        </md-tab-label>
+
         <md-tab-body>
-            <md-input-container ng-hide="favorites">
-              <a href="/auth/facebook">
+          <md-input-container ng-hide="favorites">
+            <a href="/auth/facebook">
               <md-button>
-                <p>Facebook Login</p>
+                <p>Facebook Login
+                </p>
                 <i class="fa fa-facebook-official fa-lg">
                 </i>
-              </md-button></a>
-            </md-input-container>
-            <md-tab-body ng-show="favorites">
-              <listing-dir ng-repeat="listing in favorites track by listing._id"></listing-dir>
-            </md-tab-body>
+              </md-button>
+            </a>
+          </md-input-container>
+        
+          <md-tab-body ng-show="favorites">  
+            <listing-dir ng-repeat="listing in favorites track by listing._id">
+            </listing-dir>
+          </md-tab-body>
         </md-tab-body>
+
     </md-tabs>
   </md-content>
 </div>
@@ -32,7 +43,8 @@
   <!-- garage sale locations map -->
 <div class="map-container">
   <ui-gmap-google-map center="map.center" pan="true" zoom="map.zoom">
-    <ui-gmap-markers models="theListings" coords="'loc'" idkey="'_id'" click="testClick" icon="'icon'"></ui-gmap-markers>
+    <ui-gmap-markers models="theListings" coords="'loc'" idkey="'_id'" click="testClick" icon="'icon'">
+    </ui-gmap-markers>
   </ui-gmap-google-map>
 </div>
 
