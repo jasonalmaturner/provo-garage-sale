@@ -33,17 +33,14 @@ app.directive('mainDir', function(){
 			// 	zoom: 8
 			// };
 
-			console.log($scope.theListings);
 			$scope.active = false;
 
 			$scope.matchFavorites = function(){
-				console.log('matches')
 				for(var i = 0; i < $scope.theListings.length; i++){
 					for(var j = 0; j < $scope.favorites.length; j++){
 						$scope.favorites[j].favorite = true;
 						if($scope.theListings[i]._id === $scope.favorites[j]._id){
 							$scope.theListings[i].favorite = true;
-							console.log($scope.theListings[i]);
 						};
 					};
 				};
