@@ -10,9 +10,6 @@ html, body {
 	background: #FFAB40;
 }
 
-.searchIcon {
-	padding: 30px 10px 10px 20px;
-}
 
 .searchByLocation {
 	font-size: 15px;
@@ -28,6 +25,7 @@ html, body {
 	font-size: 45px;
 	text-align: right;
 	letter-spacing: 10px;
+	position: fixed;
 }
 
 
