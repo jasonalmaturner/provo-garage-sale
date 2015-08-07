@@ -89,17 +89,19 @@
       <md-toolbar class="secondToolbar" layout="row">  
 
           <!-- search by location container -->
+        <form ng-submit="submitLocSearch(location, distance)">
         <md-input-container class="searchByLocation" flex="15" flex-sm="15" ng-if="showSearchBar">
           <label>Search by Location
           </label>
-          <input type="text/number">
+          <input ng-model="location" type="text/number">
         </md-input-container>
           
           <!-- search by distance -->
-        <md-select class="distanceSearch" ng-model="distance" flex="15" flex-sm="30" ng-if="showSearchBar" >
-          <md-option ng-repeat="distance in distances">{{distance}}
+        <md-select class="distanceSearch" flex="15" flex-sm="30" ng-if="showSearchBar" >
+          <md-option ng-repeat="distance in distances" ng-model="distance">{{distance}}
           </md-option>
         </md-select>
+        </form>
 
              <!--         Calendar        -->
         
