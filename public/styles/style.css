@@ -2,9 +2,9 @@ html, body {
 	background-color: #EEEEEE !important;
 }
 /*tool bars*/
-.topToolbar {
+/*.topToolbar {
 	padding-top: 20px;
-}
+}*/
 
 .secondToolbar {
 	background: #FFAB40;
@@ -14,23 +14,27 @@ html, body {
 .searchByLocation {
 	font-size: 13px;
 	font-weight: bold;
-	min-width: 230px;
+	min-width: 300px;
 	padding-left: 20px;
 }
 
 .distanceSearch {
-	width: 124px;
+	width: 350px;
+	height: 50px;
 	color: black;
+	padding-top: 21px;
 }
 
-.dateSearch{	
-	width: 155px;
+.dateSearch{
+	width: 140px;
 }
+
 .siteName{
-	padding-top: 16px;
+	padding-top: 8px;
 	font-weight: bold;
 	font-size: 45px;
 	letter-spacing: 10px;
+	position: absolute;
 }
 
 
