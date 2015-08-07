@@ -11,7 +11,7 @@
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					{{listing.title}}
 			  	<i ng-class="listing.favorite ? 'fa fa-star fa-lg' : 'fa fa-star-o fa-lg'"
-          	ng-click="listing.favorite = !listing.favorite; toggleFavorite(listing); $event.stopPropagation();"
+          	ng-click="toggleFavorite(listing); $event.stopPropagation();"
           	class="starChecked">
         	</i>
 	    </span>
@@ -34,7 +34,7 @@
 					{{listing.address.street}}</br>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}		
+					{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}
 
 					<!-- 		GOOGLE DIRECTION -->
 	    	
