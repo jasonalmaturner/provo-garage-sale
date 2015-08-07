@@ -1,70 +1,48 @@
-	<!-- HOME PAGE "AREA LISTINGS", "FAVORITES" & "MAP" -->
-<div layout="row" layout-sm="column">
-
-  <!-- "AREA LISTINGS" & "FAVORITES" CARD -->
-  <div class="listingColumn tabsdemoStaticTabs" flex="33" flex-sm="100">
-    <md-content class="md-padding">
-      <md-tabs class="areaListings" md-selected="data.selectedIndex">
-
-        <md-tab id="tab1">
-          <md-tab-label >Area Listings
-          </md-tab-label>
-          <md-tab-body>
-            <listing-dir ng-repeat="listing in theListings track by listing._id">
+- 	<!-- Main directive html file -->
+-
+-	<!-- listing directive -->
+-<div class="listingColumn tabsdemoStaticTabs">
+-  <md-content class="md-padding">
+-    <md-tabs class="areaListings" md-selected="data.selectedIndex">
+-      <md-tab id="tab1">
+-        <md-tab-label >Area Listings
+-        </md-tab-label>
+-
+-        <md-tab-body>
+-          <listing-dir ng-repeat="listing in theListings track by listing._id">
+-          </listing-dir>
+-        </md-tab-body>
+-      </md-tab>
+-
+-      <md-tab id="tab2">
+-        <md-tab-label>Favorites
+-        </md-tab-label>
+-
+-        <md-tab-body>
+-          <md-input-container ng-hide="favorites" class="centerfav">
+-            <a href="/auth/facebook">
+-              <md-button>
+-                <p>Facebook Login
+-                </p>
+-                <i class="fa fa-facebook-official fa-lg">
+-                </i>
+-              </md-button>
+-            </a>
+-          </md-input-container>
+-
+-          <md-tab-body ng-show="favorites">
+-            <listing-dir ng-repeat="listing in favorites track by listing._id">
             </listing-dir>
           </md-tab-body>
-        </md-tab>
+-        </md-tab-body>
 
-        <md-tab id="tab2">
-          <md-tab-label>Favorites
-          </md-tab-label>
-          <md-tab-body>
-            <md-input-container ng-hide="favorites" class="centerfav">
-              <a href="/auth/facebook">
-                <md-button>
-                  <p>Facebook Login
-                  </p>
-                  <i class="fa fa-facebook-official fa-lg">
-                  </i>
-                </md-button>
-              </a>
-            </md-input-container>
-          
-            <md-tab-body ng-show="favorites">  
-              <listing-dir ng-repeat="listing in favorites track by listing._id">
-              </listing-dir>
-            </md-tab-body>
-          </md-tab-body>
-        </md-tab>
-      </md-tabs>
-    </md-content>
-  </div>
+-    </md-tabs>
+-  </md-content>
+-</div>
 
-
-
-
-
-<!-- THIS IS FROM SHERLYN, FRIDAY 7 AUGUST 11:13 A.M.
- ...WHY ISN'T THE MAP OBEYING THE flex="66" COMMAND?  
- IN LARGE MODE IT IS IN A ROW.  
- THE CARD IS SET AT flex="33" WHICH WOULD LEAVE "66" FOR THE MAP, 
- BUT THE MAP IS NOT TAKING UP THE REST OF THE ROW. 
- IN THE CSS THE .map-container AND .angular-google-map-container 
- AFFECT THE SIZING. I HAVE HIT A WALL. I AM TAKING A BREAK.
- -->
-    <!-- garage sale locations map -->
-  <div flex="66" flex-md="66" flex-sm="100">
-    <div class="map-container">
-      <ui-gmap-google-map center="map.center" pan="true" zoom="map.zoom">
-        <ui-gmap-markers models="theListings" coords="'loc'" idkey="'_id'" click="testClick" icon="'icon'">
-        </ui-gmap-markers>
-      </ui-gmap-google-map>
-    </div>
-  </div>
-</div>
-
-  <!--
-<div class="map">
-	<div style="height: 700px;"> Cool
-	</div>
-</div> -->
+-  <!-- garage sale locations map -->
+-<div class="map-container">
+-  <ui-gmap-google-map center="map.center" pan="true" zoom="map.zoom">
+-    <ui-gmap-markers models="theListings" coords="'loc'" idkey="'_id'" click="testClick" icon="'icon'">
+-    </ui-gmap-markers>
+-  </ui-gmap-google-map>
