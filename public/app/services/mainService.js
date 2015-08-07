@@ -71,4 +71,14 @@ app.service('mainService', function($http, $q){
     return dfd.promise;
   };
 
+  this.updateListing = function(listingId, modifiedListing) {
+    return $http({
+      method: 'PUT',
+      url: 'http://localhost:8040/api/Listing/' + listingId,
+      data: modifiedListing
+    }).then(function(response){
+      return response.data;
+    })
+  };
+
 });
