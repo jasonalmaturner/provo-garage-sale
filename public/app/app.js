@@ -62,7 +62,7 @@ $routeProvider
 		templateUrl: 'app/views/home/footer/about.html',
 		controller: 'mainCtrl'
 	})
-	
+
 	.otherwise({
 		redirectTo: '/home'
 	})
