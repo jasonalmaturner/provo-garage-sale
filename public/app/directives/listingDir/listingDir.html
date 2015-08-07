@@ -27,9 +27,7 @@
 
 					<!-- 		GOOGLE DIRECTION -->
 	    	<form action="http://maps.google.com/maps" method="get" target="_blank">
-   				<input type="hidden" name="daddr" value="{{listing.address.street}}</br>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   				<input type="hidden" name="daddr" value="{{listing.address.street}},
 					{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}" />
   				 <input type="submit" value="Get directions" />
 			</form>
