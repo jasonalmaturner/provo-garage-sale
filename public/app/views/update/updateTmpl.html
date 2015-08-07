@@ -1,13 +1,11 @@
 	<!-- "MY LISTING" page--> 
 
-
 <div layout="row" layout-sm="column">
 
     <!-- My Listings card -->
   <div flex-gt-sm="33">
     <listing-dir ng-repeat="listing in userListings"></listing-dir>
  	</div>
-
 
     <!-- "UPDATE MY LISTING" FORM -->
   <div flex="66" flex-sm="100" layout-padding="10">
@@ -19,94 +17,85 @@
         <!-- title -->
       <div>
         <form name="userForm">
-         
- <div layout="column" layout-sm="column">
-          <md-input-container>
-            <label>Title
-            </label>
-            <textarea ng-model="editListing.title" columns="1" md-maxlength="30">
-            </textarea>
-          </md-input-container>
-        </div>
+          <div layout="column" layout-sm="column">
+            <md-input-container>
+              <label>Title
+              </label>
+              <textarea ng-model="editListing.title" columns="1" md-maxlength="30">
+              </textarea>
+            </md-input-container>
+          </div>
 
-          <!-- street address -->
-        <div layout="row">
-          <md-input-container>
-            <label>Street
-            </label>
-            <input type="text" ng-model="editListing.address.street">
-          </md-input-container>
-        </div>
+            <!-- street address -->
+          <div layout="row">
+            <md-input-container flex="100">
+              <label>Street
+              </label>
+              <input type="text" ng-model="editListing.address.street">
+            </md-input-container>
+          </div>
 
+          <!-- city, state, zip code row -->
+          <div layout="row">
 
-        <!-- city, state, zip code row -->
-        <div layout="row">
+              <!-- city -->
+            <md-input-container flex-gt-md="60" flex-sm="50" flex-md="60">
+              <label>City
+              </label>
+              <input type="text" ng-model="editListing.address.city">
+            </md-input-container>
 
-            <!-- city -->
-          <md-input-container flex-gt-md="60" flex-sm="50" flex-md="60">
-            <label>City
-            </label>
-            <input type="text" ng-model="editListing.address.city">
-          </md-input-container>
+              <!-- state -->
+            <md-select placeholder="State" ng-model="editListing.address.state" flex-gt-md="15" flex-sm="25" flex-md="20">
+              <md-option ng-repeat="state in states" value="{{state.abbrev}}">{{state.abbrev}}
+              </md-option>
+            </md-select>
 
-            <!-- state -->
-          <md-select placeholder="State" ng-model="editListing.address.state" flex-gt-md="15" flex-sm="25" flex-md="20">
-            <md-option ng-repeat="state in states" value="{{state.abbrev}}">{{state.abbrev}}
-            </md-option>
-          </md-select>
+              <!-- zip code -->
+            <md-input-container flex-gt-md="25" flex-sm="25" flex-md="20">
+              <label>Zip Code
+              </label>
+              <input type="text" ng-model="editListing.address.zip">
+            </md-input-container>
+          </div>
 
-            <!-- zip code -->
-          <md-input-container flex-gt-md="25" flex-sm="25" flex-md="20">
-            <label>Zip Code
-            </label>
-            <input type="text" ng-model="editListing.address.zip">
-          </md-input-container>
-        </div>
+          <!-- garage sale dates & time -->
+          <div layout="row">
+              <!-- start date -->
+            <md-input-container flex="33">
+            <!-- flex could be 33 -->
+              <label>Start Date
+              </label>
+              <input type="date" ng-model="editListing.startDate">
+            </md-input-container>
+              <!-- end date -->
+            <md-input-container flex="33">
+              <label>End Date
+              </label>
+              <input type="date" ng-model="editListing.endDate">
+            </md-input-container>
+              <!-- garage sale time -->
+            <md-input-container flex="33">
+              <label>Start Time
+              </label>
+              <input type="time" ng-model="editListing.time">
+            </md-input-container>
+          </div> 
 
+          <div layout="column" layout-sm="column">
+          <!-- garage sale description -->
+            <md-input-container>
+              <label>Description
+              </label>
+              <textarea ng-model="editListing.description" columns="1" md-maxlength="300">
+              </textarea>
+            </md-input-container>
 
-
-          <!-- garage sale dates -->
-        <div layout="row">
-
-            <!-- start date -->
-        <div layout="row">
-          <md-input-container flex="both">
-          <!-- flex could be 33 -->
-            <label>Start Date
-            </label>
-            <input type="date" ng-model="editListing.startDate">
-          </md-input-container>
-
-            <!-- end date -->
-          <md-input-container flex="33">
-            <label>End Date
-            </label>
-            <input type="date" ng-model="editListing.endDate">
-          </md-input-container>
-
-          <!-- garage sale time -->
-        <md-input-container flex="33">
-          <label>Start Time
-          </label>
-          <input type="time" ng-model="editListing.time">
-        </md-input-container>
-      </div>
-
-        <div layout="column" layout-sm="column">
-            <!-- garage sale description -->
-          <md-input-container>
-            <label>Description
-            </label>
-            <textarea ng-model="editListing.description" columns="1" md-maxlength="300">
-            </textarea>
-          </md-input-container>
-
-            <!-- submit and cancel buttons -->
-          <md-input-container>
-            <button class="submitBtn" ng-click="updateListing(editListing._id, editListing)">Submit
-            </button>
-          </md-input-container>
-
+              <!-- submit and cancel buttons -->
+            <md-input-container>
+              <button class="submitBtn" ng-click="updateListing(editListing._id, editListing)">Submit
+              </button>
+            </md-input-container>
           </div>
         </form>
       </div>
