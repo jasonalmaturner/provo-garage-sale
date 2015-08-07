@@ -13,5 +13,7 @@ app.controller('mainCtrl', function($scope, authService, $location){
 
 	
     $scope.showSearchBar = $location.path() === '/home';
+
+    
   
 });

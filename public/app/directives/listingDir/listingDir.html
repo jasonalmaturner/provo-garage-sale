@@ -15,14 +15,18 @@
           	class="starChecked">
         	</i>
 	    </span>
-
+	         <!--  Google direction Button and Time -->
+<form action="http://maps.google.com/maps" method="get" target="_blank">
 	    <span>
 			<strong>Time:</strong>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					{{listing.time | date:"shortTime"}}
-  				 <input class="getDirectionsBtn" type="submit" value="Get directions" />
+  				 
+   				<input type="hidden" name="daddr" value="{{listing.address.street}},
+					{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}" />
+  		 		<input type="submit" value="Get directions" />
 		</span>
-
+</form>
 	    <div>
 	    	<strong>Address:
 	    	</strong>
@@ -33,10 +37,7 @@
 					{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}		
 
 					<!-- 		GOOGLE DIRECTION -->
-	    	<form action="http://maps.google.com/maps" method="get" target="_blank">
-   				<input type="hidden" name="daddr" value="{{listing.address.street}},
-					{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}" />
-			</form>
+	    	
 
 		</div>
 <!-- 			<span><strong>City:</strong> {{listing.address.city}}, {{listing.address.state}}</span>
