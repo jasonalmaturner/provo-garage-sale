@@ -11,7 +11,7 @@ app.controller('mainCtrl', function($scope, authService, $location){
 
 	$scope.distances = ["5 miles", "15 miles", "25 miles"];
 
-	
+
     $scope.showSearchBar = $location.path() === '/home';
-  
+
 });

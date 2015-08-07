@@ -85,9 +85,10 @@ module.exports = {
 	},
 
 	removeFavorite: function(req, res){
-		User.findById(req.params.id, function (err, user){
+		if(!req.user) return res.status(401).send('User not logged in');
+		User.findById(req.user._id, function (err, user){
 			if(err) return res.status(500).json(err);
-			var index = user.favorites.indexOf(req.query.listing);
+			var index = user.favorites.indexOf(req.params.id);
 			if(index === -1) return res.status(501).send('favorite not found');
 			user.favorites.splice(index, 1);
 			user.save(function(err, result){
