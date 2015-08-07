@@ -1,55 +1,55 @@
-	<!-- garage sale listing template -->
+<!-- garage sale listing template -->
 <md-card class="md-card"
-	ng-class="{'clicked-listing': listing.clicked}">
-	<md-card-content >
-		<md-toolbar class="listingClick"
-			ng-click="active = !active; listingClick(listing)"
-			ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >
-			<span>
-				<strong>Title:
-				</strong>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					{{listing.title}}
-			  	<i ng-class="listing.favorite ? 'fa fa-star fa-lg' : 'fa fa-star-o fa-lg'"
-          	ng-click="listing.favorite = !listing.favorite; toggleFavorite(listing); $event.stopPropagation();"
-          	class="starChecked">
-        	</i>
-	    </span>
-
-	    <span>
-			<strong>Time:</strong>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					{{listing.time | date:"shortTime"}}
-  				 <input class="getDirectionsBtn" type="submit" value="Get directions" />
+ng-class="{'clicked-listing': listing.clicked}">
+<md-card-content >
+	<md-toolbar class="listingClick"
+		ng-click="active = !active; listingClick(listing)"
+		ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >
+		<span>
+			<strong>Title:
+			</strong>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				{{listing.title}}
+				<i ng-class="listing.favorite ? 'fa fa-star fa-lg' : 'fa fa-star-o fa-lg'"
+					ng-click="listing.favorite = !listing.favorite; toggleFavorite(listing); $event.stopPropagation();"
+					class="starChecked">
+				</i>
 		</span>
 
-	    <div>
-	    	<strong>Address:
-	    	</strong>
+		<span>
+		<strong>Time:</strong>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				{{listing.time | date:"shortTime"}}
+				<input class="getDirectionsBtn" type="submit" value="Get directions" />
+	</span>
 
-					{{listing.address.street}}</br>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}		
+		<div>
+			<strong>Address:
+			</strong>
 
-					<!-- 		GOOGLE DIRECTION -->
-	    	<form action="http://maps.google.com/maps" method="get" target="_blank">
-   				<input type="hidden" name="daddr" value="{{listing.address.street}},
-					{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}" />
-			</form>
+				{{listing.address.street}}</br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}
 
-		</div>
+				<!-- 		GOOGLE DIRECTION -->
+			<form action="http://maps.google.com/maps" method="get" target="_blank">
+				<input type="hidden" name="daddr" value="{{listing.address.street}},
+				{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}" />
+		</form>
+
+	</div>
 <!-- 			<span><strong>City:</strong> {{listing.address.city}}, {{listing.address.state}}</span>
-			<span><strong>Date:</strong> {{listing.startDate | date:"shortDate"}}
-	        </span> -->
-		</md-toolbar>
+		<span><strong>Date:</strong> {{listing.startDate | date:"shortDate"}}
+				</span> -->
+	</md-toolbar>
 
-		<div ng-show="active" class="showActive">
- 			<div>
- 				<strong>Description:
- 				</strong>
- 				{{listing.description}}
- 			</div>
+	<div ng-show="active" class="showActive">
+		<div>
+			<strong>Description:
+			</strong>
+			{{listing.description}}
 		</div>
- 	</md-card-content>
+	</div>
+</md-card-content>
 </md-card>

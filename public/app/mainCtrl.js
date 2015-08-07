@@ -30,5 +30,4 @@ app.controller('mainCtrl', function($scope, authService, $location, mainService)
         	})
     	})
     }    
-  
 });

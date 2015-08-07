@@ -23,7 +23,7 @@ html, body {
 	color: black;
 }
 
-.dateSearch{	
+.dateSearch{
 	width: 155px;
 }
 .siteName{
@@ -52,8 +52,8 @@ main-dir {
 
 /*listing card information*/
 .myListingsCardTitle {
-	text-align:center; 
-	font-size: 24px; 
+	text-align:center;
+	font-size: 24px;
 	font-weight: bold;
 }
 
@@ -80,14 +80,14 @@ main-dir {
 }
 
 .listingClick {
-	font-size: 15px; 
-	padding: 5px; 
+	font-size: 15px;
+	padding: 5px;
 	cursor:pointer;
 }
 
 .starChecked {
-	color:#E9DB00; 
-	float: right; 
+	color:#E9DB00;
+	float: right;
 	padding-right: 5px;
 }
 
@@ -96,11 +96,11 @@ main-dir {
 }
 
 .tabsdemoStaticTabs md-tab-content {
-  padding: 5px; 
+  padding: 5px;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(1) {
-background-color: #3F51B5; 
+background-color: #3F51B5;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(2) {
@@ -125,8 +125,8 @@ i:focus{
 
 /*listing form*/
 .updateMyListingTitle, .addMyListingTitle {
-	text-align:center; 
-	font-size: 24px; 
+	text-align:center;
+	font-size: 24px;
 	font-weight: bold;
 }
 
