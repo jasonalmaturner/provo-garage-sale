@@ -20,6 +20,7 @@
 			<strong>Time:</strong>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					{{listing.time | date:"shortTime"}}
+  				 <input class="getDirectionsBtn" type="submit" value="Get directions" />
 		</span>
 
 	    <div>
@@ -35,10 +36,9 @@
 	    	<form action="http://maps.google.com/maps" method="get" target="_blank">
    				<input type="hidden" name="daddr" value="{{listing.address.street}},
 					{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}" />
-  				 <input type="submit" value="Get directions" />
 			</form>
 
-			</div>
+		</div>
 <!-- 			<span><strong>City:</strong> {{listing.address.city}}, {{listing.address.state}}</span>
 			<span><strong>Date:</strong> {{listing.startDate | date:"shortDate"}}
 	        </span> -->

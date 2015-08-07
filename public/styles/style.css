@@ -25,7 +25,6 @@ html, body {
 	font-size: 45px;
 	text-align: right;
 	letter-spacing: 10px;
-	position: fixed;
 }
 
 
@@ -41,7 +40,7 @@ main-dir {
 }
 
 .angular-google-map-container {
-	height: 500px;
+	height: 546px;
 }
 
 
@@ -137,7 +136,7 @@ i:focus{
 	background: #FFAB40;
 	text-align: center;
 	flex-direction: row-reverse;
-	padding-top: 5px;
+	padding-top: 1px;
 
 }
 
