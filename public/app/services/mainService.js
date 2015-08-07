@@ -49,4 +49,13 @@ app.service('mainService', function($http, $q){
     });
   };
 
+  this.listingByUser = function(userId) {
+    return $http({
+      method: 'GET',
+      url: 'http://localhost:8040/api/Listing/user/' + userId
+    }).then(function(response){
+      return response.data;
+    })
+  };
+
 });
