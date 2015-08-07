@@ -2,9 +2,9 @@ html, body {
 	background-color: #EEEEEE !important;
 }
 /*tool bars*/
-/*.topToolbar {
+.topToolbar {
 	padding-top: 20px;
-}*/
+}
 
 .secondToolbar {
 	background: #FFAB40;
@@ -12,29 +12,20 @@ html, body {
 
 
 .searchByLocation {
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: bold;
-	min-width: 300px;
-	padding-left: 20px;
 }
 
 .distanceSearch {
-	width: 350px;
-	height: 50px;
-	color: black;
-	padding-top: 21px;
-}
-
-.dateSearch{
-	width: 140px;
 }
 
 .siteName{
-	padding-top: 8px;
+	padding-top: 20px;
 	font-weight: bold;
 	font-size: 45px;
+	text-align: right;
 	letter-spacing: 10px;
-	position: absolute;
+	position: fixed;
 }
 
 
@@ -50,7 +41,7 @@ main-dir {
 }
 
 .angular-google-map-container {
-	height: 546px;
+	height: 500px;
 }
 
 
@@ -146,7 +137,7 @@ i:focus{
 	background: #FFAB40;
 	text-align: center;
 	flex-direction: row-reverse;
-	padding-top: 1px;
+	padding-top: 5px;
 
 }
 
