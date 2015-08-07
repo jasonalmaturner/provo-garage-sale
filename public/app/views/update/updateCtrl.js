@@ -20,8 +20,15 @@ app.controller('updateCtrl', function($scope, mainService, $location, listings) 
   	$scope.editListing = listing;
   }
 
-  $scope.updateListing = function (listinginfo) {
-
+  $scope.updateListing = function (listingid, listinginfo) {
+    mainService.updateListing(listingid, listinginfo).then(function (res, err) {
+      if (err) {
+        alert('Update failed, please try again');
+      }
+      else {
+        alert('Listing updated successfully!');
+      }
+    })
   }
 
 });
