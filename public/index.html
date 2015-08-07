@@ -33,12 +33,23 @@
           </div>
 
             <!-- facebook login button -->
-          <div class="facebookBtn">
+          <div class="facebookBtn" ng-hide="currentUser">
             <md-input-container>
               <a href="/auth/facebook">
                 <md-button>
                   <i class="fa fa-facebook-official fa-lg">
                   </i>&nbsp;&nbsp;Login
+                </md-button>
+              </a>
+            </md-input-container>
+          </div>
+                      <!-- facebook current user  button and logout -->
+          <div class="facebookBtn" ng-show="currentUser">
+            <md-input-container>
+            
+              <a href="/logout">
+                <md-button>
+                 {{currentUser.name}}
                 </md-button>
               </a>
             </md-input-container>
