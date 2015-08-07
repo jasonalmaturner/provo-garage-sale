@@ -70,13 +70,13 @@ module.exports = {
 	getByArea: function(req, res){
 		// Start building in query by date
 		var limit = req.query.limit || 20;
-		var maxDistance = req.query.distance || 8;
-		maxDistance /= 6371;
+		var maxDistance = req.query.distance || 5;
+		// maxDistance /= 6371;
 		var coords = [req.params.lon, req.params.lat];
 		Listing.find({
 			loc: {
 				$near: coords,
-				$maxDistance: maxDistance
+				$maxDistance: (maxDistance / 69)
 			}
 		}).limit(limit).exec(function(err, listings){
 			if(err) return res.status(500).json(err);
