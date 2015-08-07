@@ -11,9 +11,11 @@ app.directive('listingDir', function(){
 		},
 		controller: function($scope, mainService){
 			$scope.toggleFavorite = function(listing){
-				// if(listing.favorite){
-				// 	mainService.removeFavorite
-				// }
+				if(listing.favorite){
+					mainService.removeFavorite(listing._id).then(function(res){
+						
+					})
+				}
 				mainService.addFavorite(listing._id).then(function(res){
 					$scope.matchFavorites();
 				}, function(err){

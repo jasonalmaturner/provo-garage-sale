@@ -52,10 +52,23 @@ app.service('mainService', function($http, $q){
   this.listingByUser = function(userId) {
     return $http({
       method: 'GET',
-      url: 'http://localhost:8040/api/Listing/user/' + userId
+      url: '/api/Listing/user/' + userId
     }).then(function(response){
       return response.data;
     })
+  };
+
+  this.removeFavorite = function(id){
+    var dfd = $q.defer();
+    $http({
+      method: 'PUT',
+      url: '/api/user/favorite/remove/' + id
+    }).then(function(res){
+      dfd.resolve(res);
+    }, function(err){
+      dfd.reject(err);
+    });
+    return dfd.promise;
   };
 
 });
