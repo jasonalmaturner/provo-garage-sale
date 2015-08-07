@@ -15,7 +15,7 @@ ng-class="{'clicked-listing': listing.clicked}">
 					class="starChecked">
 				</i>
 		</span>
-
+<form action="http://maps.google.com/maps" method="get" target="_blank">
 		<span>
 		<strong>Time:</strong>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -33,7 +33,7 @@ ng-class="{'clicked-listing': listing.clicked}">
 				{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}
 
 				<!-- 		GOOGLE DIRECTION -->
-			<form action="http://maps.google.com/maps" method="get" target="_blank">
+			
 				<input type="hidden" name="daddr" value="{{listing.address.street}},
 				{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}" />
 		</form>
