@@ -16,11 +16,25 @@ html, body {
 	font-weight: bold;
 }
 
+.siteName {
+	padding-top: 20px;
+	min-width: 230px;
+	padding-left: 20px;
+}
+
 .distanceSearch {
+	width: 124px;
+	/*height: 50px;*/
+	color: black;
+	/*padding-top: 21px;*/
+}
+
+.dateSearch{
+	width: 155px;
 }
 
 .siteName{
-	padding-top: 20px;
+	padding-top: 16px;
 	font-weight: bold;
 	font-size: 45px;
 	text-align: right;
@@ -35,9 +49,9 @@ main-dir {
 }
 
 .map-container {
-	height: 100%;
-	width: 100%;
-	padding-top: 10px;
+	height: 200%;
+	width: 300%;
+	/*padding-top: 10px;*/
 }
 
 .angular-google-map-container {
@@ -47,8 +61,8 @@ main-dir {
 
 /*listing card information*/
 .myListingsCardTitle {
-	text-align:center; 
-	font-size: 24px; 
+	text-align:center;
+	font-size: 24px;
 	font-weight: bold;
 }
 
@@ -75,14 +89,14 @@ main-dir {
 }
 
 .listingClick {
-	font-size: 15px; 
-	padding: 5px; 
+	font-size: 15px;
+	padding: 5px;
 	cursor:pointer;
 }
 
 .starChecked {
-	color:#E9DB00; 
-	float: right; 
+	color:#E9DB00;
+	float: right;
 	padding-right: 5px;
 }
 
@@ -91,11 +105,11 @@ main-dir {
 }
 
 .tabsdemoStaticTabs md-tab-content {
-  padding: 5px; 
+  padding: 5px;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(1) {
-background-color: #3F51B5; 
+background-color: #3F51B5;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(2) {
@@ -120,8 +134,8 @@ i:focus{
 
 /*listing form*/
 .updateMyListingTitle, .addMyListingTitle {
-	text-align:center; 
-	font-size: 24px; 
+	text-align:center;
+	font-size: 24px;
 	font-weight: bold;
 }
 
