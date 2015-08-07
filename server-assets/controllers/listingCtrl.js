@@ -82,6 +82,15 @@ module.exports = {
 			if(err) return res.status(500).json(err);
 			return res.json(listings);
 		})
+	},
+
+	geocode: function(req, res) {
+		geocoder.geocode(req.query.location).then(function(response) {
+			console.log(response[0]);
+			return res.json(response[0]);
+		}), function(err){
+			return res.status(500).json(err);
+		};
 	}
 
 };

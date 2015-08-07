@@ -14,6 +14,13 @@ app.controller('mainCtrl', function($scope, authService, $location){
 	
     $scope.showSearchBar = $location.path() === '/home';
 
-    
+
+    $scope.location = '';
+    $scope.submitLocSearch = function(location, distance){
+        mainService.getListings($scope.location).then(function(res){
+            $scope.theListings = res.data;
+        })
+    }    
+
   
 });

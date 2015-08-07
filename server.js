@@ -55,6 +55,8 @@ app.get('/api/Listing/:id', listingCtrl.readByListing);
 app.get('/api/Listings', listingCtrl.getAllListings);
 app.get('/api/Listings/:lon/:lat', listingCtrl.getByArea);
 
+app.get('/api/geocode/', listingCtrl.geocode);
+
 passport.serializeUser(function(user, done){
   done(null, user);
 })
