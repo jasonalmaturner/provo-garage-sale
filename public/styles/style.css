@@ -12,18 +12,24 @@ html, body {
 
 
 .searchByLocation {
-	font-size: 15px;
+	font-size: 13px;
 	font-weight: bold;
+	min-width: 230px;
+	padding-left: 20px;
 }
 
 .distanceSearch {
+	width: 124px;
+	color: black;
 }
 
+.dateSearch{	
+	width: 155px;
+}
 .siteName{
-	padding-top: 20px;
+	padding-top: 16px;
 	font-weight: bold;
 	font-size: 45px;
-	text-align: right;
 	letter-spacing: 10px;
 }
 
