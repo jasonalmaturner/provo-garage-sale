@@ -5,10 +5,11 @@ var app = angular.module('treasureHunters');
 app.service('mainService', function($http, $q){
 
   this.getListings = function(position){
+    console.log(position)
     var dfd = $q.defer();
     $http({
       method: 'GET',
-      url: '/api/Listings/' + position[0] + '/' + position[1] + '?distance=50000'
+      url: '/api/Listings/' + position[0] + '/' + position[1] + '?distance=20'
     }).then(function(res){
       dfd.resolve(res.data);
     }, function(err){
@@ -80,5 +81,15 @@ app.service('mainService', function($http, $q){
       return response.data;
     })
   };
+
+  this.geocode = function(location) {
+    return $http({
+      method: 'GET',
+      url: 'http://localhost:8040/api/geocode/?location=' + location
+    }).then(function(response){
+      console.log('servicegeocode', response);
+      return response;
+    })
+  }
 
 });
