@@ -133,3 +133,12 @@ i:focus{
 .areaListings {
 	background-color: #FFAB40;
 }
+
+.footer {
+	background: #FFAB40;
+	text-align: center;
+	flex-direction: row-reverse;
+	padding-top: 5px;
+
+}
+

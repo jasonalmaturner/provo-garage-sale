@@ -38,6 +38,19 @@ $routeProvider
 		templateUrl: 'app/views/user/userTmpl.html',
 		controller: 'userCtrl'
 	})
+	.when('/terms', {
+		templateUrl: 'app/views/home/footer/terms.html',
+		controller: 'mainCtrl'
+	})
+	.when('/privacy', {
+		templateUrl: 'app/views/home/footer/privacy.html',
+		controller: 'mainCtrl'
+	})
+	.when('/about', {
+		templateUrl: 'app/views/home/footer/about.html',
+		controller: 'mainCtrl'
+	})
+	
 	.otherwise({
 		redirectTo: '/home'
 	})
