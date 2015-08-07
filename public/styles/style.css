@@ -20,21 +20,17 @@ html, body {
 
 .distanceSearch {
 	width: 124px;
-	/*height: 50px;*/
 	color: black;
-	/*padding-top: 21px;*/
 }
 
 .dateSearch{
 	width: 155px;
 }
-
 .siteName{
 	padding-top: 16px;
 	font-weight: bold;
 	font-size: 45px;
 	letter-spacing: 10px;
-	position: absolute;
 }
 
 
@@ -44,14 +40,13 @@ main-dir {
 }
 
 .map-container {
-	height: 200%;
-	width: 300%;
-	/*padding-top: 10px;*/
+	height: 100%;
+	width: 100%;
+	padding-top: 10px;
 }
 
 .angular-google-map-container {
-	height: 500px;
-	/*width: flex;*/
+	height: 546px;
 }
 
 
