@@ -32,7 +32,19 @@ $routeProvider
 	})
 	.when('/update', {
 		templateUrl: 'app/views/update/updateTmpl.html',
-		controller: 'updateCtrl'
+		controller: 'updateCtrl',
+		resolve: {
+			listings: function(mainService, authService, $q) {
+				var dfd = $q.defer();
+				mainService.listingByUser(authService.currentUser()._id).then(function(res) {
+					console.log(res);
+					dfd.resolve(res);
+				}, function (err) {
+					dfd.reject(err);
+				});
+				return dfd.promise;
+			}
+		}
 	})
 	.when('/user', {
 		templateUrl: 'app/views/user/userTmpl.html',
