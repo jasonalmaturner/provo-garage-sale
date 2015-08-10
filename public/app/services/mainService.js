@@ -90,6 +90,15 @@ app.service('mainService', function($http, $q){
       console.log('servicegeocode', response);
       return response;
     })
+  },
+
+  this.removeListing = function(listingId) {
+    return $http({
+      method: 'DELETE',
+      url: 'http://localhost:8040/api/Listing/' + listingId
+    }).then(function(response){
+      return response.data;
+    })
   }
 
 });

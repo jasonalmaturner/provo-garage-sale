@@ -100,27 +100,23 @@
         </md-input-container>
         </form>
 
-         <!-- search by distance -->
-        <md-select class="distanceSearch" flex="15" flex-sm="30" ng-if="showSearchBar" >
-          <md-option ng-repeat="distance in distances" ng-model="distance">{{distance}}
-          </md-option>
-        </md-select>
+          <!-- search by distance -->
 
+        <md-select class="distanceSearch" ng-model="distance" flex="15" flex-sm="30" ng-if="showSearchBar" >
+           <md-option ng-repeat="distance in distances">{{distance}}
+           </md-option>
+        </md-select>
         
 
              <!--         Calendar        -->
-        
+
         <md-input-container ng-if="showSearchBar" class="dateSearch">
             <input type="date" ng-model="newListing.startDate"><label>Date</label>
+
         </md-input-container>
 
 
-
-            
-
-
-
-          <!-- site name -->
+                       <!-- site name -->
         <div class="siteName" flex="60" flex-sm="40">YARD SALES
         </div>
 
@@ -130,7 +126,7 @@
         <!-- Connected Views -->
   <ng-view>
   </ng-view>
-<!--
+                  <!--   Footer content -->
     <div class="footer">
 
         <p>all rights reserved 2015</p>
@@ -139,7 +135,7 @@
      <a href="#/privacy">   <md-button> Privacy Policy </md-button></a>
       <a href="#/about">  <md-button> About Us </md-button></a>
       </div>
-    </div> -->
+    </div> 
 
     <!-- Script Links -->
     <script src="bower_components/angular/angular.js"></script>
@@ -160,6 +156,5 @@
     <script src="app/views/home/homeCtrl.js"></script>
     <script src="app/views/listing/listingCtrl.js"></script>
     <script src="app/views/update/updateCtrl.js"></script>
-    <script src="app/views/user/userCtrl.js"></script>
   </body>
 </html>

@@ -3,33 +3,37 @@ html, body {
 }
 /*tool bars*/
 .topToolbar {
-	padding-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .secondToolbar {
 	background: #FFAB40;
+	height: 60px;
 }
 
 
 .searchByLocation {
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: bold;
-	min-width: 230px;
-	padding-left: 20px;
+	padding-left: 25px;
+	width: 300px;
+	padding-top: 6px;
 }
 
 .distanceSearch {
-	width: 124px;
 	color: black;
 }
 
 .dateSearch{
 	width: 155px;
+	height: 48px;
 }
 .siteName{
-	padding-top: 16px;
+	padding-top: 6px;
 	font-weight: bold;
 	font-size: 45px;
+	float: right;
 	letter-spacing: 10px;
 }
 
@@ -128,10 +132,27 @@ i:focus{
 	text-align:center;
 	font-size: 24px;
 	font-weight: bold;
+	background-color: #EEEEEE;
 }
 
 .submitBtn {
-	background-color: #00E676;
+	padding-top: 10px;
+	background-color: #09C067;
+	width: 50%;
+	align-self: center;
+	margin-top: 15px;
+}
+
+.removeBtn {
+	padding-top: 10px;
+	background-color: red;
+	width: 30%;
+	align-self: center;
+	margin-top: 15px;
+}
+
+#removeDiv {
+	background-color: #EEEEEE;
 }
 
 .areaListings {
@@ -142,10 +163,16 @@ i:focus{
 	background: #FFAB40;
 	text-align: center;
 	flex-direction: row-reverse;
-	padding-top: 1px;
+	padding-top: 5px;
 
 }
 
 .centerfav {
 	text-align: center;
+}
+.updateForm{
+	background-color: #EEEEEE;
+}
+.updateFormBox{
+	background-color: #EEEEEE;
 }
