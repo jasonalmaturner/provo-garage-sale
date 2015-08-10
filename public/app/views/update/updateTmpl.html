@@ -11,6 +11,11 @@
   <div flex="66" flex-sm="100" layout-padding="10" class="updateForm">
       <!-- Update My Listing title -->
     <md-content layout-padding="10">
+      <div id="removeDiv" ng-show="showRemove">
+        <button class="removeBtn" ng-click="removeListing(editListing._id)">
+          Remove Listing
+        </button>
+      </div>
       <div class="updateMyListingTitle">Update My Listing
       </div>
 
