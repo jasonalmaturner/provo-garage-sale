@@ -90,42 +90,6 @@
       </md-toolbar>
     </md-content>
 
-
-      <!-- SECOND TOOLBAR -->
-    <md-content>
-      <md-toolbar class="secondToolbar" layout="row">
-
-          <!-- search by location container -->
-        <form ng-submit="submitLocSearch(locationSearch)">
-          <md-input-container class="searchByLocation" flex="5" flex-sm="5" ng-show="showSearchBar">
-            <label>Search by Location
-            </label>
-            <input type="text" ng-model="locationSearch">
-          </md-input-container>
-        </form>
-
-          <!-- search by distance -->
-        <md-select class="distanceSearch" ng-model="distance" flex="10" flex-sm="5" ng-if="showSearchBar" >
-          <md-option ng-repeat="distance in distances">{{distance}}
-          </md-option>
-        </md-select>
-        
-          <!-- calendar -->
-        <md-input-container ng-if="showSearchBar" class="dateSearch"flex="10" flex-sm="5">
-          <input type="date" ng-model="newListing.startDate">
-          <label>Date
-          </label>
-        </md-input-container>
-
-          <!-- site name -->
-        <div class="siteName" flex="50" hide-sm>YARD SALES
-        </div>
-        <div class="smallSiteName" flex-sm="10" hide-gt-sm>YARD SALES
-        </div>
-      </md-toolbar>
-    </md-content>
-
-
     <!-- connected views -->
   <ng-view>
   </ng-view>
