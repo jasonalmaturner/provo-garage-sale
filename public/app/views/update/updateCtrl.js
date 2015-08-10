@@ -28,7 +28,12 @@ app.controller('updateCtrl', function($scope, mainService, $location, listings, 
         alert('Update failed, please try again.');
       }
       else {
-        alert('Listing updated successfully!');
+        mainService.listingByUser($scope.currentUser._id).then(function(resp) {
+          $scope.userListings = resp;
+          alert('Listing updated successfully!');
+        }, function (erro) {
+          alert('Error retrieving new listings');
+        })
       }
     })
   }
@@ -41,10 +46,15 @@ app.controller('updateCtrl', function($scope, mainService, $location, listings, 
       .targetEvent(ev);
     $mdDialog.show(confirm).then(function() {
         mainService.removeListing(listingid).then(function (res, err) {
-          alert('Listing removed!');
+          mainService.listingByUser($scope.currentUser._id).then(function(resp) {
+            $scope.userListings = resp;
+            alert('Listing removed!');
+            }, function (erro) {
+              alert('Error retrieving new listings');
+            })
         }, function(err) {
           alert('Removing listing failed, please try again');
         });
-      });
+    });
   };
 });

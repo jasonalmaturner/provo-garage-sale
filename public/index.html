@@ -6,18 +6,18 @@
 	  <title>Local Yard Sales</title>
 
       <!-- links -->
-	  <link rel="stylesheet" type="text/css" href="styles/style.css">
 	  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" type="text/css" href="styles/style.css">
   </head>
 
     <!-- main controller -->
   <body ng-controller="mainCtrl">
 
       <!-- TOP TOOLBAR -->
-    <md-content>
-      <md-toolbar class="topToolbar md-toolbar-tools" >
+    <md-content class="topToolbar">
+      <md-toolbar class="md-toolbar-tools" >
         <div layout="row">
           <!-- home button -->
           <div class="homeBtn" flex="20" flex-sm="10">
@@ -76,51 +76,19 @@
                 <!-- user logout button-->
               <a href="/logout" flex="30" flex-sm="5">
                 <md-button>
-                  Logout
-                 {{currentUser.name}}
+                  <span hide-sm>Logout</span>
                 </md-button>
               </a>
             </md-input-container>
           </div>
+            <div class="welcomeUser" ng-show="currentUser" flex="30" flex-sm="5">
+            <md-input-container>
+              Welcome {{currentUser.name}}
+              </md-input-container>
+            </div>
         </div>
       </md-toolbar>
     </md-content>
-
-
-      <!-- SECOND TOOLBAR -->
-    <md-content>
-      <md-toolbar class="secondToolbar" layout="row">
-
-          <!-- search by location container -->
-        <form ng-submit="submitLocSearch(locationSearch)">
-          <md-input-container class="searchByLocation" flex="5" flex-sm="5" ng-show="showSearchBar">
-            <label>Search by Location
-            </label>
-            <input type="text" ng-model="locationSearch">
-          </md-input-container>
-        </form>
-
-          <!-- search by distance -->
-        <md-select class="distanceSearch" ng-model="distance" flex="10" flex-sm="5" ng-if="showSearchBar" >
-          <md-option ng-repeat="distance in distances">{{distance}}
-          </md-option>
-        </md-select>
-
-          <!-- calendar -->
-        <md-input-container ng-if="showSearchBar" class="dateSearch"flex="10" flex-sm="5">
-          <input type="date" ng-model="newListing.startDate">
-          <label>Date
-          </label>
-        </md-input-container>
-
-          <!-- site name -->
-        <div class="siteName" flex="50" hide-sm>YARD SALES
-        </div>
-        <div class="smallSiteName" flex-sm="10" hide-gt-sm>YARD SALES
-        </div>
-      </md-toolbar>
-    </md-content>
-
 
     <!-- connected views -->
   <ng-view>
