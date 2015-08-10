@@ -4,7 +4,7 @@ html, body {
 /*tool bars*/
 .topToolbar {
 	padding-top: 10px;
-	padding-bottom: 10px;
+	background-color: #3F51B5;
 }
 
 .secondToolbar {
@@ -15,34 +15,57 @@ html, body {
 .searchByLocation {
 	font-size: 12px;
 	font-weight: bold;
+<<<<<<< HEAD
+	padding-left: 25px;
+	width: 300px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+=======
 	padding-left: 5px;
 	padding-top: 6px;
+>>>>>>> 8cbefb5c396ee4c5fe3aadb9c4844d84f000baf9
 }
 
 .distanceSearch {
 	color: black;
+<<<<<<< HEAD
+	font-size: 15px;
+=======
 	font-size: 10px;
+>>>>>>> 8cbefb5c396ee4c5fe3aadb9c4844d84f000baf9
 }
 
 .dateSearch{
 	height: 48px;
+<<<<<<< HEAD
+	font-size: 15px;
+=======
 	font-size: 12px;
+>>>>>>> 8cbefb5c396ee4c5fe3aadb9c4844d84f000baf9
 }
 
 .siteName{
+<<<<<<< HEAD
+=======
 	padding-top: 6px;
+>>>>>>> 8cbefb5c396ee4c5fe3aadb9c4844d84f000baf9
 	font-weight: bold;
 	font-size: 45px;
-	text-align: right;
-	letter-spacing: 20px;
+	letter-spacing: 15px;
 	word-spacing: 10px;
 }
 
+<<<<<<< HEAD
+md-tabs md-ink-bar{
+	color: white;
+	background-color: white;
+=======
 .smallSiteName{
 	padding-top: 6px;
 	font-weight: bold;
 	font-size: 25px;
 	text-align: right;
+>>>>>>> 8cbefb5c396ee4c5fe3aadb9c4844d84f000baf9
 }
 
 /*map*/
@@ -115,6 +138,11 @@ main-dir {
 	font-size: 14px;
 }
 
+.welcomeUser{
+	font-size: 16px;
+	padding-top: 10px;
+}
+
 .tabsdemoStaticTabs md-tab-content {
   padding: 5px;
 }
@@ -173,6 +201,16 @@ i:focus{
 
 .areaListings {
 	background-color: #FFAB40;
+}
+
+.md-right{
+	color: white;
+	background-color: white;
+}
+
+.md-left{
+	color: white;
+	background-color: white;
 }
 
 .footer {
