@@ -33,4 +33,23 @@ app.controller('mainCtrl', function($scope, authService, $location, mainService)
         	})
     	})
     }    
+
+    $scope.addClick = function() {
+        console.log("hit add")
+        if ($scope.currentUser !== undefined) {
+            $location.path('listing')
+        }
+        else {
+            alert('You must login to Add a Listing!');
+        }
+    };
+
+    $scope.myListingClick = function() {
+        if ($scope.currentUser !== undefined) {
+            $location.path('update');
+        }
+        else {
+            alert('You must login to Manage Listings!');
+        }
+    };
 });
