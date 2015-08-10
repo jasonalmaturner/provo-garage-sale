@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <!-- app name for internal use.  -->
+  <!-- app name for internal use -->
 <html ng-app="treasureHunters">
   <head>
 
@@ -19,71 +19,74 @@
     <md-content>
       <md-toolbar class="topToolbar">
         <div class="md-toolbar-tools">
-
+          <div layout="row">
             <!-- home button -->
-          <div class="homeBtn">
-            <md-input-container>
-              <a href="/#/home">
+            <div class="homeBtn" flex="15" flex-sm="10">
+              <md-input-container>
+                <a href="/#/home">
                 <md-button>
                   <i class="fa fa-home fa-lg">
-                  </i>&nbsp;&nbsp;Home
-                </md-button>
-              </a>
-            </md-input-container>
-          </div>
+                   </i> 
+                <span hide-sm>&nbsp;&nbsp;Home</span>
+                  </md-button>
+                </a>
+              </md-input-container>
+            </div>
+
+              <!-- add listing button -->
+            <div class="addListingBtn" flex="25" flex-sm="10">
+              <md-input-container >
+                <a href="#/listing">
+                  <md-button>
+                    <i class="fa fa-plus-square fa-lg">
+                    </i>
+                   <span hide-sm>&nbsp;&nbsp;Add Listing</span>
+                  </md-button>
+                </a>
+              </md-input-container>
+            </div>
+
+              <!-- update my listing button -->
+            <div class="myListingBtn" flex="20" flex-sm="10">
+              <md-input-container >
+                <a href="#/update">
+                  <md-button>
+                    <i class="fa fa-user fa-lg">
+                    </i>
+                    <span hide-sm>&nbsp;&nbsp;My Listing</span>
+                  </md-button>
+                </a>
+              </md-input-container>
+            </div>
 
             <!-- facebook login button -->
-          <div class="facebookBtn" ng-hide="currentUser">
-            <md-input-container>
-              <a href="/auth/facebook">
-                <md-button>
-                  <i class="fa fa-facebook-official fa-lg">
-                  </i>&nbsp;&nbsp;Login
-                </md-button>
-              </a>
-            </md-input-container>
-          </div>
-                      <!-- facebook current user  button and logout -->
-          <div class="facebookBtn" ng-show="currentUser">
-            <md-input-container>
-
-              <a href="/logout">
-                <md-button>
-                  Logout
-                 {{currentUser.name}}
-                </md-button>
-              </a>
-            </md-input-container>
-          </div>
-
-            <!-- add listing button -->
-          <div class="addListingBtn">
-            <md-input-container>
-              <a href="#/listing">
-                <md-button>
-                  <i class="fa fa-plus-square fa-lg">
-                  </i>&nbsp;&nbsp;Add Listing
-                </md-button>
-              </a>
-            </md-input-container>
-          </div>
-
-            <!-- update my listing button -->
-          <div class="myListingBtn">
-            <md-input-container>
-              <a href="#/update">
-                <md-button>
-                  <i class="fa fa-user fa-lg">
-                  </i>&nbsp;&nbsp;My Listing
-                </md-button>
-              </a>
-            </md-input-container>
-          </div>
-
+            <div class="facebookBtn" ng-hide="currentUser" flex="30" flex-sm="10">
+              <md-input-container>
+                <a href="/auth/facebook">
+                  <md-button>
+                    <i class="fa fa-facebook-official fa-lg">
+                    </i>
+                    <span hide-sm>&nbsp;&nbsp;Login</span>
+                  </md-button>
+                </a>
+              </md-input-container>
+            </div>
+              <!-- facebook current user button -->
+            <div class="facebookBtn" ng-show="currentUser" flex="30" flex-sm="5">
+              <md-input-container>
+                  <!-- user logout button-->
+                <a href="/logout" flex="30" flex-sm="5">
+                  <md-button>
+                    Logout
+                   {{currentUser.name}}
+                  </md-button>
+                </a>
+              </md-input-container>
+            </div>
+          </div> 
         </div>
       </md-toolbar>
     </md-content>
-
 
       <!-- second toolbar -->
     <md-content>

@@ -1,11 +1,11 @@
-  <!-- "MY LISTING" page--> 
+	<!-- "MY LISTING" page--> 
 
 <div layout="row" layout-sm="column">
 
     <!-- My Listings card -->
-  <div flex-gt-sm="33">
+  <div flex-gt-sm="33" flex-sm"100">
     <listing-dir ng-repeat="listing in userListings"></listing-dir>
-  </div>
+ 	</div>
 
     <!-- "UPDATE MY LISTING" FORM -->
   <div flex="66" flex-sm="100" layout-padding="10" class="updateForm">
@@ -32,8 +32,8 @@
           </div>
 
             <!-- street address -->
-          <div layout="row">
-            <md-input-container flex="100">
+          <div layout="row" flex="100">
+            <md-input-container>
               <label>Street
               </label>
               <input type="text" ng-model="editListing.address.street">
