@@ -143,6 +143,18 @@ i:focus{
 	margin-top: 15px;
 }
 
+.removeBtn {
+	padding-top: 10px;
+	background-color: red;
+	width: 30%;
+	align-self: center;
+	margin-top: 15px;
+}
+
+#removeDiv {
+	background-color: #EEEEEE;
+}
+
 .areaListings {
 	background-color: #FFAB40;
 }
