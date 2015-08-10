@@ -1,16 +1,22 @@
-  <!-- "MY LISTING" page--> 
+	<!-- "MY LISTING" page--> 
 
 <div layout="row" layout-sm="column">
 
     <!-- My Listings card -->
-  <div flex-gt-sm="33">
+  <div flex-gt-sm="33" flex-sm"100">
     <listing-dir ng-repeat="listing in userListings"></listing-dir>
-  </div>
+ 	</div>
 
     <!-- "UPDATE MY LISTING" FORM -->
   <div flex="66" flex-sm="100" layout-padding="10" class="updateForm">
       <!-- Update My Listing title -->
     <md-content layout-padding="10">
+      <div id="removeDiv" ng-show="showRemove">
+        <md-button class="removeBtn" ng-click="removeListing(editListing._id, $event)">
+          Remove Listing
+        </md-button>
+      </div>
+
       <div class="updateMyListingTitle">Update My Listing
       </div>
 
@@ -27,8 +33,8 @@
           </div>
 
             <!-- street address -->
-          <div layout="row">
-            <md-input-container flex="100">
+          <div layout="row" flex="100">
+            <md-input-container>
               <label>Street
               </label>
               <input type="text" ng-model="editListing.address.street">
@@ -93,8 +99,8 @@
 
               <!-- submit and cancel buttons -->
             <md-input-container>
-              <button class="submitBtn" ng-click="updateListing(editListing._id, editListing)">Submit
-              </button>
+              <md-button class="submitBtn" ng-click="updateListing(editListing._id, editListing)">Submit
+              </md-button>
             </md-input-container>
           </div>
         </form>

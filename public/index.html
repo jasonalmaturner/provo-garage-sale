@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-  <!-- app name for internal use.  -->
+  <!-- app name for internal use -->
 <html ng-app="treasureHunters">
   <head>
 
-	  <title>Local Yard Sales </title>
+	  <title>Local Yard Sales</title>
 
       <!-- links -->
 	  <link rel="stylesheet" type="text/css" href="styles/style.css">
@@ -15,39 +15,66 @@
     <!-- main controller -->
   <body ng-controller="mainCtrl">
 
-      <!-- top toolbar -->
+      <!-- TOP TOOLBAR -->
     <md-content>
-      <md-toolbar class="topToolbar">
-        <div class="md-toolbar-tools">
-
-            <!-- home button -->
-          <div class="homeBtn">
+      <md-toolbar class="topToolbar md-toolbar-tools" >
+        <div layout="row">
+          <!-- home button -->
+          <div class="homeBtn" flex="20" flex-sm="10">
             <md-input-container>
               <a href="/#/home">
-                <md-button>
-                  <i class="fa fa-home fa-lg">
-                  </i>&nbsp;&nbsp;Home
+              <md-button>
+                <i class="fa fa-home fa-lg">
+                 </i>
+              <span hide-sm>Home</span>
                 </md-button>
               </a>
             </md-input-container>
           </div>
 
-            <!-- facebook login button -->
-          <div class="facebookBtn" ng-hide="currentUser">
+            <!-- add listing button -->
+          <div class="addListingBtn" flex="30" flex-sm="10">
+            <md-input-container ng-click="addClick()">
+              <!-- <a href="#/listing"> -->
+                <md-button>
+                  <i class="fa fa-plus-square fa-lg">
+                  </i>
+                 <span hide-sm>Add Listing</span>
+                </md-button>
+              <!-- </a> -->
+            </md-input-container>
+          </div>
+
+            <!-- update my listing button -->
+          <div class="myListingBtn" flex="30" flex-sm="10">
+            <md-input-container ng-click="myListingClick()">
+              <!-- <a href="#/update"> -->
+                <md-button>
+                  <i class="fa fa-user fa-lg">
+                  </i>
+                  <span hide-sm>My Listing</span>
+                </md-button>
+              <!-- </a> -->
+            </md-input-container>
+          </div>
+
+          <!-- facebook login button -->
+          <div class="facebookBtn" ng-hide="currentUser" flex="30" flex-sm="10">
             <md-input-container>
               <a href="/auth/facebook">
                 <md-button>
                   <i class="fa fa-facebook-official fa-lg">
-                  </i>&nbsp;&nbsp;Login
+                  </i>
+                  <span hide-sm>Login</span>
                 </md-button>
               </a>
             </md-input-container>
           </div>
-                      <!-- facebook current user  button and logout -->
-          <div class="facebookBtn" ng-show="currentUser">
+            <!-- facebook current user button -->
+          <div class="facebookBtn" ng-show="currentUser" flex="30" flex-sm="5">
             <md-input-container>
-
-              <a href="/logout">
+                <!-- user logout button-->
+              <a href="/logout" flex="30" flex-sm="5">
                 <md-button>
                   Logout
                  {{currentUser.name}}
@@ -55,89 +82,60 @@
               </a>
             </md-input-container>
           </div>
-
-            <!-- add listing button -->
-          <div class="addListingBtn">
-            <md-input-container>
-              <a href="#/listing">
-                <md-button>
-                  <i class="fa fa-plus-square fa-lg">
-                  </i>&nbsp;&nbsp;Add Listing
-                </md-button>
-              </a>
-            </md-input-container>
-          </div>
-
-            <!-- update my listing button -->
-          <div class="myListingBtn">
-            <md-input-container>
-              <a href="#/update">
-                <md-button>
-                  <i class="fa fa-user fa-lg">
-                  </i>&nbsp;&nbsp;My Listing
-                </md-button>
-              </a>
-            </md-input-container>
-          </div>
-
         </div>
       </md-toolbar>
     </md-content>
 
 
-      <!-- second toolbar -->
+      <!-- SECOND TOOLBAR -->
     <md-content>
       <md-toolbar class="secondToolbar" layout="row">
 
           <!-- search by location container -->
         <form ng-submit="submitLocSearch(locationSearch)">
-        <md-input-container class="searchByLocation" flex="15" flex-sm="15" ng-show="showSearchBar">
-          <label>Search by Location
-          </label>
-          <input type="text" ng-model="locationSearch">
-        </md-input-container>
+          <md-input-container class="searchByLocation" flex="5" flex-sm="5" ng-show="showSearchBar">
+            <label>Search by Location
+            </label>
+            <input type="text" ng-model="locationSearch">
+          </md-input-container>
         </form>
 
-         <!-- search by distance -->
-        <md-select class="distanceSearch" flex="15" flex-sm="30" ng-if="showSearchBar" >
-          <md-option ng-repeat="distance in distances" ng-model="distance">{{distance}}
+          <!-- search by distance -->
+        <md-select class="distanceSearch" ng-model="distance" flex="10" flex-sm="5" ng-if="showSearchBar" >
+          <md-option ng-repeat="distance in distances">{{distance}}
           </md-option>
         </md-select>
 
-
-
-             <!--         Calendar        -->
-
-        <md-input-container ng-if="showSearchBar" class="dateSearch">
-            <input type="date" ng-model="newListing.startDate"><label>Date</label>
+          <!-- calendar -->
+        <md-input-container ng-if="showSearchBar" class="dateSearch"flex="10" flex-sm="5">
+          <input type="date" ng-model="newListing.startDate">
+          <label>Date
+          </label>
         </md-input-container>
 
-
-
-
-
-
-
           <!-- site name -->
-        <div class="siteName" flex="60" flex-sm="40">YARD SALES
+        <div class="siteName" flex="50" hide-sm>YARD SALES
         </div>
-
+        <div class="smallSiteName" flex-sm="10" hide-gt-sm>YARD SALES
+        </div>
       </md-toolbar>
     </md-content>
 
-        <!-- Connected Views -->
+
+    <!-- connected views -->
   <ng-view>
   </ng-view>
-<!--
-    <div class="footer">
 
-        <p>all rights reserved 2015</p>
+      <!-- footer content -->
+    <!-- <div class="footer">
+
+        <div>all rights reserved 2015</div>
          <div class="footerContent"><md-button> Like Us on Facebook</md-button>
       <a href="#/terms">  <md-button> Terms and Conditions </md-button></a>
      <a href="#/privacy">   <md-button> Privacy Policy </md-button></a>
       <a href="#/about">  <md-button> About Us </md-button></a>
       </div>
-    </div> -->
+    </div>  -->
 
     <!-- Script Links -->
     <script src="bower_components/angular/angular.js"></script>
@@ -158,6 +156,5 @@
     <script src="app/views/home/homeCtrl.js"></script>
     <script src="app/views/listing/listingCtrl.js"></script>
     <script src="app/views/update/updateCtrl.js"></script>
-    <script src="app/views/user/userCtrl.js"></script>
   </body>
 </html>
