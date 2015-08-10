@@ -72,10 +72,12 @@ main-dir {
 .getDirectionsBtn{
 	width: 60px;
 	height: 17px;
-	font-size: 9px;
+	font-size: 10px;
+	font-weight: bold;
 	color: #3F51B5;
 	padding-left: 0px;
 	cursor: pointer;
+	text-align: center;
 }
 
 .listingPopOut {
