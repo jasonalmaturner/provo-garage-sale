@@ -121,6 +121,11 @@ main-dir {
 	padding-top: 10px;
 }
 
+md-tabs md-ink-bar{
+	color:white;
+	background-color: white;
+}
+
 .tabsdemoStaticTabs md-tab-content {
   padding: 5px;
 }
