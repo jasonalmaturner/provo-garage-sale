@@ -4,7 +4,7 @@ html, body {
 /*tool bars*/
 .topToolbar {
 	padding-top: 10px;
-	background-color: #3F51B5;
+	padding-bottom: 10px;
 }
 
 .secondToolbar {
@@ -12,32 +12,50 @@ html, body {
 	height: 60px;
 }
 
+
 .searchByLocation {
-	font-size: 12px;
+	font-size: 15px;
 	font-weight: bold;
 	padding-left: 25px;
 	width: 300px;
+<<<<<<< HEAD
 	padding-bottom: 0px;
 	padding-top: 0px;
+=======
+>>>>>>> 08864041e51112275b8a9f91f724814b41df1fa3
 }
 
 .distanceSearch {
 	color: black;
+<<<<<<< HEAD
 	font-size: 15px;
+=======
+>>>>>>> 08864041e51112275b8a9f91f724814b41df1fa3
 }
 
 .dateSearch{
+	width: 155px;
 	height: 48px;
+<<<<<<< HEAD
 	font-size: 15px;
+=======
+>>>>>>> 08864041e51112275b8a9f91f724814b41df1fa3
 }
-
 .siteName{
+<<<<<<< HEAD
+=======
+	padding-top: 6px;
+>>>>>>> 08864041e51112275b8a9f91f724814b41df1fa3
 	font-weight: bold;
 	font-size: 45px;
-	letter-spacing: 15px;
-	word-spacing: 10px;
+	float: right;
+	letter-spacing: 10px;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08864041e51112275b8a9f91f724814b41df1fa3
 /*map*/
 main-dir {
 	display: flex;
@@ -59,15 +77,6 @@ main-dir {
 	text-align:center;
 	font-size: 24px;
 	font-weight: bold;
-}
-
-.getDirectionsBtn{
-	width: 60px;
-	height: 17px;
-	font-size: 9px;
-	color: #3F51B5;
-	padding-left: 0px;
-	cursor: pointer;
 }
 
 .listingPopOut {
@@ -106,11 +115,6 @@ main-dir {
 
 .showActive {
 	font-size: 14px;
-}
-
-.welcomeUser{
-	font-size: 16px;
-	padding-top: 10px;
 }
 
 .tabsdemoStaticTabs md-tab-content {
@@ -157,30 +161,8 @@ i:focus{
 	margin-top: 15px;
 }
 
-.removeBtn {
-	padding-top: 10px;
-	background-color: red;
-	width: 30%;
-	align-self: center;
-	margin-top: 15px;
-}
-
-#removeDiv {
-	background-color: #EEEEEE;
-}
-
 .areaListings {
 	background-color: #FFAB40;
-}
-
-.md-right{
-	color: white;
-	background-color: white;
-}
-
-.md-left{
-	color: white;
-	background-color: white;
 }
 
 .footer {
