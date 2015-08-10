@@ -26,7 +26,7 @@
               <a href="/#/home">
                 <md-button>
                   <i class="fa fa-home fa-lg">
-                  </i>&nbsp;Home
+                  </i>&nbsp;&nbsp;Home
                 </md-button>
               </a>
             </md-input-container>
@@ -38,7 +38,7 @@
               <a href="/auth/facebook">
                 <md-button>
                   <i class="fa fa-facebook-official fa-lg">
-                  </i>&nbsp;Login
+                  </i>&nbsp;&nbsp;Login
                 </md-button>
               </a>
             </md-input-container>
@@ -49,6 +49,7 @@
 
               <a href="/logout">
                 <md-button>
+                  Logout
                  {{currentUser.name}}
                 </md-button>
               </a>
@@ -61,7 +62,7 @@
               <a href="#/listing">
                 <md-button>
                   <i class="fa fa-plus-square fa-lg">
-                  </i>&nbsp;Add Listing
+                  </i>&nbsp;&nbsp;Add Listing
                 </md-button>
               </a>
             </md-input-container>
@@ -73,7 +74,7 @@
               <a href="#/update">
                 <md-button>
                   <i class="fa fa-user fa-lg">
-                  </i>&nbsp;My Listing
+                  </i>&nbsp;&nbsp;My Listing
                 </md-button>
               </a>
             </md-input-container>
@@ -93,7 +94,7 @@
         <md-input-container class="searchByLocation" flex="15" flex-sm="15" ng-show="showSearchBar">
           <label>Search by Location
           </label>
-          <input type="text" ng-model="locationSearch" class="searchBar">
+          <input type="text" ng-model="locationSearch">
         </md-input-container>
         </form>
 
@@ -106,18 +107,14 @@
         
 
              <!--         Calendar        -->
-        
+
         <md-input-container ng-if="showSearchBar" class="dateSearch">
             <input type="date" ng-model="newListing.startDate"><label>Date</label>
 
         </md-input-container>
 
 
-
-
-
-
-          <!-- site name -->
+                       <!-- site name -->
         <div class="siteName" flex="60" flex-sm="40">YARD SALES
         </div>
 
@@ -127,10 +124,10 @@
         <!-- Connected Views -->
   <ng-view>
   </ng-view>
-
-                     <!--  Footer Content  -->
+                  <!--   Footer content -->
     <div class="footer">
-         <p>all rights reserved 2015</p>
+
+        <p>all rights reserved 2015</p>
          <div class="footerContent"><md-button> Like Us on Facebook</md-button>
       <a href="#/terms">  <md-button> Terms and Conditions </md-button></a>
      <a href="#/privacy">   <md-button> Privacy Policy </md-button></a>
@@ -157,6 +154,5 @@
     <script src="app/views/home/homeCtrl.js"></script>
     <script src="app/views/listing/listingCtrl.js"></script>
     <script src="app/views/update/updateCtrl.js"></script>
-    <script src="app/views/user/userCtrl.js"></script>
   </body>
 </html>

@@ -57,6 +57,11 @@ app.get('/api/Listings/:lon/:lat', listingCtrl.getByArea);
 
 app.get('/api/geocode/', listingCtrl.geocode);
 
+app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/#/home')
+})
+
 passport.serializeUser(function(user, done){
   done(null, user);
 })
