@@ -16,8 +16,14 @@ html, body {
 .searchByLocation {
 	font-size: 15px;
 	font-weight: bold;
+<<<<<<< HEAD
 	padding-left: 25px;
 	width: 300px;
+=======
+	min-width: 230px;
+	padding-left: 20px;
+	padding-top: 20px;
+>>>>>>> 88d253e64be26a9aad87c3ce766496172bd2cc4f
 }
 
 .distanceSearch {
