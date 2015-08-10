@@ -26,7 +26,7 @@
               <a href="/#/home">
                 <md-button>
                   <i class="fa fa-home fa-lg">
-                  </i>&nbsp;&nbsp;Home
+                  </i>&nbsp;Home
                 </md-button>
               </a>
             </md-input-container>
@@ -38,7 +38,7 @@
               <a href="/auth/facebook">
                 <md-button>
                   <i class="fa fa-facebook-official fa-lg">
-                  </i>&nbsp;&nbsp;Login
+                  </i>&nbsp;Login
                 </md-button>
               </a>
             </md-input-container>
@@ -61,7 +61,7 @@
               <a href="#/listing">
                 <md-button>
                   <i class="fa fa-plus-square fa-lg">
-                  </i>&nbsp;&nbsp;Add Listing
+                  </i>&nbsp;Add Listing
                 </md-button>
               </a>
             </md-input-container>
@@ -73,7 +73,7 @@
               <a href="#/update">
                 <md-button>
                   <i class="fa fa-user fa-lg">
-                  </i>&nbsp;&nbsp;My Listing
+                  </i>&nbsp;My Listing
                 </md-button>
               </a>
             </md-input-container>
@@ -93,22 +93,27 @@
         <md-input-container class="searchByLocation" flex="15" flex-sm="15" ng-show="showSearchBar">
           <label>Search by Location
           </label>
-          <input type="text" ng-model="locationSearch">
+          <input type="text" ng-model="locationSearch" class="searchBar">
         </md-input-container>
         </form>
 
           <!-- search by distance -->
-        <!-- <md-select class="distanceSearch" flex="15" flex-sm="30" ng-if="showSearchBar" >
-          <md-option ng-repeat="distance in distances" ng-model="distance">{{distance}}
-          </md-option>
-        </md-select> -->
+
+        <md-select class="distanceSearch" ng-model="distance" flex="15" flex-sm="30" ng-if="showSearchBar" >
+           <md-option ng-repeat="distance in distances">{{distance}}
+           </md-option>
+        </md-select>
         
 
              <!--         Calendar        -->
         
-        <!-- <md-input-container ng-if="showSearchBar" class="dateSearch">
+        <md-input-container ng-if="showSearchBar" class="dateSearch">
             <input type="date" ng-model="newListing.startDate"><label>Date</label>
-        </md-input-container> -->
+
+        </md-input-container>
+
+
+
 
 
 
@@ -122,16 +127,16 @@
         <!-- Connected Views -->
   <ng-view>
   </ng-view>
-<!--
-    <div class="footer">
 
-        <p>all rights reserved 2015</p>
+                     <!--  Footer Content  -->
+    <div class="footer">
+         <p>all rights reserved 2015</p>
          <div class="footerContent"><md-button> Like Us on Facebook</md-button>
       <a href="#/terms">  <md-button> Terms and Conditions </md-button></a>
      <a href="#/privacy">   <md-button> Privacy Policy </md-button></a>
       <a href="#/about">  <md-button> About Us </md-button></a>
       </div>
-    </div> -->
+    </div> 
 
     <!-- Script Links -->
     <script src="bower_components/angular/angular.js"></script>

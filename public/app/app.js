@@ -3,12 +3,13 @@
 var app = angular.module('treasureHunters', ["ngRoute", "ngMaterial", "ngAnimate", "uiGmapgoogle-maps"]);
 
 app.config(function($routeProvider, uiGmapGoogleMapApiProvider){
-
+                    // Routes 
 $routeProvider
 	.when('/home', {
 		templateUrl: 'app/views/home/homeTmpl.html',
 		controller: 'homeCtrl',
-		resolve: {
+		resolve: { 
+			    // accessing listing by location
 			listings: function(mainService, $q){
 				var dfd = $q.defer();
 				navigator.geolocation.getCurrentPosition(function(position){
@@ -66,6 +67,8 @@ $routeProvider
 	.otherwise({
 		redirectTo: '/home'
 	})
+
+	// Googe Map api 
 
 uiGmapGoogleMapApiProvider.configure({
 	key: 'AIzaSyBifIcf6wbqjTZfAcuKKBjp1wk0XRMA_wA',

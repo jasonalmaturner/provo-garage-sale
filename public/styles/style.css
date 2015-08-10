@@ -3,33 +3,42 @@ html, body {
 }
 /*tool bars*/
 .topToolbar {
-	padding-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .secondToolbar {
 	background: #FFAB40;
+	height: 60px;
 }
 
 
 .searchByLocation {
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: bold;
+<<<<<<< HEAD
+	padding-left: 25px;
+	width: 300px;
+=======
 	min-width: 230px;
 	padding-left: 20px;
+	padding-top: 20px;
+>>>>>>> 88d253e64be26a9aad87c3ce766496172bd2cc4f
 }
 
 .distanceSearch {
-	width: 124px;
 	color: black;
 }
 
 .dateSearch{
 	width: 155px;
+	height: 48px;
 }
 .siteName{
-	padding-top: 16px;
+	padding-top: 6px;
 	font-weight: bold;
 	font-size: 45px;
+	float: right;
 	letter-spacing: 10px;
 }
 
@@ -128,10 +137,15 @@ i:focus{
 	text-align:center;
 	font-size: 24px;
 	font-weight: bold;
+	background-color: #EEEEEE;
 }
 
 .submitBtn {
-	background-color: #00E676;
+	padding-top: 10px;
+	background-color: #09C067;
+	width: 50%;
+	align-self: center;
+	margin-top: 15px;
 }
 
 .areaListings {
@@ -142,10 +156,16 @@ i:focus{
 	background: #FFAB40;
 	text-align: center;
 	flex-direction: row-reverse;
-	padding-top: 1px;
+	padding-top: 5px;
 
 }
 
 .centerfav {
 	text-align: center;
+}
+.updateForm{
+	background-color: #EEEEEE;
+}
+.updateFormBox{
+	background-color: #EEEEEE;
 }
