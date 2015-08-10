@@ -31,12 +31,17 @@ html, body {
 }
 .siteName{
 	padding-top: 6px;
+	padding-right: 15px;
 	font-weight: bold;
 	font-size: 45px;
-	float: right;
-	letter-spacing: 10px;
+	text-align: right;
+	letter-spacing: 20px;
+	word-spacing: 10px;
 }
 
+.smallSiteName{
+	
+}
 
 /*map*/
 main-dir {
