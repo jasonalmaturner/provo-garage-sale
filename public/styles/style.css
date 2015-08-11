@@ -101,8 +101,8 @@ main-dir {
 	margin: 10px;
 	height: 526px;
 	overflow: scroll;
-/*	min-width: 430px;
-	max-width: 430px;*/
+	min-width: 430px;
+	max-width: 430px;
 }
 
 .listingCard {
