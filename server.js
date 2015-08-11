@@ -21,7 +21,7 @@ console.log(777, process.env)
 passport.use(new FacebookStrategy({
     clientID: 855831487806174,
     clientSecret: 'ebab77d2f0a597cabc8c0bb10cef28d6',
-    callbackURL: 'http://localhost:8040/auth/facebook/callback'
+    callbackURL: '/auth/facebook/callback'
   }, function(accessToken, refreshToken, profile, done) {
     userCtrl.create(profile, done);
  }));
