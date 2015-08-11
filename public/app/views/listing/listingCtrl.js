@@ -2,7 +2,7 @@
 
 var app = angular.module('treasureHunters');
 
-app.controller('listingCtrl', function($scope, mainService, $location) {
+app.controller('listingCtrl', function($scope, mainService, $location, $mdDialog) {
   $scope.userState = '';
   
   $scope.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
@@ -11,13 +11,25 @@ app.controller('listingCtrl', function($scope, mainService, $location) {
 
   $scope.newListing = {};
 
-  $scope.submitListing = function (newListing) {
+  $scope.submitListing = function (newListing, ev) {
   	mainService.createListing(newListing).then(function (res, err) {
   		if (err) {
-  			alert('Submission failed, please try again');
+        $mdDialog.show(
+  			$mdDialog.alert()
+          .clickOutsideToClose(true)
+          .title('Submission failed, please try again')
+          .ok('Ok')
+          .targetEvent(ev)
+        )
   		}
   		else {
-  			alert('Submission successful, thank you for using our app!');
+        $mdDialog.show(
+        $mdDialog.alert()
+          .clickOutsideToClose(true)
+          .title('Submission successful, thank you for using website!')
+          .ok('Ok')
+          .targetEvent(ev)
+        )
   			$location.path("home");
   		}
   	})
