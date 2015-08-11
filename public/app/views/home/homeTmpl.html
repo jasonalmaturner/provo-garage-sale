@@ -1,26 +1,26 @@
-<!-- home page -->
+<!-- HOME PAGE -->
 
       <!-- SECOND TOOLBAR -->
   	<md-content>
       <md-toolbar class="secondToolbar" layout="row">
 
-          <!-- calendar -->
-        <md-input-container class="dateSearch" flex="30" flex-sm="30">
+          <!-- DATE -->
+        <md-input-container class="dateSearch" flex="20" flex-sm="40">
           <input type="date" ng-model="newListing.startDate">
           <label><strong>Date</strong>
           </label>
         </md-input-container>
 
-          <!-- search by location -->
+          <!-- LOCATION SEARCH -->
         <form ng-submit="submitLocSearch(locationSearch, distanceSearch)">
-          <md-input-container class="searchByLocation" flex="10" flex-sm="5">
+          <md-input-container class="searchByLocation" flex="10" flex-md="10" flex-sm="5">
             <label>Location Search
             </label>
             <input type="text" ng-model="locationSearch">
           </md-input-container>
         </form>
 
-          <!-- search by distance -->
+          <!-- WITHIN distance -->
         <md-select placeholder="Within" class="distanceSearch" ng-model="distanceSearch" flex-gt-sm="10" flex-sm="20">
           <md-option ng-repeat="distance in distances">{{distance}} miles
           </md-option>
@@ -32,7 +32,7 @@
         </div>
 
           <!-- medium LOCAL YARD SALES -->
-        <div class="mediumSiteName" flex="35" hide-sm hide-lg>LOCAL YARD SALES
+        <div class="mediumSiteName" flex="25" hide-sm hide-lg>LOCAL YARD SALES
         </div>
 
           <!-- small LOCAL YARD SALES -->
