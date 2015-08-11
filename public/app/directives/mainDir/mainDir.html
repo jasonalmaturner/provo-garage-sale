@@ -9,7 +9,7 @@
      </md-tab-label>
 
      <md-tab-body>
-       <listing-dir ng-repeat="listing in theListings track by listing._id">
+       <listing-dir ng-repeat="listing in theListings | filter:{startDate : dateModified} track by listing._id">
        </listing-dir>
      </md-tab-body>
    </md-tab>
