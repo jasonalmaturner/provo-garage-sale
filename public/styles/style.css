@@ -111,7 +111,6 @@ main-dir {
 
 .updateState{
 	padding-top: 16px;
-	padding-bottom: 0px;
 	padding-left: 15px;
 }
 
@@ -151,9 +150,9 @@ md-tabs md-ink-bar{
 	background-color: white;
 }
 
-md-input-container{
-	padding: 0px;
-}
+/*md-input-container{*/
+	/*padding: 0px;*/
+/*}*/
 
 .tabsdemoStaticTabs md-tab-content {
   padding: 5px;
