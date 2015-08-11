@@ -293,8 +293,12 @@ i:focus{
 	margin-right: 50px;
 }
 
+.md-tab:nth-child(1){background: #FFAB40; }
 .md-tab:nth-child(2){background: #FF9100; }
 
 #description {
 	color: #424242
+}
+md-tabs-canvas.md-center-tabs {
+	background-color: #3F51B5;
 }
