@@ -4,6 +4,14 @@
   	<md-content>
       <md-toolbar class="secondToolbar" layout="row">
 
+
+          <!-- calendar -->
+        <md-input-container class="dateSearch" flex="15" flex-sm="30">
+          <input type="date" ng-model="newListing.startDate">
+          <label><strong>Date</strong>
+          </label>
+        </md-input-container>
+
           <!-- search by location -->
         <form ng-submit="submitLocSearch(locationSearch, distanceSearch)">
           <md-input-container class="searchByLocation" flex="10" flex-sm="5">
@@ -19,15 +27,8 @@
           </md-option>
         </md-select>
 
-          <!-- calendar -->
-        <md-input-container class="dateSearch" flex="10" flex-sm="30">
-          <input type="date" ng-model="newListing.startDate">
-          <label><strong>Date</strong>
-          </label>
-        </md-input-container>
-
           <!-- site name -->
-        <div class="siteName" flex="55" hide-sm>YARD SALES
+        <div class="siteName" flex="55" hide-sm>LOCAL YARD SALES
         </div>
         <!-- </div> -->
       </md-toolbar>
