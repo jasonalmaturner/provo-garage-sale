@@ -17,7 +17,7 @@
 
       <!-- TOP TOOLBAR -->
       <md-content>
--      <md-toolbar class="topToolbar md-toolbar-tools" >
+      <md-toolbar class="topToolbar md-toolbar-tools" >
         <div layout="row">
           <!-- home button -->
           <div class="homeBtn" flex="20" flex-sm="10">
@@ -76,17 +76,17 @@
                 <!-- user logout button-->
               <a href="/logout" flex="30" flex-sm="5">
                 <md-button>
+                  <i class="fa fa-sign-out fa-lg">
+                  </i>
                   <span hide-sm>Logout</span>
                 </md-button>
               </a>
             </md-input-container>
           </div>
-            <div class="welcomeUser" ng-show="currentUser" flex="30" flex-sm="5">
-            <md-input-container>
-              Welcome {{currentUser.name}}
-              </md-input-container>
-            </div>
         </div>
+            <span class="welcomeUser" ng-show="currentUser">
+              Welcome {{currentUser.name}}
+            </span>
       </md-toolbar>
     </md-content>
 

@@ -14,15 +14,15 @@
         </form>
 
           <!-- search by distance -->
-        <md-select class="distanceSearch" ng-model="distance" flex-gt-sm="10" flex-sm="20" ng-if="showSearchBar">
+        <md-select placeholder="Within" class="distanceSearch" ng-model="distance" flex-gt-sm="10" flex-sm="20" ng-if="showSearchBar">
           <md-option ng-repeat="distance in distances">{{distance}}
           </md-option>
         </md-select>
 
           <!-- calendar -->
-        <md-input-container ng-if="showSearchBar" class="dateSearch" flex="5" flex-sm="30">
+        <md-input-container ng-if="showSearchBar" class="dateSearch" flex="10" flex-sm="30">
           <input type="date" ng-model="newListing.startDate">
-          <label>Date
+          <label><strong>Date</strong>
           </label>
         </md-input-container>
 
