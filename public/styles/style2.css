@@ -193,6 +193,11 @@ i:focus{
 	background-color: white;
 }
 
+md-tabs md-ink-bar{
+	color:white;
+	background-color: white;
+}
+
 .footer {
 	background: #FFAB40;
 	text-align: center;

@@ -33,8 +33,8 @@
           </div>
 
             <!-- street address -->
-          <div layout="row" flex="100">
-            <md-input-container>
+          <div layout="row">
+            <md-input-container flex="100">
               <label>Street
               </label>
               <input type="text" ng-model="editListing.address.street">
@@ -52,7 +52,7 @@
             </md-input-container>
 
               <!-- state -->
-            <md-select placeholder="State" ng-model="editListing.address.state" flex-gt-md="15" flex-sm="25" flex-md="20">
+            <md-select placeholder="State" class="updateState" ng-model="editListing.address.state" flex-gt-md="15" flex-sm="25" flex-md="20">
               <md-option ng-repeat="state in states" value="{{state.abbrev}}">{{state.abbrev}}
               </md-option>
             </md-select>
