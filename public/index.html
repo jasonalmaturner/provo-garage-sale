@@ -6,7 +6,7 @@
 	  <title>Local Yard Sales</title>
 
       <!-- links -->
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+	  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" type="text/css" href="styles/style.css">
@@ -16,16 +16,16 @@
   <body ng-controller="mainCtrl">
 
       <!-- TOP TOOLBAR -->
-      <md-content>
+      <md-content class="blueToolbar">
       <md-toolbar class="topToolbar md-toolbar-tools" >
         <div layout="row">
           <!-- home button -->
           <div class="homeBtn" flex="20" flex-sm="10">
-            <md-input-container>
+            <md-input-container class="buttonPadding">
               <a href="/#/home">
               <md-button>
                 <i class="fa fa-home fa-lg">
-                 </i> 
+                 </i>
               <span hide-sm>Home</span>
                 </md-button>
               </a>
@@ -34,7 +34,7 @@
 
             <!-- add listing button -->
           <div class="addListingBtn" flex="30" flex-sm="10">
-            <md-input-container ng-click="addClick()">
+            <md-input-container ng-click="addClick($event)" class="buttonPadding">
               <!-- <a href="#/listing"> -->
                 <md-button>
                   <i class="fa fa-plus-square fa-lg">
@@ -47,7 +47,7 @@
 
             <!-- update my listing button -->
           <div class="myListingBtn" flex="30" flex-sm="10">
-            <md-input-container ng-click="myListingClick()">
+            <md-input-container ng-click="myListingClick($event)" class="buttonPadding">
               <!-- <a href="#/update"> -->
                 <md-button>
                   <i class="fa fa-user fa-lg">
@@ -60,7 +60,7 @@
 
           <!-- facebook login button -->
           <div class="facebookBtn" ng-hide="currentUser" flex="30" flex-sm="10">
-            <md-input-container>
+            <md-input-container class="buttonPadding">
               <a href="/auth/facebook">
                 <md-button>
                   <i class="fa fa-facebook-official fa-lg">
@@ -72,7 +72,7 @@
           </div>
             <!-- facebook current user button -->
           <div class="facebookBtn" ng-show="currentUser" flex="30" flex-sm="5">
-            <md-input-container>
+            <md-input-container class="buttonPadding">
                 <!-- user logout button-->
               <a href="/logout" flex="30" flex-sm="5">
                 <md-button>

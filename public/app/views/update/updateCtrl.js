@@ -22,17 +22,35 @@ app.controller('updateCtrl', function($scope, mainService, $location, listings, 
   	$scope.editListing = listing;
   }
 
-  $scope.updateListing = function (listingid, listinginfo) {
+  $scope.updateListing = function (listingid, listinginfo, ev) {
     mainService.updateListing(listingid, listinginfo).then(function (res, err) {
       if (err) {
-        alert('Update failed, please try again.');
+        $mdDialog.show(
+        $mdDialog.alert()
+          .clickOutsideToClose(true)
+          .title('Update failed, please try again.')
+          .ok('Ok')
+          .targetEvent(ev)
+        )
       }
       else {
         mainService.listingByUser($scope.currentUser._id).then(function(resp) {
           $scope.userListings = resp;
-          alert('Listing updated successfully!');
-        }, function (erro) {
-          alert('Error retrieving new listings');
+            $mdDialog.show(
+            $mdDialog.alert()
+            .clickOutsideToClose(true)
+            .title('Listing updated successfully!')
+            .ok('Ok')
+            .targetEvent(ev)
+          )
+        }, function (err) {
+          $mdDialog.show(
+            $mdDialog.alert()
+            .clickOutsideToClose(true)
+            .title('Error retrieving new listings')
+            .ok('Ok')
+            .targetEvent(ev)
+          )
         })
       }
     })
@@ -48,12 +66,30 @@ app.controller('updateCtrl', function($scope, mainService, $location, listings, 
         mainService.removeListing(listingid).then(function (res, err) {
           mainService.listingByUser($scope.currentUser._id).then(function(resp) {
             $scope.userListings = resp;
-            alert('Listing removed!');
-            }, function (erro) {
-              alert('Error retrieving new listings');
+            $mdDialog.show(
+              $mdDialog.alert()
+              .clickOutsideToClose(true)
+              .title('Listing removed!')
+              .ok('Ok')
+              .targetEvent(ev)
+            )  
+            }, function (err) {
+              $mdDialog.show(
+                $mdDialog.alert()
+                .clickOutsideToClose(true)
+                .title('Error retrieving new listings')
+                .ok('Ok')
+                .targetEvent(ev)
+              ) 
             })
-        }, function(err) {
-          alert('Removing listing failed, please try again');
+        }, function (err) {
+          $mdDialog.show(
+            $mdDialog.alert()
+            .clickOutsideToClose(true)
+            .title('Removing listing failed, please try again')
+            .ok('Ok')
+            .targetEvent(ev)
+          ) 
         });
     });
   };
