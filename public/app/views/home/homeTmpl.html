@@ -14,7 +14,7 @@
         </form>
 
           <!-- search by distance -->
-        <md-select class="distanceSearch" ng-model="distance" flex-gt-sm="10" flex-sm="20" ng-if="showSearchBar">
+        <md-select placeholder="Within" class="distanceSearch" ng-model="distance" flex-gt-sm="10" flex-sm="20" ng-if="showSearchBar">
           <md-option ng-repeat="distance in distances">{{distance}}
           </md-option>
         </md-select>

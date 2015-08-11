@@ -81,12 +81,10 @@
               </a>
             </md-input-container>
           </div>
-            <div class="welcomeUser" ng-show="currentUser" flex="30" flex-sm="5">
-            <md-input-container>
-              Welcome {{currentUser.name}}
-              </md-input-container>
-            </div>
         </div>
+            <span class="welcomeUser" ng-show="currentUser">
+              Welcome {{currentUser.name}}
+            </span>
       </md-toolbar>
     </md-content>
 

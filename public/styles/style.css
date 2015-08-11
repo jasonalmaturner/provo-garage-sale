@@ -13,7 +13,7 @@ html, body {
 }
 
 .searchByLocation {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	padding-left: 25px;
 	width: 300px;
@@ -24,19 +24,29 @@ html, body {
 .distanceSearch {
 	color: black;
 	font-size: 15px;
+	padding-left: 20px;
+	padding-top: 13px;
+}
+
+.md-select-label{
+	padding-bottom: 1px;
 }
 
 .dateSearch{
 	height: 48px;
 	font-size: 15px;
+	padding-bottom: 2px;
 }
-
+#input_4{
+	min-width: 150px;
+}
 .siteName{
 	padding-top: 6px;
 	font-weight: bold;
 	font-size: 45px;
 	letter-spacing: 15px;
 	word-spacing: 10px;
+	text-align: center;
 }
 
 .smallSiteName{
@@ -98,6 +108,16 @@ main-dir {
 	font-size: 15px;
 }
 
+.updateState{
+	padding-top: 16px;
+	padding-bottom: 0px;
+	padding-left: 15px;
+}
+
+.md-select-label{
+	min-height: 29px;
+}
+
 .clicked-listing {
 	background-color: #FFAB40;
 }
@@ -120,12 +140,17 @@ main-dir {
 
 .welcomeUser{
 	font-size: 16px;
-	padding-top: 10px;
+	margin-left: auto;
+	padding-top: 25px;
 }
 
 md-tabs md-ink-bar{
 	color:white;
 	background-color: white;
+}
+
+md-input-container{
+	padding: 0px;
 }
 
 .tabsdemoStaticTabs md-tab-content {
@@ -165,7 +190,6 @@ i:focus{
 }
 
 .submitBtn {
-	padding-top: 10px;
 	background-color: #09C067;
 	width: 50%;
 	align-self: center;
@@ -173,7 +197,6 @@ i:focus{
 }
 
 .removeBtn {
-	padding-top: 10px;
 	background-color: red;
 	width: 30%;
 	align-self: center;
@@ -198,6 +221,7 @@ i:focus{
 	background-color: white;
 }
 
+
 .footer {
 	background: #FFAB40;
 	text-align: center;
@@ -209,11 +233,19 @@ i:focus{
 .centerfav {
 	text-align: center;
 }
+
+.md-button{
+	line-height: 27px;
+	color: white;
+}
+
 .updateForm{
 	background-color: #EEEEEE;
+	padding-bottom: 165px;
 }
 .updateFormBox{
 	background-color: #EEEEEE;
+	padding: 5px;
 }
 
 .terms {
