@@ -4,12 +4,21 @@ var app = angular.module('treasureHunters');
 
 app.service('mainService', function($http, $q){
 
-  this.getListings = function(position){
+  this.getListings = function(position, distance){
+    console.log("distance in service", distance);
+    if (!distance) {
+      var dist = 15;
+    }
+    else {
+      var dist = distance.slice(0, 2);
+      dist = Number(dist);
+    }
+    console.log("after mod distnace", dist)
     console.log(position)
     var dfd = $q.defer();
     $http({
       method: 'GET',
-      url: '/api/Listings/' + position[0] + '/' + position[1] + '?distance=20'
+      url: '/api/Listings/' + position[0] + '/' + position[1] + '?distance=' + dist
     }).then(function(res){
       dfd.resolve(res.data);
     }, function(err){

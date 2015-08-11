@@ -5,8 +5,8 @@
       <md-toolbar class="secondToolbar" layout="row">
 
           <!-- search by location -->
-        <form ng-submit="submitLocSearch(locationSearch)">
-          <md-input-container class="searchByLocation" flex="10" flex-sm="5" ng-show="showSearchBar">
+        <form ng-submit="submitLocSearch(locationSearch, distanceSearch)">
+          <md-input-container class="searchByLocation" flex="10" flex-sm="5">
             <label>Yard Sale Search
             </label>
             <input type="text" ng-model="locationSearch">
@@ -14,8 +14,8 @@
         </form>
 
           <!-- search by distance -->
-        <md-select placeholder="Within" class="distanceSearch" ng-model="distance" flex-gt-sm="10" flex-sm="20" ng-if="showSearchBar">
-          <md-option ng-repeat="distance in distances">{{distance}}
+        <md-select placeholder="Within" class="distanceSearch" ng-model="distanceSearch" flex-gt-sm="10" flex-sm="20">
+          <md-option ng-repeat="distance in distances">{{distance}} miles
           </md-option>
         </md-select>
 
