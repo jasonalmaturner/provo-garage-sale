@@ -4,6 +4,10 @@ var app = angular.module('treasureHunters');
 
 app.controller('homeCtrl', function($scope, listings, mainService) {
 	$scope.theListings = listings;
+    for (var i = 0; i < $scope.theListings; i++) {
+        $scope.theListings[i].startDate.setHours(0,0,0,0);
+        $scope.theListings[i].endDate.setHours(0,0,0,0);
+    }
 	$scope.favorites = $scope.currentUser ? $scope.currentUser.favorites : false;
   	$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 12 };
 
@@ -24,5 +28,9 @@ app.controller('homeCtrl', function($scope, listings, mainService) {
             	console.log("thelistingsafter", $scope.theListings)
         	})
     	})
+    };
+
+    $scope.dateFilter = function (date) {
+        console.log(date);
     }
 });
