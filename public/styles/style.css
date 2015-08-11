@@ -34,6 +34,7 @@ html, body {
 .dateSearch{
 	height: 48px;
 	font-size: 15px;
+	padding-left: 10px;
 	padding-bottom: 2px;
 }
 #input_4{
@@ -42,25 +43,26 @@ html, body {
 
 .siteName{
 	padding-top: 6px;
-	font-weight: bold;
+	font-style: italic;
 	font-size: 45px;
-	letter-spacing: 15px;
-	word-spacing: 10px;
 	text-align: right;
+	color: #EEEEEE;
 }
 
 .mediumSiteName{
 	padding-top: 20px;
-	font-weight: bold;
+	font-style: italic;	
 	font-size: 35px;
 	text-align: right;
+	color: #EEEEEE;
 }
 
 .smallSiteName{
 	padding-top: 6px;
-	font-weight: bold;
+	font-style: italic;	
 	font-size: 10px;
 	text-align: right;
+	color: #EEEEEE;	
 }
 
 /*map*/
