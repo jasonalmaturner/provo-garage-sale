@@ -15,7 +15,12 @@ html, body {
 .searchByLocation {
 	font-size: 14px;
 	font-weight: bold;
+<<<<<<< HEAD
 	padding-left: 25px;
+=======
+	padding-left: 10px;
+	width: 274px;
+>>>>>>> 108155e112fe4c7df56910895e150abcb3952914
 	padding-bottom: 0px;
 	padding-top: 0px;
 }
@@ -23,7 +28,7 @@ html, body {
 .distanceSearch {
 	color: black;
 	font-size: 15px;
-	padding-left: 20px;
+	padding-left: 15px;
 	padding-top: 13px;
 }
 
@@ -36,6 +41,7 @@ html, body {
 	font-size: 15px;
 	padding-left: 10px;
 	padding-bottom: 2px;
+	padding-left: 15px;
 }
 #input_4{
 	min-width: 150px;
@@ -249,6 +255,17 @@ i:focus{
 	font-size: 14px;
 
 }
+.border {
+	border: 8px solid #FFAB40;
+	border-radius: 2px;
+	margin-top: 10px;
+	padding: 0px;
+}
+.listingDiv {
+	margin-left: 15%;
+	margin-right: 15%;
+	padding-bottom: 80px;
+}
 
 .centerfav {
 	text-align: center;
@@ -261,7 +278,7 @@ i:focus{
 
 .updateForm{
 	background-color: #EEEEEE;
-	padding-bottom: 100px;
+	padding-bottom: 80px;
 }
 .updateFormBox{
 	background-color: #EEEEEE;
