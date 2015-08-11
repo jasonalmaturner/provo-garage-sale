@@ -13,8 +13,10 @@ var Listing = require('./server-assets/models/listingModel.js');
 var User = require('./server-assets/models/userModel.js');
 
 var app = express();
-var port = 8040;
+var port = process.env.EXPRESS_PORT || 8040;
 var mongoUri = 'mongodb://localhost:27017/PTH';
+
+console.log(777, process.env)
 
 passport.use(new FacebookStrategy({
     clientID: 855831487806174,
