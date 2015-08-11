@@ -101,7 +101,8 @@ main-dir {
 	margin: 10px;
 	height: 526px;
 	overflow: scroll;
-	min-width: 400px;
+	min-width: 430px;
+	max-width: 430px;
 }
 
 .listingCard {
@@ -211,6 +212,18 @@ i:focus{
 	background-color: #FFAB40;
 }
 
+.listingSize{
+	padding: 10px;
+}
+
+#tab-content-8{
+	padding: 3px;
+}
+
+.md-padding{
+	padding: 10px;
+}
+
 .md-right{
 	color: white;
 	background-color: white;
@@ -227,6 +240,8 @@ i:focus{
 	text-align: center;
 	flex-direction: row-reverse;
 	padding-top: 5px;
+	height: 63px;
+	font-size: 14px;
 
 }
 
