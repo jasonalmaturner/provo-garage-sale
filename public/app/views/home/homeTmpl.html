@@ -1,12 +1,11 @@
-<!-- home template -->
+<!-- home page -->
 
       <!-- SECOND TOOLBAR -->
   	<md-content>
       <md-toolbar class="secondToolbar" layout="row">
 
-
           <!-- calendar -->
-        <md-input-container class="dateSearch" flex="15" flex-sm="30">
+        <md-input-container class="dateSearch" flex="30" flex-sm="30">
           <input type="date" ng-model="newListing.startDate">
           <label><strong>Date</strong>
           </label>
@@ -15,29 +14,30 @@
           <!-- search by location -->
         <form ng-submit="submitLocSearch(locationSearch, distanceSearch)">
           <md-input-container class="searchByLocation" flex="10" flex-sm="5">
-            <label>Yard Sale Search
+            <label>Location Search
             </label>
             <input type="text" ng-model="locationSearch">
           </md-input-container>
         </form>
 
           <!-- search by distance -->
-        <md-select placeholder="Within" class="distanceSearch" ng-model="distanceSearch" flex-gt-sm="10" flex-sm="20" ng-change="submitLocSearch(locationSearch, distanceSearch)">
+        <md-select placeholder="Within" class="distanceSearch" ng-model="distanceSearch" flex-gt-sm="10" flex-sm="20">
           <md-option ng-repeat="distance in distances">{{distance}} miles
           </md-option>
         </md-select>
 
-          <!-- calendar -->
-        <md-input-container class="dateSearch" flex="10" flex-sm="30">
-          <input type="date" ng-model="dateSearch" ng-change="dateFilter(dateSearch)">
-          <label><strong>Date</strong>
-          </label>
-        </md-input-container>
-
-          <!-- site name -->
-        <div class="siteName" flex="55" hide-sm>LOCAL YARD SALES
+        
+          <!-- large LOCAL YARD SALES -->
+        <div class="siteName" flex="35" hide-sm hide-md>LOCAL YARD SALES
         </div>
-        <!-- </div> -->
+
+          <!-- medium LOCAL YARD SALES -->
+        <div class="mediumSiteName" flex="35" hide-sm hide-lg>LOCAL YARD SALES
+        </div>
+
+          <!-- small LOCAL YARD SALES -->
+        <div class="smallSiteName" flex="35" hide-md hide-lg>LOCAL YARD SALES
+        </div>        
       </md-toolbar>
     </md-content>
 <main-dir></main-dir>

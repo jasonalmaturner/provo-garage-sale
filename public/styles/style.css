@@ -15,8 +15,12 @@ html, body {
 .searchByLocation {
 	font-size: 14px;
 	font-weight: bold;
+<<<<<<< HEAD
+	padding-left: 25px;
+=======
 	padding-left: 10px;
 	width: 274px;
+>>>>>>> 108155e112fe4c7df56910895e150abcb3952914
 	padding-bottom: 0px;
 	padding-top: 0px;
 }
@@ -35,26 +39,36 @@ html, body {
 .dateSearch{
 	height: 48px;
 	font-size: 15px;
+	padding-left: 10px;
 	padding-bottom: 2px;
 	padding-left: 15px;
 }
 #input_4{
 	min-width: 150px;
 }
+
 .siteName{
 	padding-top: 6px;
-	font-weight: bold;
+	font-style: italic;
 	font-size: 45px;
-	letter-spacing: 15px;
-	word-spacing: 10px;
-	text-align: center;
+	text-align: right;
+	color: #EEEEEE;
+}
+
+.mediumSiteName{
+	padding-top: 20px;
+	font-style: italic;	
+	font-size: 35px;
+	text-align: right;
+	color: #EEEEEE;
 }
 
 .smallSiteName{
 	padding-top: 6px;
-	font-weight: bold;
-	font-size: 25px;
+	font-style: italic;	
+	font-size: 10px;
 	text-align: right;
+	color: #EEEEEE;	
 }
 
 /*map*/
