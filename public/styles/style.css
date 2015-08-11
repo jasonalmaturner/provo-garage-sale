@@ -64,7 +64,7 @@ main-dir {
 .map-container {
 	height: 100%;
 	width: 100%;
-	padding-top: 10px;
+	padding: 10px;
 }
 
 .angular-google-map-container {
@@ -101,8 +101,8 @@ main-dir {
 	margin: 10px;
 	height: 526px;
 	overflow: scroll;
-	min-width: 430px;
-	max-width: 430px;
+/*	min-width: 430px;
+	max-width: 430px;*/
 }
 
 .listingCard {
@@ -125,11 +125,11 @@ main-dir {
 .listingClick {
 	font-size: 15px;
 	padding: 5px;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 .starChecked {
-	color:#E9DB00;
+	color: #E9DB00;
 	float: right;
 	padding-right: 5px;
 }
@@ -150,20 +150,12 @@ md-tabs md-ink-bar{
 	background-color: white;
 }
 
-/*md-input-container{*/
-	/*padding: 0px;*/
-/*}*/
-
-.tabsdemoStaticTabs md-tab-content {
-  padding: 5px;
-}
-
 .tabsdemoStaticTabs md-tab-content:nth-child(1) {
-background-color: #3F51B5;
+	background-color: #3F51B5;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(2) {
-background-color: #3F51B5;
+	background-color: #3F51B5;
 }
 
 .expandcollapse-heading-collapsed:focus{
@@ -172,6 +164,10 @@ background-color: #3F51B5;
 
 .expandcollapse-heading-expanded:focus{
 	outline:none;
+}
+
+.buttonPadding{
+	padding-bottom: 15px;
 }
 
 i{
