@@ -15,8 +15,7 @@ html, body {
 .searchByLocation {
 	font-size: 14px;
 	font-weight: bold;
-	padding-left: 10px;
-	width: 274px;
+	padding-left: 25px;
 	padding-bottom: 0px;
 	padding-top: 0px;
 }
@@ -35,26 +34,36 @@ html, body {
 .dateSearch{
 	height: 48px;
 	font-size: 15px;
+	padding-left: 10px;
 	padding-bottom: 2px;
-	padding-left: 15px;
 }
 #input_4{
 	min-width: 150px;
 }
+
 .siteName{
 	padding-top: 6px;
-	font-weight: bold;
+	font-style: italic;
 	font-size: 45px;
-	letter-spacing: 15px;
-	word-spacing: 10px;
-	text-align: center;
+	text-align: right;
+	color: #EEEEEE;
+}
+
+.mediumSiteName{
+	padding-top: 20px;
+	font-style: italic;	
+	font-size: 35px;
+	text-align: right;
+	color: #EEEEEE;
+
 }
 
 .smallSiteName{
 	padding-top: 6px;
-	font-weight: bold;
-	font-size: 25px;
+	font-style: italic;	
+	font-size: 10px;
 	text-align: right;
+	color: #EEEEEE;	
 }
 
 /*map*/
@@ -81,14 +90,10 @@ main-dir {
 }
 
 .getDirectionsBtn{
-	width: 60px;
-	height: 17px;
-	font-size: 10px;
-	font-weight: bold;
-	color: #3F51B5;
-	padding-left: 0px;
-	cursor: pointer;
-	text-align: center;
+	margin-right: 10px;
+	background-color: #3F51B5;
+	color: white;
+	content-align: center;
 }
 
 .listingPopOut {
@@ -97,7 +102,7 @@ main-dir {
 }
 
 .listingColumn {
-	background-color: #3F51B5;
+	background-color: #EEEEEE !important;
 	padding: 10px;
 	margin: 10px;
 	height: 526px;
@@ -125,8 +130,9 @@ main-dir {
 
 .listingClick {
 	font-size: 15px;
-	padding: 5px;
+	padding: 20px;
 	cursor: pointer;
+	color: #EEEEEE;
 }
 
 .starChecked {
@@ -152,11 +158,11 @@ md-tabs md-ink-bar{
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(1) {
-	background-color: #3F51B5;
+	background-color: #EEEEEE;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(2) {
-	background-color: #3F51B5;
+	background-color: #EEEEEE
 }
 
 .expandcollapse-heading-collapsed:focus{
@@ -211,6 +217,7 @@ i:focus{
 
 .listingSize{
 	padding: 10px;
+	background-color: #EEEEEE
 }
 
 #tab-content-8{
@@ -219,6 +226,8 @@ i:focus{
 
 .md-padding{
 	padding: 10px;
+	color: #EEEEEE;
+	background-color:#EEEEEE 
 }
 
 .md-right{
@@ -230,7 +239,6 @@ i:focus{
 	color: white;
 	background-color: white;
 }
-
 
 .footer {
 	background: #FFAB40;
@@ -283,4 +291,10 @@ i:focus{
 .about {
 	margin-left: 50px;
 	margin-right: 50px;
+}
+
+.md-tab:nth-child(2){background: #FF9100; }
+
+#description {
+	color: #424242
 }
