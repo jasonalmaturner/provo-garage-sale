@@ -84,7 +84,7 @@ app.service('mainService', function($http, $q){
   this.updateListing = function(listingId, modifiedListing) {
     return $http({
       method: 'PUT',
-      url: 'http://localhost:8040/api/Listing/' + listingId,
+      url: '/api/Listing/' + listingId,
       data: modifiedListing
     }).then(function(response){
       return response.data;
@@ -94,7 +94,7 @@ app.service('mainService', function($http, $q){
   this.geocode = function(location) {
     return $http({
       method: 'GET',
-      url: 'http://localhost:8040/api/geocode/?location=' + location
+      url: '/api/geocode/?location=' + location
     }).then(function(response){
       console.log('servicegeocode', response);
       return response;
@@ -104,7 +104,7 @@ app.service('mainService', function($http, $q){
   this.removeListing = function(listingId) {
     return $http({
       method: 'DELETE',
-      url: 'http://localhost:8040/api/Listing/' + listingId
+      url: '/api/Listing/' + listingId
     }).then(function(response){
       return response.data;
     })

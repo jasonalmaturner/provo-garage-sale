@@ -9,7 +9,8 @@ app.controller('mainCtrl', function($scope, authService, $location, mainService,
 		$scope.isLoggedIn = isLoggedIn;
 		$scope.currentUser = authService.currentUser();
 		console.log($scope.currentUser);
-	}); 
+	});
+
 
     $scope.addClick = function(ev) {
         console.log("hit add")

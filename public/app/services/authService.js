@@ -11,6 +11,7 @@ app.service('authService', function($http, $q){
 			method: 'GET',
 			url: '/api/user'
 		}).then(function(res){
+			console.log(res.data)
 			currentUser = res.data;
 			isLoggedIn = true;
 		}, function(err){
