@@ -6,7 +6,7 @@
 
           <!-- search by location -->
         <form ng-submit="submitLocSearch(locationSearch)">
-          <md-input-container class="searchByLocation" flex="10" flex-sm="5" ng-show="showSearchBar">
+          <md-input-container class="searchByLocation" flex="10" flex-sm="5">
             <label>Yard Sale Search
             </label>
             <input type="text" ng-model="locationSearch">
@@ -14,7 +14,7 @@
         </form>
 
           <!-- search by distance -->
-        <md-select placeholder="Within" class="distanceSearch" ng-model="distance" flex-gt-sm="10" flex-sm="20" ng-if="showSearchBar">
+        <md-select placeholder="Within" class="distanceSearch" ng-model="distance" flex-gt-sm="10" flex-sm="20">
           <md-option ng-repeat="distance in distances">{{distance}}
           </md-option>
         </md-select>
