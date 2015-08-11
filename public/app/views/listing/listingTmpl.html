@@ -1,16 +1,16 @@
 <!-- ADD MY LISTING html file -->
 
-<div layout="row" layout-sm="column">
+<div layout="row" layout-sm="column" class="listingDiv">
 
   <!-- "ADD MY LISTING" FORM -->
-  <div flex="100" layout-padding="10">
+
+  <div flex="100" layout-padding="10" class="border">
 
       <!-- Add My Listing title -->
     <div class="addMyListingTitle">Add My Listing
     </div>
 
     <!-- Add My Listing information -->
-    <div>
       <form name="userForm">
         <div>
          	<md-input-container>
@@ -91,12 +91,11 @@
 
             <!-- submit buttons -->
           <md-input-container>
-            <button class="submitBtn" ng-click="submitListing(newListing, $event)">Submit
-            </button>
+              <md-button class="submitBtn" ng-click="submitListing(newListing, $event)">Submit
+              </md-button>
           </md-input-container>
         </div>
       </form>
-    </div>
   </md-content>
 </div>
 </div>
