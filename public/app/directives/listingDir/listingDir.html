@@ -3,8 +3,8 @@
 ng-class="{'clicked-listing': listing.clicked}">
 <md-card-content class="listingSize">
 	<md-toolbar class="listingClick"
-		ng-click="active = !active; listingClick(listing)"
-		ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >
+		ng-click="listingClick(listing)"
+		ng-class="{'expandcollapse-heading-collapsed': !listing.clicked, 'expandcollapse-heading-expanded': listing.clicked}" >
 		<span class="listingTitle">
 			<strong>{{listing.title}}</strong>
 				<i title="Add/Remove Favorites" ng-class="listing.favorite ? 'fa fa-star fa-lg' : 'fa fa-star-o fa-lg'"
@@ -29,7 +29,7 @@ ng-class="{'clicked-listing': listing.clicked}">
 	</div>
 	</md-toolbar>
 
-	<div ng-show="active" class="showActive" id="description">
+	<div ng-show="listing.clicked" class="showActive" id="description">
 		<div>
 			<strong>Description:
 			</strong>
