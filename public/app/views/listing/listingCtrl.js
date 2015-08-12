@@ -26,7 +26,7 @@ app.controller('listingCtrl', function($scope, mainService, $location, $mdDialog
         $mdDialog.show(
         $mdDialog.alert()
           .clickOutsideToClose(true)
-          .title('Submission successful, thank you for using website!')
+          .title('Submission successful, thank you for using our website!')
           .ok('Ok')
           .targetEvent(ev)
         )
