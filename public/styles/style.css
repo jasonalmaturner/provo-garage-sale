@@ -193,12 +193,10 @@ i:focus{
 .removeBtn {
 	background-color: red;
 	width: 30%;
-	align-self: center;
-	margin-top: 15px;
 }
 
 #removeDiv {
-	background-color: #EEEEEE;
+	background-color: #E0E0E0;
 }
 
 .areaListings {
