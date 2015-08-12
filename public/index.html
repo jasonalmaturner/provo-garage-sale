@@ -6,6 +6,7 @@
 	  <title>Local Yard Sales</title>
 
       <!-- links -->
+    <link rel='shortcut icon' type='image/png' href="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQptLc_SZrhIiO60mSIUxA_70OAV5KUyF0B_hr22MBL1_szc_6Z">  
 	  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -14,6 +15,7 @@
 
     <!-- main controller -->
   <body ng-controller="mainCtrl">
+    <div id="wrapper">
 
       <!-- TOP TOOLBAR -->
       <md-content class="blueToolbar">
@@ -84,26 +86,28 @@
             </md-input-container>
           </div>
         </div>
-<!--             <span class="welcomeUser" ng-show="currentUser">
+            <span class="welcomeUser" ng-show="currentUser">
               Welcome {{currentUser.name}}
-            </span> -->
+            </span>
       </md-toolbar>
     </md-content>
 
     <!-- connected views -->
+  <div id="body">
   <ng-view>
   </ng-view>
-
+  </div>
       <!-- footer content -->
     <div class="footer" >
 
         <div>all rights reserved 2015</div>
          <div class="footerContent"><md-button> Like Us on Facebook</md-button>
-      <a href="#/terms">  <md-button> Terms and Conditions </md-button></a>
-     <a href="#/privacy">   <md-button> Privacy Policy </md-button></a>
-      <a href="#/about">  <md-button> About Us </md-button></a>
+      <a href="#/terms">  <md-button class="footerBtn"> Terms and Conditions </md-button></a>
+     <a href="#/privacy">   <md-button class="footerBtn"> Privacy Policy </md-button></a>
+      <a href="#/about">  <md-button class="footerBtn"> About Us </md-button></a>
       </div>
-    </div> 
+    </div>
+  </div> 
 
     <!-- Script Links -->
     <script src="bower_components/angular/angular.js"></script>
