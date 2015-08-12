@@ -5,12 +5,9 @@ ng-class="{'clicked-listing': listing.clicked}">
 	<md-toolbar class="listingClick"
 		ng-click="active = !active; listingClick(listing)"
 		ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" >
-		<span>
-			<strong>Title:
-			</strong>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				{{listing.title}}
-				<i ng-class="listing.favorite ? 'fa fa-star fa-lg' : 'fa fa-star-o fa-lg'"
+		<span class="listingTitle">
+			<strong>{{listing.title}}</strong>
+				<i title="Add/Remove Favorites" ng-class="listing.favorite ? 'fa fa-star fa-lg' : 'fa fa-star-o fa-lg'"
 					ng-click="toggleFavorite(listing); $event.stopPropagation();"
 					class="starChecked">
 				</i>
@@ -18,7 +15,7 @@ ng-class="{'clicked-listing': listing.clicked}">
 		<form action="http://maps.google.com/maps" method="get" target="_blank">
 		<div>
 		<strong>Time:</strong>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				{{listing.time | date:"shortTime"}}
 		</div>
 

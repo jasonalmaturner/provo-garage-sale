@@ -1,15 +1,19 @@
 html, body {
 	background-color: #EEEEEE;
+	height: 100%;
 }
 /*tool bars*/
 .topToolbar {
-	padding-top: 10px;
 	background-color: #3F51B5;
 }
 
 .secondToolbar {
 	background: #FFAB40;
 	height: 60px;
+}
+
+.blueToolbar{
+	padding: 0px;
 }
 
 .searchByLocation {
@@ -35,7 +39,7 @@ html, body {
 	height: 48px;
 	font-size: 15px;
 	padding-bottom: 2px;
-	padding-left: 15px;
+	padding-left: 20px;
 }
 #input_4{
 	min-width: 150px;
@@ -44,8 +48,8 @@ html, body {
 	padding-top: 6px;
 	font-weight: bold;
 	font-size: 45px;
-	letter-spacing: 15px;
-	word-spacing: 10px;
+
+	word-spacing: 9px;
 	text-align: center;
 }
 
@@ -59,6 +63,10 @@ html, body {
 /*map*/
 main-dir {
 	display: flex;
+}
+
+.md-toolbar-tools{
+	padding-bottom: 4px;
 }
 
 .map-container {
@@ -87,6 +95,8 @@ main-dir {
 	background-color: #3F51B5;
 	color: white;
 	text-align: left;
+	outline: none;
+	border-radius: 2px;
 }
 
 .listingPopOut {
@@ -136,24 +146,28 @@ main-dir {
 }
 
 .welcomeUser{
-	font-size: 16px;
+	font-size: 14px;
 	margin-left: auto;
-	padding-top: 25px;
-	padding-right: 12px;
+	padding-top: 30px;
+	padding-right: 11px;
 }
 
 md-tabs md-ink-bar{
-	color:white;
+	color: white;
 	background-color: white;
-	height: 4px;
+	height: 6px;
+}
+
+.md-tab.md-focused{
+	background-color: #FFAB40;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(1) {
-	background-color: #3F51B5;
+	background-color: #EEEEEE;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(2) {
-	background-color: #3F51B5;
+	background-color: #EEEEEE;
 }
 
 .expandcollapse-heading-collapsed:focus{
@@ -165,7 +179,8 @@ md-tabs md-ink-bar{
 }
 
 .buttonPadding{
-	padding-bottom: 15px;
+	padding-bottom: 0px;
+	padding-top: 0px;
 }
 
 i{
@@ -174,6 +189,11 @@ i{
 
 i:focus{
 	outline:none;
+}
+
+.listingTitle{
+	text-align: center;
+	font-size: 18px;
 }
 
 /*listing form*/
@@ -232,6 +252,14 @@ i:focus{
 	background-color: white;
 }
 
+#wrapper{
+	min-height: 100%;
+	position: relative;
+}
+
+#body{
+	padding-bottom: 83px;
+}
 
 .footer {
 	background: #FFAB40;
@@ -242,9 +270,15 @@ i:focus{
 	height: 63px;
 	font-size: 14px;
 	min-width: 800px;
-
-
+	bottom: 0;
+	width: 100%;
+	position: absolute;
 }
+
+.bottomFooter{
+	padding-bottom: 83px;
+}
+
 .border {
 	border: 1px solid #FFAB40;
 	border-radius: 2px;
@@ -278,7 +312,14 @@ i:focus{
 .md-button{
 	line-height: 27px;
 	color: white;
-	padding: 20px;
+	padding: 10px 20px 10px 20px;
+}
+
+.loginListing{
+	background-color: #3F51B5;
+	height: 70px;
+    padding-top: 5px;
+    margin-top: 15px;
 }
 
 .updateForm{
@@ -306,17 +347,21 @@ i:focus{
 }
 
 .md-tab:nth-child(1){background: #FFAB40; }
-.md-tab:nth-child(2){background: #FFB74D; }
+.md-tab:nth-child(2){background: #FFAB40; }
 
 #description {
 	color: #424242
 }
 md-tabs-canvas.md-center-tabs {
-	background-color: #3F51B5;
+	background-color: #FFAB40;
 }
 
 .md-padding{
 	padding: 0px;
+}
+
+md-tabs .md-tab{
+	color: rgb(189, 127, 47);
 }
 
 .md-tab{
