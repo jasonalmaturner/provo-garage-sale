@@ -9,11 +9,12 @@
 
     <!-- "UPDATE MY LISTING" FORM -->
   <div flex="66" flex-sm="100" layout-padding="10" class="updateForm">
+  <div ng-hide="showRemove">Please select a listing to update.</div>
       <!-- Update My Listing title -->
-    <md-content layout-padding="10" class="border">
-      <div id="removeDiv" ng-show="showRemove">
-        <md-button class="removeBtn" ng-click="removeListing(editListing._id, $event)">
-          Remove Listing
+    <md-content layout-padding="10" class="border" ng-show="showRemove">
+      <div id="removeDiv">
+        <md-button id="removeBtn" ng-click="removeListing(editListing._id, $event)">
+          Remove Listing<br>
         </md-button>
       </div>
 

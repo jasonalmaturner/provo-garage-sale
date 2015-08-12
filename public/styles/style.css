@@ -211,15 +211,15 @@ i:focus{
 	margin-top: 15px;
 }
 
-.removeBtn {
+#removeBtn {
 	background-color: red;
-	width: 30%;
-	align-self: center;
-	margin-top: 15px;
+	font-size: 0.7em;
+	padding: 3px;
 }
 
 #removeDiv {
-	background-color: #EEEEEE;
+	background-color: #E0E0E0;
+	text-align: top;
 }
 
 .areaListings {
