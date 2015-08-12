@@ -3,10 +3,10 @@ var mongoose = require('mongoose');
 var Listing = new mongoose.Schema({
 	title: { type: String, required: true },
 	address: {
-		street: { type: String, required: true },
-		city: { type: String, required: true },
+		street: { type: String, required: true, maxlength: 45 },
+		city: { type: String, required: true, maxlength: 25 },
 		state: { type: String, required: true, maxlength: 2 },
-		zip: { type: String, required: true, maxlength: 10 }
+		zip: { type: String, required: true, maxlength: 5 }
 	},
 	loc: {type: [Number], index: '2d'},
 	startDate: { type: Date, required: true },
