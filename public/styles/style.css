@@ -1,5 +1,5 @@
 html, body {
-	background-color: #EEEEEE !important;
+	background-color: #EEEEEE;
 }
 /*tool bars*/
 .topToolbar {
@@ -15,7 +15,8 @@ html, body {
 .searchByLocation {
 	font-size: 14px;
 	font-weight: bold;
-	padding-left: 25px;
+	padding-left: 10px;
+	width: 274px;
 	padding-bottom: 0px;
 	padding-top: 0px;
 }
@@ -33,36 +34,26 @@ html, body {
 .dateSearch{
 	height: 48px;
 	font-size: 15px;
-	padding-left: 10px;
 	padding-bottom: 2px;
+	padding-left: 15px;
 }
 #input_4{
 	min-width: 150px;
 }
-
 .siteName{
 	padding-top: 6px;
-	font-style: italic;
+	font-weight: bold;
 	font-size: 45px;
-	text-align: right;
-	color: #EEEEEE;
-}
-
-.mediumSiteName{
-	padding-top: 20px;
-	font-style: italic;
-	font-size: 35px;
-	text-align: right;
-	color: #EEEEEE;
-
+	letter-spacing: 15px;
+	word-spacing: 10px;
+	text-align: center;
 }
 
 .smallSiteName{
 	padding-top: 6px;
-	font-style: italic;
-	font-size: 10px;
+	font-weight: bold;
+	font-size: 25px;
 	text-align: right;
-	color: #EEEEEE;
 }
 
 /*map*/
@@ -101,6 +92,7 @@ main-dir {
 }
 
 .listingColumn {
+
 	background-color: #E0E0E0!important;
 	padding: 10px;
 	margin: 10px;
@@ -129,9 +121,8 @@ main-dir {
 
 .listingClick {
 	font-size: 15px;
-	padding: 20px;
+	padding: 5px;
 	cursor: pointer;
-	color: #EEEEEE;
 }
 
 .starChecked {
@@ -157,11 +148,11 @@ md-tabs md-ink-bar{
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(1) {
-	background-color: #EEEEEE;
+	background-color: #3F51B5;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(2) {
-	background-color: #EEEEEE
+	background-color: #3F51B5;
 }
 
 .expandcollapse-heading-collapsed:focus{
@@ -216,7 +207,6 @@ i:focus{
 
 .listingSize{
 	padding: 10px;
-	background-color: #EEEEEE
 }
 
 #tab-content-8{
@@ -225,8 +215,6 @@ i:focus{
 
 .md-padding{
 	padding: 10px;
-	color: #EEEEEE;
-	background-color:#EEEEEE
 }
 
 .md-right{
@@ -238,6 +226,7 @@ i:focus{
 	color: white;
 	background-color: white;
 }
+
 
 .footer {
 	background: #FFAB40;
@@ -291,6 +280,7 @@ i:focus{
 	background-color: #EEEEEE;
 	padding-bottom: 80px;
 }
+
 .updateFormBox{
 
 	padding: 5px;
