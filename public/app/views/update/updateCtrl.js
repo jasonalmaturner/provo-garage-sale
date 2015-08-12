@@ -72,7 +72,8 @@ app.controller('updateCtrl', function($scope, mainService, $location, listings, 
               .title('Listing removed!')
               .ok('Ok')
               .targetEvent(ev)
-            )  
+            )
+            $scope.showRemove = false;  
             }, function (err) {
               $mdDialog.show(
                 $mdDialog.alert()
