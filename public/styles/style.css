@@ -83,7 +83,7 @@ main-dir {
 	
 	background-color: #3F51B5;
 	color: white;
-	
+	text-align: left;
 }
 
 .listingPopOut {
@@ -92,9 +92,6 @@ main-dir {
 }
 
 .listingColumn {
-
-	background-color: #E0E0E0!important;
-	padding: 10px;
 	margin: 10px;
 	height: 526px;
 	overflow: scroll;
@@ -145,6 +142,7 @@ main-dir {
 md-tabs md-ink-bar{
 	color:white;
 	background-color: white;
+	height: 4px;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(1) {
@@ -210,11 +208,12 @@ i:focus{
 }
 
 #tab-content-8{
-	padding: 3px;
+	background-color: #EEEEEE;
 }
 
 .md-padding{
 	padding: 10px;
+	background-color: #EEEEEE;
 }
 
 .md-right{
