@@ -23,7 +23,6 @@ html, body {
 .distanceSearch {
 	color: black;
 	font-size: 15px;
-	padding-left: 15px;
 	padding-top: 13px;
 }
 
@@ -90,10 +89,10 @@ main-dir {
 }
 
 .getDirectionsBtn{
-	margin-right: 10px;
+	
 	background-color: #3F51B5;
 	color: white;
-	content-align: center;
+	
 }
 
 .listingPopOut {
@@ -102,7 +101,7 @@ main-dir {
 }
 
 .listingColumn {
-	background-color: #EEEEEE !important;
+	background-color: #E0E0E0!important;
 	padding: 10px;
 	margin: 10px;
 	height: 526px;
@@ -190,11 +189,11 @@ i:focus{
 	text-align:center;
 	font-size: 24px;
 	font-weight: bold;
-	background-color: #EEEEEE;
+	color: #3F51B5
 }
 
 .submitBtn {
-	background-color: #09C067;
+	background-color: #3F51B5;
 	width: 50%;
 	align-self: center;
 	margin-top: 15px;
@@ -245,15 +244,32 @@ i:focus{
 	text-align: center;
 	flex-direction: row-reverse;
 	padding-top: 5px;
+	padding-bottom: 15px;
 	height: 63px;
 	font-size: 14px;
+	min-width: 800px;
+	
 
 }
 .border {
-	border: 8px solid #FFAB40;
+	border: 1px solid #FFAB40;
 	border-radius: 2px;
 	margin-top: 10px;
-	padding: 0px;
+	padding: 10%;
+	background-color: #E0E0E0;
+}
+.leftListingDiv {
+	width: 10%;
+	height: 100%;
+	background-color: red;
+	float: left;
+}
+.rightListingDiv {
+	width: 10%;
+	height: 100%;
+	background-color: red;
+	float: right;
+}
 }
 .listingDiv {
 	margin-left: 15%;
@@ -268,6 +284,7 @@ i:focus{
 .md-button{
 	line-height: 27px;
 	color: white;
+	padding: 20px;
 }
 
 .updateForm{
@@ -275,7 +292,7 @@ i:focus{
 	padding-bottom: 80px;
 }
 .updateFormBox{
-	background-color: #EEEEEE;
+	
 	padding: 5px;
 }
 
@@ -294,7 +311,7 @@ i:focus{
 }
 
 .md-tab:nth-child(1){background: #FFAB40; }
-.md-tab:nth-child(2){background: #FF9100; }
+.md-tab:nth-child(2){background: #FFB74D; }
 
 #description {
 	color: #424242
