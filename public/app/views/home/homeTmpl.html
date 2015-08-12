@@ -1,35 +1,42 @@
-<!-- home template -->
+<!-- HOME PAGE -->
 
       <!-- SECOND TOOLBAR -->
   	<md-content>
       <md-toolbar class="secondToolbar" layout="row">
 
-          <!-- search by location -->
+          <!-- calendar -->
+        <md-input-container class="dateSearch" flex="20" flex-sm="40">
+          <input type="date" ng-model="dateSearch" ng-change="dateFilter(dateSearch)">
+          <label><strong>Date</strong>
+          </label>
+        </md-input-container>
+
+          <!-- LOCATION SEARCH -->
         <form ng-submit="submitLocSearch(locationSearch, distanceSearch)">
-          <md-input-container class="searchByLocation" flex="10" flex-sm="5">
-            <label>Yard Sale Search
+          <md-input-container class="searchByLocation" flex="10" flex-md="10" flex-sm="5">
+            <label>Location Search
             </label>
             <input type="text" ng-model="locationSearch">
           </md-input-container>
         </form>
 
-          <!-- search by distance -->
+          <!-- WITHIN distance -->
         <md-select placeholder="Within" class="distanceSearch" ng-model="distanceSearch" flex-gt-sm="10" flex-sm="20">
           <md-option ng-repeat="distance in distances">{{distance}} miles
           </md-option>
         </md-select>
-
-          <!-- calendar -->
-        <md-input-container class="dateSearch" flex="10" flex-sm="30">
-          <input type="date" ng-model="newListing.startDate">
-          <label><strong>Date</strong>
-          </label>
-        </md-input-container>
-
-          <!-- site name -->
-        <div class="siteName" flex="55" hide-sm>YARD SALES
+        
+          <!-- large LOCAL YARD SALES -->
+        <div class="siteName" flex="35" hide-sm hide-md>LOCAL YARD SALES
         </div>
-        <!-- </div> -->
+
+          <!-- medium LOCAL YARD SALES -->
+        <!-- <div class="mediumSiteName" flex="25" hide-sm hide-lg>LOCAL YARD SALES
+        </div>
+ -->
+          <!-- small LOCAL YARD SALES -->
+        <!-- <div class="smallSiteName" flex="10" hide-md hide-lg>LOCAL YARD SALES
+        </div>  -->       
       </md-toolbar>
     </md-content>
 <main-dir></main-dir>

@@ -16,7 +16,6 @@ html, body {
 	font-size: 14px;
 	font-weight: bold;
 	padding-left: 25px;
-	width: 300px;
 	padding-bottom: 0px;
 	padding-top: 0px;
 }
@@ -24,7 +23,6 @@ html, body {
 .distanceSearch {
 	color: black;
 	font-size: 15px;
-	padding-left: 20px;
 	padding-top: 13px;
 }
 
@@ -35,25 +33,36 @@ html, body {
 .dateSearch{
 	height: 48px;
 	font-size: 15px;
+	padding-left: 10px;
 	padding-bottom: 2px;
 }
 #input_4{
 	min-width: 150px;
 }
+
 .siteName{
 	padding-top: 6px;
-	font-weight: bold;
+	font-style: italic;
 	font-size: 45px;
-	letter-spacing: 15px;
-	word-spacing: 10px;
 	text-align: right;
+	color: #EEEEEE;
+}
+
+.mediumSiteName{
+	padding-top: 20px;
+	font-style: italic;
+	font-size: 35px;
+	text-align: right;
+	color: #EEEEEE;
+
 }
 
 .smallSiteName{
 	padding-top: 6px;
-	font-weight: bold;
-	font-size: 25px;
+	font-style: italic;
+	font-size: 10px;
 	text-align: right;
+	color: #EEEEEE;
 }
 
 /*map*/
@@ -80,14 +89,10 @@ main-dir {
 }
 
 .getDirectionsBtn{
-	width: 60px;
-	height: 17px;
-	font-size: 10px;
-	font-weight: bold;
-	color: #3F51B5;
-	padding-left: 0px;
-	cursor: pointer;
-	text-align: center;
+
+	background-color: #3F51B5;
+	color: white;
+
 }
 
 .listingPopOut {
@@ -96,7 +101,7 @@ main-dir {
 }
 
 .listingColumn {
-	background-color: #3F51B5;
+	background-color: #E0E0E0!important;
 	padding: 10px;
 	margin: 10px;
 	height: 526px;
@@ -124,8 +129,9 @@ main-dir {
 
 .listingClick {
 	font-size: 15px;
-	padding: 5px;
+	padding: 20px;
 	cursor: pointer;
+	color: #EEEEEE;
 }
 
 .starChecked {
@@ -151,11 +157,11 @@ md-tabs md-ink-bar{
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(1) {
-	background-color: #3F51B5;
+	background-color: #EEEEEE;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(2) {
-	background-color: #3F51B5;
+	background-color: #EEEEEE
 }
 
 .expandcollapse-heading-collapsed:focus{
@@ -183,11 +189,11 @@ i:focus{
 	text-align:center;
 	font-size: 24px;
 	font-weight: bold;
-	background-color: #EEEEEE;
+	color: #3F51B5
 }
 
 .submitBtn {
-	background-color: #09C067;
+	background-color: #3F51B5;
 	width: 50%;
 	align-self: center;
 	margin-top: 15px;
@@ -210,6 +216,7 @@ i:focus{
 
 .listingSize{
 	padding: 10px;
+	background-color: #EEEEEE
 }
 
 #tab-content-8{
@@ -218,6 +225,8 @@ i:focus{
 
 .md-padding{
 	padding: 10px;
+	color: #EEEEEE;
+	background-color:#EEEEEE
 }
 
 .md-right{
@@ -230,21 +239,37 @@ i:focus{
 	background-color: white;
 }
 
-
 .footer {
 	background: #FFAB40;
 	text-align: center;
 	flex-direction: row-reverse;
 	padding-top: 5px;
+	padding-bottom: 15px;
 	height: 63px;
 	font-size: 14px;
+	min-width: 800px;
+
 
 }
 .border {
-	border: 8px solid #FFAB40;
+	border: 1px solid #FFAB40;
 	border-radius: 2px;
 	margin-top: 10px;
-	padding: 0px;
+	padding: 10%;
+	background-color: #E0E0E0;
+}
+.leftListingDiv {
+	width: 10%;
+	height: 100%;
+	background-color: red;
+	float: left;
+}
+.rightListingDiv {
+	width: 10%;
+	height: 100%;
+	background-color: red;
+	float: right;
+}
 }
 .listingDiv {
 	margin-left: 15%;
@@ -259,6 +284,7 @@ i:focus{
 .md-button{
 	line-height: 27px;
 	color: white;
+	padding: 20px;
 }
 
 .updateForm{
@@ -266,7 +292,7 @@ i:focus{
 	padding-bottom: 80px;
 }
 .updateFormBox{
-	background-color: #EEEEEE;
+
 	padding: 5px;
 }
 
@@ -282,4 +308,14 @@ i:focus{
 .about {
 	margin-left: 50px;
 	margin-right: 50px;
+}
+
+.md-tab:nth-child(1){background: #FFAB40; }
+.md-tab:nth-child(2){background: #FFB74D; }
+
+#description {
+	color: #424242
+}
+md-tabs-canvas.md-center-tabs {
+	background-color: #3F51B5;
 }

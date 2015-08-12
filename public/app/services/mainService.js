@@ -5,7 +5,6 @@ var app = angular.module('treasureHunters');
 app.service('mainService', function($http, $q){
 
   this.getListings = function(position, distance){
-    console.log("distance in service", distance);
     if (!distance) {
       var dist = 15;
     }
@@ -13,8 +12,6 @@ app.service('mainService', function($http, $q){
       var dist = distance.slice(0, 2);
       dist = Number(dist);
     }
-    console.log("after mod distnace", dist)
-    console.log(position)
     var dfd = $q.defer();
     $http({
       method: 'GET',
