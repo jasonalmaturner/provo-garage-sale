@@ -4,9 +4,9 @@
   	<md-content>
       <md-toolbar class="secondToolbar" layout="row">
 
-          <!-- DATE -->
+          <!-- calendar -->
         <md-input-container class="dateSearch" flex="20" flex-sm="40">
-          <input type="date" ng-model="newListing.startDate">
+          <input type="date" ng-model="dateSearch" ng-change="dateFilter(dateSearch)">
           <label><strong>Date</strong>
           </label>
         </md-input-container>
@@ -25,7 +25,6 @@
           <md-option ng-repeat="distance in distances">{{distance}} miles
           </md-option>
         </md-select>
-
         
           <!-- large LOCAL YARD SALES -->
         <div class="siteName" flex="35" hide-sm hide-md>LOCAL YARD SALES
