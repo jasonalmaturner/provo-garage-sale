@@ -8,7 +8,7 @@ ng-class="{'clicked-listing': listing.clicked}">
 		<span class="listingTitle">
 			<strong>{{listing.title}}</strong>
 				<i title="Add/Remove Favorites" ng-class="listing.favorite ? 'fa fa-star fa-lg' : 'fa fa-star-o fa-lg'"
-					ng-click="listing.favorite = !listing.favorite; toggleFavorite(listing); $event.stopPropagation();"
+					ng-click="toggleFavorite(listing); $event.stopPropagation();"
 					class="starChecked">
 				</i>
 		</span>
@@ -23,8 +23,7 @@ ng-class="{'clicked-listing': listing.clicked}">
 			<strong>Address:
 			</strong>
 				<!-- 		GOOGLE DIRECTION -->
-				
-				<input class="getDirectionsBtn" type="submit" name="daddr" value="{{listing.address.street}}&#x00A;{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}"/> 
+				<input class="getDirectionsBtn" type="submit" name="daddr" value="{{listing.address.street}}&#x00A;{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}"/>
 		</form>
 
 	</div>

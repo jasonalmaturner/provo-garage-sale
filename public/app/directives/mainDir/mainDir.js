@@ -15,9 +15,9 @@ app.directive('mainDir', function(){
 				$scope.map.center.longitude = position.coords.longitude;
 			})
 
-			uiGmapGoogleMapApi.then(function(map){
-			}, function(err){
-			})
+			// uiGmapGoogleMapApi.then(function(map){
+			// }, function(err){
+			// })
 
 			// uiGmapIsReady.promise().then(function(map){
 			// 	console.log(map);
