@@ -68,6 +68,8 @@ app.directive('mainDir', function(){
 					if(listing._id !== $scope.theListings[i]._id){
 						$scope.theListings[i].clicked = false;
 						$scope.theListings[i].icon = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+					} else {
+						// $scope.theListings[i].clicked = false;
 					}
 				}
 			}
