@@ -14,9 +14,9 @@ app.directive('listingDir', function(){
 				if(listing.favorite){
 					mainService.removeFavorite(listing._id).then(function(res){
 						listing.favorite = false;
-						console.log($scope.favorites);
-						$scope.favorites = updateFavorites(listing, $scope.theListings, $scope.favorites);
-						console.log($scope.favorites);
+						console.log($scope.currentUser.favorites);
+						$scope.currentUser.favorites = updateFavorites(listing, $scope.theListings, $scope.favorites);
+						console.log($scope.currentUser.favorites);
 						// $scope.matchFavorites();
 					}, function(err){
 						// $scope.matchFavorites();
@@ -25,9 +25,9 @@ app.directive('listingDir', function(){
 				} else {
 					mainService.addFavorite(listing._id).then(function(res){
 						listing.favorite = true;
-						console.log($scope.favorites);
-						$scope.favorites = updateFavorites(listing, $scope.theListings, $scope.favorites);
-						console.log($scope.favorites);
+						console.log($scope.currentUser.favorites);
+						$scope.currentUser.favorites = updateFavorites(listing, $scope.theListings, $scope.favorites);
+						console.log($scope.currentUser.favorites);
 						// $scope.matchFavorites();
 					}, function(err){
 						// $scope.matchFavorites();
@@ -37,7 +37,7 @@ app.directive('listingDir', function(){
 				// listing.favorite = !listing.favorite;
 			}
 
-			var updateFavorites = function(theListing, listings, favorites){
+			function updateFavorites(theListing, listings, favorites){
 				var newFavorites = favorites.slice(0);
 				if(theListing.favorite){
 					newFavorites.push(theListing);

@@ -3,13 +3,13 @@
 var app = angular.module('treasureHunters');
 
 app.controller('mainCtrl', function($scope, authService, $location, mainService, $mdDialog){
-	
-                // User State 
+
+    // User State 
     $scope.$watch(authService.isLoggedIn, function (isLoggedIn){
-		$scope.isLoggedIn = isLoggedIn;
-		$scope.currentUser = authService.currentUser();
-		console.log($scope.currentUser);
-	});
+			$scope.isLoggedIn = isLoggedIn;
+			$scope.currentUser = authService.currentUser();
+			console.log($scope.currentUser);
+		});
 
 
     $scope.addClick = function(ev) {
