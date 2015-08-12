@@ -143,6 +143,9 @@ main-dir {
 
 .showActive {
 	font-size: 14px;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 2px;
 }
 
 .welcomeUser{
@@ -282,8 +285,7 @@ i:focus{
 .border {
 	border: 1px solid #FFAB40;
 	border-radius: 2px;
-	margin-top: 10px;
-	padding: 10%;
+	padding: 3% 8% 3% 8%;
 	background-color: #E0E0E0;
 }
 .leftListingDiv {
@@ -324,12 +326,14 @@ i:focus{
 
 .updateForm{
 	background-color: #EEEEEE;
-	padding-bottom: 80px;
+	padding-bottom: 10px;
+	margin-top: 5px;
+	padding-top: 2px;
 }
 
 .updateFormBox{
 
-	padding: 5px;
+	padding: 3px;
 }
 
 .terms {
