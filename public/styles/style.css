@@ -64,7 +64,10 @@ main-dir {
 .map-container {
 	height: 100%;
 	width: 100%;
-	padding: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 2px;
 }
 
 .angular-google-map-container {
@@ -83,18 +86,15 @@ main-dir {
 
 	background-color: #3F51B5;
 	color: white;
-
+	text-align: left;
 }
 
 .listingPopOut {
-	font-size: 14px;
+	font-size: 14px;git
 	font-weight: bold;
 }
 
 .listingColumn {
-
-	background-color: #E0E0E0!important;
-	padding: 10px;
 	margin: 10px;
 	height: 526px;
 	overflow: scroll;
@@ -145,6 +145,7 @@ main-dir {
 md-tabs md-ink-bar{
 	color:white;
 	background-color: white;
+	height: 4px;
 }
 
 .tabsdemoStaticTabs md-tab-content:nth-child(1) {
@@ -193,12 +194,10 @@ i:focus{
 .removeBtn {
 	background-color: red;
 	width: 30%;
-	align-self: center;
-	margin-top: 15px;
 }
 
 #removeDiv {
-	background-color: #EEEEEE;
+	background-color: #E0E0E0;
 }
 
 .areaListings {
@@ -206,15 +205,19 @@ i:focus{
 }
 
 .listingSize{
-	padding: 10px;
+
 }
 
 #tab-content-8{
-	padding: 3px;
+	background-color: #EEEEEE;
+}
+
+#tab-content-9{
+	background-color: #EEEEEE;
 }
 
 .md-padding{
-	padding: 10px;
+	background-color: #EEEEEE;
 }
 
 .md-right{
@@ -308,4 +311,17 @@ i:focus{
 }
 md-tabs-canvas.md-center-tabs {
 	background-color: #3F51B5;
+}
+
+.md-padding{
+	padding: 0px;
+}
+
+.md-tab{
+	font-size: 19px;
+	line-height: 20px;
+}
+
+md-card md-card-content {
+	padding: 0;
 }
