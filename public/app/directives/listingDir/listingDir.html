@@ -25,24 +25,16 @@ ng-class="{'clicked-listing': listing.clicked}">
 		<div>
 			<strong>Address:
 			</strong>
-
-				{{listing.address.street}}</br>
-					<input class="getDirectionsBtn" type="submit" value="&nbsp;&nbsp;Directions" />
-				{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}
-
 				<!-- 		GOOGLE DIRECTION -->
-			
-				<input type="hidden" name="daddr" value="{{listing.address.street}},
-				{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}" />
+				<md-button >
+				<input class="getDirectionsBtn" type="submit" name="daddr" value="{{listing.address.street}},
+				{{listing.address.city}}, {{listing.address.state}} {{listing.address.zip}}" /> </md-button>
 		</form>
 
 	</div>
-<!-- 			<span><strong>City:</strong> {{listing.address.city}}, {{listing.address.state}}</span>
-		<span><strong>Date:</strong> {{listing.startDate | date:"shortDate"}}
-				</span> -->
 	</md-toolbar>
 
-	<div ng-show="active" class="showActive">
+	<div ng-show="active" class="showActive" id="description">
 		<div>
 			<strong>Description:
 			</strong>
