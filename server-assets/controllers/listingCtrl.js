@@ -32,6 +32,7 @@ module.exports = {
 	},
 
 	update: function(req, res) {
+			delete req.body._id;
 	    Listing.findByIdAndUpdate(req.params.id, req.body, function(err, result) {
 	      if (err) return res.status(500).send(err);
 	      res.json(result);
